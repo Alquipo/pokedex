@@ -4,14 +4,13 @@ export default {
     gutter: '3.2rem'
   },
   border: {
-    radius: '0.4rem'
+    radius: '1.0rem'
   },
   font: {
-    family:
-      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family: "'Roboto', sans-serif",
     light: 300,
     normal: 400,
-    bold: 600,
+    bold: 700,
     sizes: {
       xsmall: '1.2rem',
       small: '1.4rem',
@@ -22,9 +21,9 @@ export default {
     }
   },
   colors: {
-    primary: '#F231A5',
-    secondary: '#3CD3C1',
-    mainBg: '#06092B',
+    // primary: '#ecf0f1',
+    secondary: '#e4c439',
+    // mainBg: '#06092B',
     lightBg: '#F2F2F2',
     white: '#FAFAFA',
     black: '#030517',
@@ -47,5 +46,97 @@ export default {
     overlay: 30,
     modal: 40,
     alwaysOnTop: 50
+  },
+
+  pokemonTypeColors: {
+    Normal: {
+      color: '#6d6d4e',
+      backgroundHover: '#a8a878'
+    },
+
+    Fire: {
+      color: '#9c531f',
+      backgroundHover: '#f08030'
+    },
+
+    Water: {
+      color: '#445e9c',
+      backgroundHover: '#6890f0'
+    },
+
+    Electric: {
+      color: '#a1871f',
+      backgroundHover: '#f8d030'
+    },
+
+    Grass: {
+      color: '#4e8234',
+      backgroundHover: '#78c850'
+    },
+
+    Ice: {
+      color: '#638d8d',
+      backgroundHover: '#98d8d8'
+    },
+
+    Ground: {
+      color: '#927d44',
+      backgroundHover: '#e0c068'
+    },
+
+    Flying: {
+      color: '#6d5e9c',
+      backgroundHover: '#a890f0'
+    },
+
+    Ghost: {
+      color: '#493963',
+      backgroundHover: '#705898'
+    },
+
+    Rock: {
+      color: '#786824',
+      backgroundHover: '#b8a038'
+    },
+
+    Fighting: {
+      color: '#7d1f1a',
+      backgroundHover: '#c03028'
+    },
+
+    Poison: {
+      color: '#682a68',
+      backgroundHover: '#a040a0'
+    },
+
+    Psychic: {
+      color: '#a13959',
+      backgroundHover: '#f85888'
+    },
+
+    Bug: {
+      color: '#6d7815',
+      backgroundHover: '#a8b820'
+    },
+
+    Dark: {
+      color: '#49392f',
+      backgroundHover: '#705848'
+    },
+
+    Steel: {
+      color: '#787887',
+      backgroundHover: '#b8b8d0'
+    },
+
+    Dragon: {
+      color: '#4924a1',
+      backgroundHover: '#7038f8'
+    },
+
+    Fairy: {
+      color: '#fa58f4',
+      backgroundHover: '#f781d8'
+    }
   }
 } as const
