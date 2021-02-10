@@ -9,11 +9,7 @@ export type RibbonProps = {
   color?: RibbonColors
   position?: RibbonPosition
 }
-const Ribbon = ({
-  children,
-  color = 'Normal',
-  position = 'left'
-}: RibbonProps) => (
+const Ribbon = ({ children, color, position = 'right' }: RibbonProps) => (
   <S.Wrapper position={position} color={color}>
     {children}
   </S.Wrapper>

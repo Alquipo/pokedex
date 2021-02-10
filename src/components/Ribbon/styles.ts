@@ -27,8 +27,9 @@ const wrapperModifiers = {
 
     &::before {
       border-right-width: 1.5rem;
-      right: 0;
+      border-left-width: 0rem;
       border-right-color: transparent;
+      right: 0;
     }
   `,
 
@@ -41,8 +42,9 @@ const wrapperModifiers = {
 
     &::before {
       border-left-width: 1.5rem;
-      left: 0;
+      border-right-width: 0rem;
       border-left-color: transparent;
+      left: 0;
     }
   `
 }
@@ -63,7 +65,6 @@ export const Wrapper = styled.div<RibbonProps>`
       border-top-width: 0.7rem;
       position: absolute;
       border-style: solid;
-      border-right-width: 0rem;
       border-bottom-color: transparent;
       border-bottom-width: 1rem;
     }

@@ -1,4 +1,4 @@
-import Ribbon from 'components/Ribbon'
+import Ribbon, { RibbonPosition } from 'components/Ribbon'
 import * as S from './styles'
 
 export type PokemonTypesProps =
@@ -26,19 +26,22 @@ export type PokemonCardProps = {
   name: string
   type: PokemonTypesProps[]
   image: string
+  ribbonPosition?: RibbonPosition
 }
 
-const PokemonCard = ({ id, image, name, type }: PokemonCardProps) => (
+const PokemonCard = ({
+  id,
+  image,
+  name,
+  type,
+  ribbonPosition
+}: PokemonCardProps) => (
   <>
     <S.Wrapper typeColor={type[0]}>
-      <Ribbon color={type[0]}># {id}</Ribbon>
-      {/* <S.CardId typeColor={type[0]}># {id}</S.CardId> */}
-      {/* {imageLoading ? <PokeballMini /> : null} */}
-      <S.CardImg
-        src={image}
-        alt={name}
-        // style={imageLoading ? null : { display: 'block' }}
-      />
+      <Ribbon position={ribbonPosition} color={type[0]}>
+        # {id}
+      </Ribbon>
+      <S.CardImg src={image} alt={name} />
       <S.CardName>{name}</S.CardName>
 
       <S.CardDetails>{type.join(' / ')}</S.CardDetails>

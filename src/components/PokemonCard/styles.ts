@@ -43,13 +43,14 @@ export const Wrapper = styled.div<TypeColorProps>`
     border: 0.1rem solid;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
 
-    /* transition: 0.5s ease-in-out all;
+    ${!!typeColor &&
+    wrapperModifiers.type(theme, typeColor)}/* transition: 0.5s ease-in-out all;
     -webkit-transition: 0.5s ease-out;
     -moz-transition: 0.5s ease-out;
     -o-transition: 0.5s ease-out; */
 
-    cursor: pointer;
 
     /* &:hover {
       transform: scale(1.05);
@@ -87,8 +88,6 @@ export const Wrapper = styled.div<TypeColorProps>`
       -webkit-transform: scale(0);
       transform: scale(0);
     } */
-
-    ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}
 `
 export const CardImg = styled.img`
