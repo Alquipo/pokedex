@@ -21,11 +21,12 @@ export const CardId = styled.span<TypeColorProps>`
 `
 export const wrapperModifiers = {
   type: (theme: DefaultTheme, typeColor: PokemonTypesProps) => css`
-    border-color: ${theme.pokemonTypeColors[typeColor].color};
+    border-color: ${theme.pokemonTypeColors[typeColor].backgroundHover};
+    color: ${theme.pokemonTypeColors[typeColor].backgroundHover};
 
-    &:hover {
+    /* &:hover {
       background-color: ${theme.pokemonTypeColors[typeColor].backgroundHover};
-    }
+    } */
   `
 }
 
@@ -33,25 +34,24 @@ export const Wrapper = styled.div<TypeColorProps>`
   ${({ theme, typeColor }) => css`
     width: 12rem auto;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     padding: ${theme.spacings.xxsmall};
 
     background-color: ${theme.colors.lightBg};
-    color: ${theme.colors.secondary};
     border-radius: ${theme.border.radius};
     border: 0.1rem solid;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
-    transition: 0.5s ease-in-out all;
+    /* transition: 0.5s ease-in-out all;
     -webkit-transition: 0.5s ease-out;
     -moz-transition: 0.5s ease-out;
-    -o-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out; */
 
     cursor: pointer;
 
-    &:hover {
+    /* &:hover {
       transform: scale(1.05);
       color: ${theme.colors.white};
       overflow: hidden;
@@ -86,7 +86,7 @@ export const Wrapper = styled.div<TypeColorProps>`
     &:hover:before {
       -webkit-transform: scale(0);
       transform: scale(0);
-    }
+    } */
 
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}

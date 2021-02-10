@@ -3,6 +3,27 @@ import PokemonCard, { PokemonCardProps } from '.'
 
 import mockPokemon from './mock'
 
+// const teste = [
+//   'Normal',
+//   'Fire',
+//   'Water',
+//   'Electric',
+//   'Grass',
+//   'Ice',
+//   'Ground',
+//   'Flying',
+//   'Ghost',
+//   'Rock',
+//   'Fighting',
+//   'Poison',
+//   'Psychic',
+//   'Bug',
+//   'Dark',
+//   'Steel',
+//   'Dragon',
+//   'Fairy'
+// ]
+
 export default {
   title: 'PokemonCard',
   component: PokemonCard,
@@ -10,7 +31,8 @@ export default {
   // argTypes: {
   //   type: {
   //     control: {
-  //       type: 'check'
+  //       type: 'select',
+  //       options: Object.keys(teste.splice())
   //     }
   //   }
   // }
@@ -21,7 +43,8 @@ export const Default: Story<PokemonCardProps> = (args) => (
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      position: 'relative'
     }}
   >
     <PokemonCard {...args} />
