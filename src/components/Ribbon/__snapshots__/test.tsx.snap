@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Ribbon /> should render the text correctly 1`] = `
+.c0 {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 0 1.6rem;
+  height: 2.6rem;
+  top: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  color: #FAFAFA;
+  left: -1.5rem;
+}
+
+.c0::before {
+  content: '';
+  top: 2.6rem;
+  border-top-width: 0.7rem;
+  position: absolute;
+  border-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-width: 1rem;
+}
+
+.c0::before {
+  border-left-width: 1.5rem;
+  border-right-width: 0rem;
+  border-left-color: transparent;
+  left: 0;
+}
+
+<div
+  class="c0"
+>
+  # 5
+</div>
+`;

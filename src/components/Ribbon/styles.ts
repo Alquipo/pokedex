@@ -18,11 +18,7 @@ const wrapperModifiers = {
     }
   `,
 
-  right: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xsmall};
-    padding: 0 ${theme.spacings.xsmall};
-    height: 2.6rem;
-
+  right: () => css`
     right: -1.5rem;
 
     &::before {
@@ -33,11 +29,7 @@ const wrapperModifiers = {
     }
   `,
 
-  left: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xsmall};
-    padding: 0 ${theme.spacings.xsmall};
-    height: 2.6rem;
-
+  left: () => css`
     left: -1.5rem;
 
     &::before {
@@ -52,6 +44,10 @@ const wrapperModifiers = {
 export const Wrapper = styled.div<RibbonProps>`
   ${({ theme, color, position }) => css`
     position: absolute;
+
+    font-size: ${theme.font.sizes.xsmall};
+    padding: 0 ${theme.spacings.xsmall};
+    height: 2.6rem;
 
     top: ${theme.spacings.xxsmall};
     display: flex;
