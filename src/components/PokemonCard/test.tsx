@@ -4,24 +4,29 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import PokemonCard, { PokemonCardProps } from '.'
 
 const props: PokemonCardProps = {
-  id: 5,
-  name: 'Pikachu',
-  type: ['Electric', 'Flying']
+  id: 6,
+  name: 'Charizard',
+  type: ['Fire', 'Flying']
 }
 
 describe('<PokemonCard />', () => {
   it('should render the PokemonCard correctly', () => {
-    renderWithTheme(<PokemonCard {...props} />)
+    const { container } = renderWithTheme(<PokemonCard {...props} />)
 
-    expect(screen.getByText('Pikachu')).toBeInTheDocument()
+    expect(screen.getByText('Charizard')).toBeInTheDocument()
 
-    expect(screen.getByText('# 5')).toBeInTheDocument()
-
-    expect(screen.getByText('Electric / Flying')).toBeInTheDocument()
+    expect(screen.getByText('#006')).toBeInTheDocument()
 
     expect(screen.getByRole('img', { name: props.name })).toHaveAttribute(
       'src',
-      props.image
+      `img/thumbnails-compressed/006.png`
     )
+
+    expect(screen.getByRole('img', { name: props.type[0] })).toHaveAttribute(
+      'src',
+      `img/type-icons/Fire.png`
+    )
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

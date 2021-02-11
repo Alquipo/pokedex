@@ -18,5 +18,4 @@ export const Icon = styled.img`
   height: 60%;
   width: 60%;
   margin: 20%;
-  vertical-align: middle;
 `

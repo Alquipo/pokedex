@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
+.c5 {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2px 3px;
+  background-color: #FBA54C;
+  box-shadow: 0 0 2rem #FBA54C;
+}
+
+.c7 {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2px 3px;
+  background-color: #A1BBEC;
+  box-shadow: 0 0 2rem #A1BBEC;
+}
+
+.c6 {
+  height: 60%;
+  width: 60%;
+  margin: 20%;
+}
+
+.c1 {
+  position: absolute;
+  padding: 0 1.6rem;
+  height: 2.6rem;
+  top: 0.3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FAFAFA;
+  background-color: #FBA54C;
+  left: -1.5rem;
+}
+
+.c1::before {
+  content: '';
+  top: 2.6rem;
+  border-top-width: 0.7rem;
+  position: absolute;
+  border-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-width: 1rem;
+}
+
+.c1::before {
+  border-left-color: #dc7205;
+  border-top-color: #dc7205;
+}
+
+.c1::before {
+  border-left-width: 1.5rem;
+  border-right-width: 0rem;
+  border-left-color: transparent;
+  left: 0;
+}
+
+.c0 {
+  width: 12rem auto;
+  position: relative;
+  padding: 0.3rem;
+  border-radius: 1.0rem;
+  border: 0.1rem solid;
+  text-align: center;
+  cursor: pointer;
+  border-color: #FBA54C;
+  color: #FBA54C;
+  box-shadow: 0 0 1rem #FBA54C;
+}
+
+.c2 {
+  width: 10rem;
+  margin: auto;
+}
+
+.c2:hover {
+  position: relative;
+  z-index: 2;
+}
+
+.c3 {
+  text-transform: capitalize;
+  font-size: 2.0rem;
+  font-weight: 700;
+  width: 18rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    color="Fire"
+  >
+    #
+    006
+  </div>
+  <img
+    alt="Charizard"
+    class="c2"
+    src="img/thumbnails-compressed/006.png"
+  />
+  <h1
+    class="c3"
+  >
+    Charizard
+  </h1>
+  <div
+    class="c4"
+  >
+    <div
+      class="c5"
+    >
+      <img
+        alt="Fire"
+        class="c6"
+        src="img/type-icons/Fire.png"
+      />
+    </div>
+    <div
+      class="c7"
+    >
+      <img
+        alt="Flying"
+        class="c6"
+        src="img/type-icons/Flying.png"
+      />
+    </div>
+  </div>
+</div>
+`;

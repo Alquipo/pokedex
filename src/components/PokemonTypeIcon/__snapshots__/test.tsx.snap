@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PokemonTypeIcon /> should render the PokemonTypeIcon correctly 1`] = `
+.c0 {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2px 3px;
+  background-color: #FBA54C;
+  box-shadow: 0 0 2rem #FBA54C;
+}
+
+.c1 {
+  height: 60%;
+  width: 60%;
+  margin: 20%;
+}
+
+<div
+  class="c0"
+>
+  <img
+    alt="Fire"
+    class="c1"
+    src="img/type-icons/Fire.png"
+  />
+</div>
+`;
