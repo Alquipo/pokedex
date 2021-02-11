@@ -81,6 +81,9 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
   cursor: pointer;
   border-color: #FBA54C;
   color: #FBA54C;
+}
+
+.c0:hover {
   box-shadow: 0 0 1rem #FBA54C;
 }
 

@@ -1,5 +1,4 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { lighten } from 'polished'
 import { PokemonTypesProps } from '.'
 
 export type TypeColorProps = {
@@ -10,7 +9,10 @@ export const wrapperModifiers = {
   type: (theme: DefaultTheme, typeColor: PokemonTypesProps) => css`
     border-color: ${theme.pokemonTypeColors[typeColor]};
     color: ${theme.pokemonTypeColors[typeColor]};
-    box-shadow: 0 0 1rem ${theme.pokemonTypeColors[typeColor]};
+
+    &:hover {
+      box-shadow: 0 0 1rem ${theme.pokemonTypeColors[typeColor]};
+    }
   `
 }
 
