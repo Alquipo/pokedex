@@ -31,7 +31,7 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
 
 .c1 {
   position: absolute;
-  padding: 0 1.6rem;
+  padding: 0 0.8rem;
   height: 2.6rem;
   top: 0.3rem;
   display: -webkit-box;
@@ -75,10 +75,12 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
   width: 12rem auto;
   position: relative;
   padding: 0.3rem;
+  margin: 0.3rem 0.8rem;
   border-radius: 1.0rem;
   border: 0.1rem solid;
   text-align: center;
   cursor: pointer;
+  background-color: #fff;
   border-color: #FBA54C;
   color: #FBA54C;
 }

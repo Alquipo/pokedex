@@ -27,21 +27,21 @@ export type PokemonTypesProps =
 export type PokemonCardProps = {
   id: number
   name: string
-  type: PokemonTypesProps[]
+  types: PokemonTypesProps[]
   ribbonPosition?: RibbonPosition
 }
 
-const PokemonCard = ({ id, name, type, ribbonPosition }: PokemonCardProps) => (
-  <S.Wrapper typeColor={type[0]}>
-    <Ribbon position={ribbonPosition} color={type[0]}>
+const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
+  <S.Wrapper typeColor={types[0]}>
+    <Ribbon position={ribbonPosition} color={types[0]}>
       #{formatNameID(id)}
     </Ribbon>
     <S.CardImg src={formatNameImage(id)} alt={name} />
     <S.CardName>{name}</S.CardName>
 
     <S.WrapperIcons>
-      {type.map((typeIcon, index) => (
-        <PokemonTypeIcon key={index} typeIcon={typeIcon} />
+      {types.map((type, index) => (
+        <PokemonTypeIcon key={index} typeIcon={type} />
       ))}
     </S.WrapperIcons>
   </S.Wrapper>

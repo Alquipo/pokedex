@@ -3,7 +3,7 @@
 exports[`<Ribbon /> should render the text correctly 1`] = `
 .c0 {
   position: absolute;
-  padding: 0 1.6rem;
+  padding: 0 0.8rem;
   height: 2.6rem;
   top: 0.3rem;
   display: -webkit-box;

@@ -11,57 +11,57 @@ export async function getStaticProps() {
         {
           id: 6,
           name: 'Charizard',
-          type: ['Fire', 'Flying']
+          types: ['Fire', 'Flying']
         },
         {
           id: 7,
           name: 'Squirtle',
-          type: ['Water']
+          types: ['Water']
         },
         {
           id: 8,
           name: 'Wartortle',
-          type: ['Water']
+          types: ['Water']
         },
         {
           id: 9,
           name: 'Blastoise',
-          type: ['Water']
+          types: ['Water']
         },
         {
           id: 10,
           name: 'Cartepie',
-          type: ['Bug']
+          types: ['Bug']
         },
         {
           id: 11,
           name: 'Metapod',
-          type: ['Bug']
+          types: ['Bug']
         },
         {
           id: 12,
           name: 'Butterfree',
-          type: ['Bug', 'Flying']
+          types: ['Bug', 'Flying']
         },
         {
           id: 13,
           name: 'Weedle',
-          type: ['Bug', 'Poison']
+          types: ['Bug', 'Poison']
         },
         {
           id: 14,
           name: 'Kakuna',
-          type: ['Bug', 'Poison']
+          types: ['Bug', 'Poison']
         },
         {
           id: 15,
           name: 'Beedrill',
-          type: ['Bug', 'Poison']
+          types: ['Bug', 'Poison']
         },
         {
           id: 16,
           name: 'Pidgey',
-          type: ['Normal', 'Flying']
+          types: ['Normal', 'Flying']
         }
       ]
     }

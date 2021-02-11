@@ -13,7 +13,7 @@ const Pokedex = ({ pokemons }: PokedexTemplateProps) => (
         key={index}
         id={pokemon.id}
         name={pokemon.name}
-        type={pokemon.type}
+        types={pokemon.types}
       />
     ))}
   </Container>

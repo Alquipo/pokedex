@@ -6,7 +6,7 @@ import PokemonCard, { PokemonCardProps } from '.'
 const props: PokemonCardProps = {
   id: 6,
   name: 'Charizard',
-  type: ['Fire', 'Flying']
+  types: ['Fire', 'Flying']
 }
 
 describe('<PokemonCard />', () => {
@@ -22,7 +22,7 @@ describe('<PokemonCard />', () => {
       `img/thumbnails-compressed/006.png`
     )
 
-    expect(screen.getByRole('img', { name: props.type[0] })).toHaveAttribute(
+    expect(screen.getByRole('img', { name: props.types[0] })).toHaveAttribute(
       'src',
       `img/type-icons/Fire.png`
     )

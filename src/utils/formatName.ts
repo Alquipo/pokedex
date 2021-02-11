@@ -13,3 +13,7 @@ export function formatNameImage(id: number) {
 export function formatNameID(id: number) {
   return pad(id, 3)
 }
+
+// export function formatNameType(name: string) {
+//   return name.toLowerCase()
+// }
