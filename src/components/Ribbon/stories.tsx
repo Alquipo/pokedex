@@ -5,7 +5,7 @@ export default {
   title: 'Ribbon',
   component: Ribbon,
   args: {
-    children: '# 5',
+    children: '#005',
     color: 'Normal'
   },
   argTypes: {
