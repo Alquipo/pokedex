@@ -33,7 +33,7 @@ export default {
   },
   spacings: {
     xxsmall: '0.3rem',
-    xsmall: '1.6rem',
+    xsmall: '0.8rem',
     small: '2.4rem',
     medium: '3.2rem',
     large: '4.0rem',
