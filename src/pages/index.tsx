@@ -10,58 +10,58 @@ export async function getStaticProps() {
       pokemons: [
         {
           id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          name: 'Charizard',
+          type: ['Fire', 'Flying']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 7,
+          name: 'Squirtle',
+          type: ['Water']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 8,
+          name: 'Wartortle',
+          type: ['Water']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 9,
+          name: 'Blastoise',
+          type: ['Water']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 10,
+          name: 'Cartepie',
+          type: ['Bug']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 11,
+          name: 'Metapod',
+          type: ['Bug']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 12,
+          name: 'Butterfree',
+          type: ['Bug', 'Flying']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 13,
+          name: 'Weedle',
+          type: ['Bug', 'Poison']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 14,
+          name: 'Kakuna',
+          type: ['Bug', 'Poison']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 15,
+          name: 'Beedrill',
+          type: ['Bug', 'Poison']
         },
         {
-          id: 6,
-          name: 'charizard',
-          type: ['Fire', 'Grass']
+          id: 16,
+          name: 'Pidgey',
+          type: ['Normal', 'Flying']
         }
       ]
     }

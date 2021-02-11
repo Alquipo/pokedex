@@ -22,7 +22,7 @@ export const Wrapper = styled.div<TypeColorProps>`
     position: relative;
 
     padding: ${theme.spacings.xxsmall};
-    margin: ${theme.spacings.xsmall};
+    margin: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
 
     border-radius: ${theme.border.radius};
     border: 0.1rem solid;
