@@ -14,13 +14,6 @@ const GlobalStyles = createGlobalStyle`
       font-size: 62.5%;
     }
 
-    //temporário somente para colocar a pagina com height 100%
-    html,
-    body,
-    #__next {
-      height: 100%;
-    }
-
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};

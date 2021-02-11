@@ -1,4 +1,7 @@
+import PokemonTypeIcon from 'components/PokemonTypeIcon'
 import Ribbon, { RibbonPosition } from 'components/Ribbon'
+import React from 'react'
+import formatNameImage from 'utils/format-image-name'
 import * as S from './styles'
 
 export type PokemonTypesProps =
@@ -25,28 +28,23 @@ export type PokemonCardProps = {
   id: string
   name: string
   type: PokemonTypesProps[]
-  image: string
   ribbonPosition?: RibbonPosition
 }
 
-const PokemonCard = ({
-  id,
-  image,
-  name,
-  type,
-  ribbonPosition
-}: PokemonCardProps) => (
-  <>
-    <S.Wrapper typeColor={type[0]}>
-      <Ribbon position={ribbonPosition} color={type[0]}>
-        # {id}
-      </Ribbon>
-      <S.CardImg src={image} alt={name} />
-      <S.CardName>{name}</S.CardName>
+const PokemonCard = ({ id, name, type, ribbonPosition }: PokemonCardProps) => (
+  <S.Wrapper typeColor={type[0]}>
+    <Ribbon position={ribbonPosition} color={type[0]}>
+      # {id}
+    </Ribbon>
+    <S.CardImg src={formatNameImage(id)} alt={name} />
+    <S.CardName>{name}</S.CardName>
 
-      <S.CardDetails>{type.join(' / ')}</S.CardDetails>
-    </S.Wrapper>
-  </>
+    <S.WrapperIcons>
+      {type.map((typeIcon, index) => (
+        <PokemonTypeIcon key={index} typeIcon={typeIcon} />
+      ))}
+    </S.WrapperIcons>
+  </S.Wrapper>
 )
 
 export default PokemonCard

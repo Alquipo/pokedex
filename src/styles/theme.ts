@@ -32,7 +32,7 @@ export default {
     darkGray: '#2E2F42'
   },
   spacings: {
-    xxsmall: '0.8rem',
+    xxsmall: '0.3rem',
     xsmall: '1.6rem',
     small: '2.4rem',
     medium: '3.2rem',

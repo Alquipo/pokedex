@@ -29,9 +29,8 @@ export default {
   component: PokemonCard,
   args: {
     id: '5',
-    image: '/img/pokemons/025.png',
     name: 'Pikachu',
-    type: ['Electric']
+    type: ['Electric', 'Fire']
   },
   argTypes: {
     type: {
@@ -66,9 +65,7 @@ export const Default: Story<PokemonCardProps> = (args) => (
   <div
     style={{
       display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      position: 'relative'
+      justifyContent: 'center'
     }}
   >
     <PokemonCard {...args} />

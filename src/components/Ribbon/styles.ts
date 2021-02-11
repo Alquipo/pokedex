@@ -66,6 +66,6 @@ export const Wrapper = styled.div<RibbonProps>`
     }
 
     ${!!color && wrapperModifiers.color(theme, color)};
-    ${!!position && wrapperModifiers[position](theme)};
+    ${!!position && wrapperModifiers[position]()};
   `}
 `
