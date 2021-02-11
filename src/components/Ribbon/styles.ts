@@ -4,17 +4,11 @@ import { RibbonColors, RibbonProps } from '.'
 
 const wrapperModifiers = {
   color: (theme: DefaultTheme, color: RibbonColors) => css`
-    background-color: ${theme.pokemonTypeColors[color].backgroundHover};
+    background-color: ${theme.pokemonTypeColors[color]};
 
     &::before {
-      border-left-color: ${darken(
-        0.2,
-        theme.pokemonTypeColors[color].backgroundHover
-      )};
-      border-top-color: ${darken(
-        0.2,
-        theme.pokemonTypeColors[color].backgroundHover
-      )};
+      border-left-color: ${darken(0.2, theme.pokemonTypeColors[color])};
+      border-top-color: ${darken(0.2, theme.pokemonTypeColors[color])};
     }
   `,
 
@@ -45,13 +39,14 @@ export const Wrapper = styled.div<RibbonProps>`
   ${({ theme, color, position }) => css`
     position: absolute;
 
-    font-size: ${theme.font.sizes.xsmall};
     padding: 0 ${theme.spacings.xsmall};
     height: 2.6rem;
 
     top: ${theme.spacings.xxsmall};
     display: flex;
     align-items: center;
+
+    font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
 

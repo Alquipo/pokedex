@@ -49,94 +49,40 @@ export default {
   },
 
   pokemonTypeColors: {
-    Normal: {
-      color: '#6d6d4e',
-      backgroundHover: '#a8a878'
-    },
+    Normal: '#A0A29F',
 
-    Fire: {
-      color: '#9c531f',
-      backgroundHover: '#f08030'
-    },
+    Fire: '#FBA54C',
 
-    Water: {
-      color: '#445e9c',
-      backgroundHover: '#6890f0'
-    },
+    Water: '#539DDF',
 
-    Electric: {
-      color: '#a1871f',
-      backgroundHover: '#f8d030'
-    },
+    Electric: '#F2D94E',
 
-    Grass: {
-      color: '#4e8234',
-      backgroundHover: '#78c850'
-    },
+    Grass: '#5FBD58',
 
-    Ice: {
-      color: '#638d8d',
-      backgroundHover: '#98d8d8'
-    },
+    Ice: '#75D0C1',
 
-    Ground: {
-      color: '#927d44',
-      backgroundHover: '#e0c068'
-    },
+    Ground: '#DA7C4D',
 
-    Flying: {
-      color: '#6d5e9c',
-      backgroundHover: '#a890f0'
-    },
+    Flying: '#A1BBEC',
 
-    Ghost: {
-      color: '#493963',
-      backgroundHover: '#705898'
-    },
+    Ghost: '#5F6DBC',
 
-    Rock: {
-      color: '#786824',
-      backgroundHover: '#b8a038'
-    },
+    Rock: '#C9BB8A',
 
-    Fighting: {
-      color: '#7d1f1a',
-      backgroundHover: '#c03028'
-    },
+    Fighting: '#D3425F',
 
-    Poison: {
-      color: '#682a68',
-      backgroundHover: '#a040a0'
-    },
+    Poison: '#B763CF',
 
-    Psychic: {
-      color: '#a13959',
-      backgroundHover: '#f85888'
-    },
+    Psychic: '#FA8581',
 
-    Bug: {
-      color: '#6d7815',
-      backgroundHover: '#a8b820'
-    },
+    Bug: '#92BC2C',
 
-    Dark: {
-      color: '#49392f',
-      backgroundHover: '#705848'
-    },
+    Dark: '#595761',
 
-    Steel: {
-      color: '#787887',
-      backgroundHover: '#b8b8d0'
-    },
+    Steel: '#5695A3',
 
-    Dragon: {
-      color: '#4924a1',
-      backgroundHover: '#7038f8'
-    },
+    Dragon: '#0C69C8',
 
-    Fairy: {
-      color: '#fa58f4',
-      backgroundHover: '#f781d8'
-    }
+    Fairy: '#EE90E6'
   }
 } as const

@@ -8,8 +8,9 @@ export type TypeColorProps = {
 
 export const wrapperModifiers = {
   type: (theme: DefaultTheme, typeColor: PokemonTypesProps) => css`
-    border-color: ${theme.pokemonTypeColors[typeColor].backgroundHover};
-    color: ${theme.pokemonTypeColors[typeColor].backgroundHover};
+    border-color: ${theme.pokemonTypeColors[typeColor]};
+    color: ${theme.pokemonTypeColors[typeColor]};
+    box-shadow: 0 0 1rem ${theme.pokemonTypeColors[typeColor]};
   `
 }
 
@@ -20,16 +21,11 @@ export const Wrapper = styled.div<TypeColorProps>`
 
     padding: ${theme.spacings.xxsmall};
 
-    /* background-color: ${theme.colors.lightBg}; */
     border-radius: ${theme.border.radius};
     border: 0.1rem solid;
     text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    cursor: pointer;
 
-    /* &:hover {
-      background-color: ${lighten(0.1, theme.colors.lightBg)};
-    } */
+    cursor: pointer;
 
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}

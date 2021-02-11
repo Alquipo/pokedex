@@ -9,8 +9,8 @@ export const Wrapper = styled.div<PokemonTypeIconProps>`
     transition: all 0.2s;
     margin: 2px 3px;
 
-    background-color: ${theme.pokemonTypeColors[typeIcon].backgroundHover};
-    box-shadow: 0 0 2rem ${theme.pokemonTypeColors[typeIcon].backgroundHover};
+    background-color: ${theme.pokemonTypeColors[typeIcon]};
+    box-shadow: 0 0 2rem ${theme.pokemonTypeColors[typeIcon]};
   `}
 `
 

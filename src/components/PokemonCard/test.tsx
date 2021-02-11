@@ -4,8 +4,7 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import PokemonCard, { PokemonCardProps } from '.'
 
 const props: PokemonCardProps = {
-  id: '5',
-  image: '/img/pokemons/025.png',
+  id: 5,
   name: 'Pikachu',
   type: ['Electric', 'Flying']
 }
