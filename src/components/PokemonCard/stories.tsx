@@ -28,9 +28,9 @@ export default {
   title: 'PokemonCard',
   component: PokemonCard,
   args: {
-    id: '5',
-    name: 'Pikachu',
-    type: ['Electric', 'Fire']
+    id: '6',
+    name: 'Charizard',
+    type: ['Fire', 'Flying']
   },
   argTypes: {
     type: {
