@@ -149,7 +149,7 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
       <img
         alt="Fire"
         class="c6"
-        src="img/type-icons/Fire.png"
+        src="img/type-icons/fire.png"
       />
     </div>
     <div
@@ -158,7 +158,7 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
       <img
         alt="Flying"
         class="c6"
-        src="img/type-icons/Flying.png"
+        src="img/type-icons/flying.png"
       />
     </div>
   </div>

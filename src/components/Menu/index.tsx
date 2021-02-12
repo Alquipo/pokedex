@@ -1,17 +1,17 @@
-import Search from 'components/Search'
-import { useState } from 'react'
+// import Search from 'components/Search'
+// import { useState } from 'react'
 import GithubCorner from 'react-github-corner'
-import { pokemonFilteredName } from 'utils/formatName'
+// import { pokemonFilteredName } from 'utils/formatName'
 
 import * as S from './styles'
 
 export type MenuProps = {
-  hasLogo: boolean
-  hasGitHubCorner: boolean
-  hasSearch: boolean
+  hasLogo?: boolean
+  hasGitHubCorner?: boolean
+  hasSearch?: boolean
 }
 
-const Menu = ({ hasGitHubCorner, hasLogo, hasSearch }: MenuProps) => {
+const Menu = ({ hasGitHubCorner, hasLogo }: MenuProps) => {
   // const [search, setSearch] = useState('')
 
   // function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -24,9 +24,9 @@ const Menu = ({ hasGitHubCorner, hasLogo, hasSearch }: MenuProps) => {
     <S.Wrapper>
       {/* <Search onChange={handleOnChange} value={search} placeholder="teste" /> */}
 
-      {!!hasLogo && <S.Logo src="img/pokemon-logo.svg" />}
+      {hasLogo && <S.Logo src="img/pokemon-logo.svg" alt="Pokemon logo" />}
 
-      {!!hasGitHubCorner && (
+      {hasGitHubCorner && (
         <GithubCorner
           href="https://github.com/Alquipo/pokedex-v2"
           size={65}

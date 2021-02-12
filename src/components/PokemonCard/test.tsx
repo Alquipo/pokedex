@@ -24,7 +24,7 @@ describe('<PokemonCard />', () => {
 
     expect(screen.getByRole('img', { name: props.types[0] })).toHaveAttribute(
       'src',
-      `img/type-icons/Fire.png`
+      `img/type-icons/fire.png`
     )
 
     expect(container.firstChild).toMatchSnapshot()
