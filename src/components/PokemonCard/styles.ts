@@ -30,7 +30,7 @@ export const Wrapper = styled.div<TypeColorProps>`
 
     cursor: pointer;
 
-    background-color: #fff;
+    background-color: ${theme.colors.white};
 
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}
