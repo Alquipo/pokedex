@@ -24,7 +24,7 @@ export const Wrapper = styled.div<TypeColorProps>`
     padding: ${theme.spacings.xxsmall};
     margin: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
 
-    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.radius.large};
     border: 0.1rem solid;
     text-align: center;
 

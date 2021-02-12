@@ -4,7 +4,11 @@ export default {
     gutter: '3.2rem'
   },
   border: {
-    radius: '1.0rem'
+    radius: {
+      xsmall: '0.3rem',
+      small: '0.5rem',
+      large: '1.0rem'
+    }
   },
   font: {
     family: "'Roboto', sans-serif",
@@ -28,14 +32,14 @@ export default {
     white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
+    gray: '#505050',
     darkGray: '#2E2F42',
     transparent: 'hsla(0,0%,100%,0.5)'
   },
   spacings: {
     xxsmall: '0.3rem',
     xsmall: '0.8rem',
-    small: '2.4rem',
+    small: '1.6rem',
     medium: '3.2rem',
     large: '4.0rem',
     xlarge: '4.8rem',
