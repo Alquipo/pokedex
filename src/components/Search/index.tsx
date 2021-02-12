@@ -1,9 +1,13 @@
 import * as S from './styles'
 
-const Search = () => (
-  <S.Wrapper>
-    <h1>Search</h1>
-  </S.Wrapper>
-)
+type Props = React.InputHTMLAttributes<HTMLInputElement>
+
+const Search: React.FC<Props> = (props) => {
+  return (
+    <S.Wrapper>
+      <S.Input type="text" {...props} autoFocus />
+    </S.Wrapper>
+  )
+}
 
 export default Search
