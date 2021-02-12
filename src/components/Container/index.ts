@@ -5,11 +5,6 @@ export const Container = styled.div`
     width: 100%;
     max-width: ${theme.grid.container};
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
     margin-left: auto;
     margin-right: auto;
 
