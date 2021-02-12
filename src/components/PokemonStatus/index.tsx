@@ -74,44 +74,31 @@ const PokemonStatus = ({ type }: PokemonStatusProps) => (
             <tbody>
               <tr>
                 <td>#003</td>
-                <td>ID</td>
+                <td>HP</td>
               </tr>
               <tr>
                 <td>2.0m {'(6.7)'}</td>
-                <td>Height</td>
+                <td>Attack</td>
               </tr>
               <tr>
                 <td>13Kg</td>
-                <td>Wight</td>
+                <td>Defence</td>
               </tr>
               <tr>
-                <td>
-                  <span>
-                    <S.ButtonAbilities role="button" type={(type = 'Grass')}>
-                      Overgrow
-                    </S.ButtonAbilities>
-                    <S.ButtonAbilities role="button" type={(type = 'Grass')}>
-                      Overgrow
-                    </S.ButtonAbilities>
-                  </span>
-                </td>
-                <td>Abilities</td>
+                <td>13Kg</td>
+                <td>Sp. Attack</td>
               </tr>
-
               <tr>
-                <td>
-                  <S.WrapperTypes>
-                    <S.Type type={(type = 'Grass')}>
-                      <span>{type}</span>
-                      <PokemonTypeIcon typeIcon={'Grass'} />
-                    </S.Type>
-                    <S.Type type={(type = 'Poison')}>
-                      <span>{type}</span>
-                      <PokemonTypeIcon typeIcon={'Poison'} />
-                    </S.Type>
-                  </S.WrapperTypes>
-                </td>
-                <td>Type</td>
+                <td>13Kg</td>
+                <td>Sp. Defence</td>
+              </tr>
+              <tr>
+                <td>13Kg</td>
+                <td>Speed</td>
+              </tr>
+              <tr>
+                <td>13Kg</td>
+                <td>Total</td>
               </tr>
             </tbody>
           </S.Table>

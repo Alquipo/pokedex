@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> should render the heading 1`] = `
+<main
+  class=""
+>
+  <h1>
+    ProgressBar
+  </h1>
+</main>
+`;
