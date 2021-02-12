@@ -38,11 +38,6 @@ export const Wrapper = styled.div<TypeColorProps>`
 export const CardImg = styled.img`
   width: 10rem;
   margin: auto;
-
-  &:hover {
-    position: relative;
-    z-index: 2;
-  }
 `
 export const CardName = styled.h1`
   ${({ theme }) => css`
