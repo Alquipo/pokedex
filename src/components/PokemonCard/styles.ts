@@ -52,12 +52,6 @@ export const CardName = styled.h1`
     width: 18rem;
   `}
 `
-export const CardDetails = styled.span`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
-    font-weight: ${theme.font.normal};
-  `}
-`
 
 export const WrapperIcons = styled.div`
   display: flex;

@@ -1,7 +1,4 @@
-// import Search from 'components/Search'
-// import { useState } from 'react'
 import GithubCorner from 'react-github-corner'
-// import { pokemonFilteredName } from 'utils/formatName'
 
 import * as S from './styles'
 
@@ -12,14 +9,6 @@ export type MenuProps = {
 }
 
 const Menu = ({ hasGitHubCorner, hasLogo }: MenuProps) => {
-  // const [search, setSearch] = useState('')
-
-  // function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
-  //   setSearch(event.target.value)
-
-  //   pokemonFilteredName(search)
-  // }
-
   return (
     <S.Wrapper>
       {/* <Search onChange={handleOnChange} value={search} placeholder="teste" /> */}

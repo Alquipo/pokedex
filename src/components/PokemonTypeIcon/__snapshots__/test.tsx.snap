@@ -24,7 +24,7 @@ exports[`<PokemonTypeIcon /> should render the PokemonTypeIcon correctly 1`] = `
   <img
     alt="Fire"
     class="c1"
-    src="img/type-icons/Fire.png"
+    src="img/type-icons/fire.png"
   />
 </div>
 `;

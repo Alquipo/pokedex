@@ -14,7 +14,7 @@ describe('<PokemonTypeIcon />', () => {
 
     expect(screen.getByRole('img', { name: props.typeIcon })).toHaveAttribute(
       'src',
-      `img/type-icons/Fire.png`
+      `img/type-icons/fire.png`
     )
 
     expect(container.firstChild).toMatchSnapshot()
