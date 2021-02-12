@@ -5,7 +5,7 @@ export default {
   title: 'PokemonTypeIcon',
   component: PokemonTypeIcon,
   args: {
-    typeIcon: 'Fire'
+    type: 'Fire'
   }
 } as Meta
 

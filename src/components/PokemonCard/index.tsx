@@ -41,7 +41,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
 
     <S.WrapperIcons>
       {types.map((type, index) => (
-        <PokemonTypeIcon key={index} typeIcon={type} />
+        <PokemonTypeIcon key={index} type={type} />
       ))}
     </S.WrapperIcons>
   </S.Wrapper>

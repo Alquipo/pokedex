@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components'
-import { PokemonTypeIconProps } from '.'
+import { PokemonTypesProps } from 'components/PokemonCard'
 
-export const Wrapper = styled.div<PokemonTypeIconProps>`
+type WrapperProps = {
+  typeIcon: PokemonTypesProps
+}
+
+export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, typeIcon }) => css`
     border-radius: 100%;
     height: 3rem;

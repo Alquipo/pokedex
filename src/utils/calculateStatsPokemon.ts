@@ -1,11 +1,3 @@
-// export function calculateStats(stats: number) {
-//   return {
-//     stats,
-//     calculateMinStats(stats:number),
-//     calculateMaxStats(stats:number)
-//   }
-// }
-
 export function calculateMinStats(stats: number) {
   const statusMinPokemon = Math.floor(
     Math.floor((2 * stats * 100) / 100 + 5) * 0.9

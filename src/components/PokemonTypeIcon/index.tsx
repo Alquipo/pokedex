@@ -2,15 +2,12 @@ import { PokemonTypesProps } from 'components/PokemonCard'
 import * as S from './styles'
 
 export type PokemonTypeIconProps = {
-  typeIcon: PokemonTypesProps
+  type: PokemonTypesProps
 }
 
-const PokemonTypeIcon = ({ typeIcon }: PokemonTypeIconProps) => (
-  <S.Wrapper typeIcon={typeIcon}>
-    <S.Icon
-      src={`img/type-icons/${typeIcon.toLowerCase()}.png`}
-      alt={typeIcon}
-    />
+const PokemonTypeIcon = ({ type }: PokemonTypeIconProps) => (
+  <S.Wrapper typeIcon={type}>
+    <S.Icon src={`img/type-icons/${type.toLowerCase()}.png`} alt={type} />
   </S.Wrapper>
 )
 
