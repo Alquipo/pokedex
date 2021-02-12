@@ -20,6 +20,7 @@ const Menu = ({ hasGitHubCorner, hasLogo }: MenuProps) => {
           href="https://github.com/Alquipo/pokedex-v2"
           size={65}
           bannerColor={'#8F8F8F'}
+          target="_blank"
         />
       )}
     </S.Wrapper>
