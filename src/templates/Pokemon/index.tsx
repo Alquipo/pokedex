@@ -6,7 +6,6 @@ export type PokemonTemplateProps = {
   stats: PokemonStatusProps
 }
 const Pokemon = ({ stats }: PokemonTemplateProps) => {
-  console.log(stats)
   return (
     <>
       <Menu bgColor={stats.types[0]} />

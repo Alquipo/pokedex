@@ -35,10 +35,6 @@ export const Wrapper = styled.div<TypeColorProps>`
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}
 `
-export const CardImg = styled.img`
-  width: 10rem;
-  margin: auto;
-`
 export const CardName = styled.h1`
   ${({ theme }) => css`
     text-transform: capitalize;

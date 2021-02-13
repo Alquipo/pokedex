@@ -7,7 +7,7 @@ const pad = (id: number, length: number) => {
 }
 
 export function formatNameImageCompressed(id: number) {
-  return `img/thumbnails-compressed/${pad(id, 3)}.png`
+  return `/img/thumbnails-compressed/${pad(id, 3)}.png`
 }
 
 export function formatNameImageHD(id: number) {

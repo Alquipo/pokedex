@@ -1,7 +1,12 @@
+import Image from 'next/image'
+
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
 import Ribbon, { RibbonPosition } from 'components/Ribbon'
-import React from 'react'
-import { formatNameImageCompressed, formatNameID } from 'utils/formatName'
+import {
+  formatNameImageCompressed,
+  formatNameID,
+  formatNameImageHD
+} from 'utils/formatName'
 import * as S from './styles'
 
 export type PokemonTypesProps =
@@ -36,7 +41,9 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
     <Ribbon position={ribbonPosition} color={types[0]}>
       #{formatNameID(id)}
     </Ribbon>
-    <S.CardImg src={formatNameImageCompressed(id)} alt={name} />
+
+    <Image src={formatNameImageHD(id)} alt={name} width={100} height={100} />
+
     <S.CardName>{name}</S.CardName>
 
     <S.WrapperIcons>
