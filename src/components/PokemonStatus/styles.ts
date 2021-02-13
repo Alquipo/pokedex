@@ -1,6 +1,23 @@
+import { Container } from 'components/Container'
 import { PokemonTypesProps } from 'components/PokemonCard'
 import styled, { css } from 'styled-components'
 
+export const Wrapper = styled(Container)`
+  ${({ theme }) => css`
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &.pokemonStatus-appear {
+      animation: fadeIn 2s ease-in-out;
+    }
+  `}
+`
 export const PokemonName = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.gray};
@@ -14,15 +31,6 @@ export const PokemonName = styled.h1`
     transition: opacity 0.6s ease-in-out;
 
     cursor: default;
-
-    &.pokemonStatus-appear {
-      opacity: 0;
-    }
-
-    &.pokemonStatus-appear-active {
-      opacity: 1;
-      transition: opacity 1000ms ease-in;
-    }
   `}
 `
 

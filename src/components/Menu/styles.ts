@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import styled, { css, DefaultTheme } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { MenuProps } from '.'
 
 export const wrapperModifiers = {
@@ -32,9 +32,21 @@ export const Wrapper = styled.header<MenuProps>`
 
     ${positionLogo && wrapperModifiers[positionLogo]}
 
+    @keyframes fadeI {
+      0% {
+        background-color: ${theme.colors.pokemonText.transparent};
+      }
+
+      100% {
+        background-color: ${theme.colors.pokemonText[bgColor!]};
+      }
+    }
+
+    &.menu-appear {
+      animation: fadeI 2s ease-in-out;
+    }
     &.menu-appear-done {
       background-color: ${theme.colors.pokemonText[bgColor!]};
-      transition: background-color 1s ease-in-out;
     }
 
     backdrop-filter: saturate(180%) blur(0.2rem);

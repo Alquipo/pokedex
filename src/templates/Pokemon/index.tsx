@@ -1,6 +1,8 @@
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+
 import Menu from 'components/Menu'
 import PokemonStatus, { PokemonStatusProps } from 'components/PokemonStatus'
-import * as S from './styles'
+// import * as S from './styles'
 
 export type PokemonTemplateProps = {
   stats: PokemonStatusProps
@@ -8,14 +10,22 @@ export type PokemonTemplateProps = {
 const Pokemon = ({ stats }: PokemonTemplateProps) => {
   return (
     <>
-      <Menu
-        hasLogo
-        positionLogo={'right'}
-        hasTransition
-        bgColor={stats.types[0]}
-      />
+      <TransitionGroup appear={true} enter={true}>
+        <CSSTransition timeout={2000} classNames="menu">
+          <Menu
+            hasLogo
+            positionLogo={'right'}
+            hasTransition
+            bgColor={stats.types[0]}
+          />
+        </CSSTransition>
+      </TransitionGroup>
 
-      <PokemonStatus {...stats} />
+      <TransitionGroup appear={true} enter={true}>
+        <CSSTransition timeout={2000} classNames="pokemonStatus">
+          <PokemonStatus {...stats} />
+        </CSSTransition>
+      </TransitionGroup>
     </>
   )
 }
