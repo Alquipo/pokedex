@@ -7,7 +7,7 @@ export type PokemonTypeIconProps = {
 
 const PokemonTypeIcon = ({ type }: PokemonTypeIconProps) => (
   <S.Wrapper typeIcon={type}>
-    <S.Icon src={`img/type-icons/${type.toLowerCase()}.png`} alt={type} />
+    <S.Icon src={`/img/type-icons/${type.toLowerCase()}.png`} alt={type} />
   </S.Wrapper>
 )
 

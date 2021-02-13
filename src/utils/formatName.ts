@@ -6,8 +6,15 @@ const pad = (id: number, length: number) => {
   return str
 }
 
-export function formatNameImage(id: number) {
+export function formatNameImageCompressed(id: number) {
   return `img/thumbnails-compressed/${pad(id, 3)}.png`
+}
+
+export function formatNameImageHD(id: number) {
+  return `https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${pad(
+    id,
+    3
+  )}.png`
 }
 
 export function formatNameID(id: number) {

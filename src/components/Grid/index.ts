@@ -5,11 +5,9 @@ export const Grid = styled.div`
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1.4fr 1fr;
     display: inline-grid;
-    grid-gap: ${theme.spacings.small};
+    grid-gap: ${theme.spacings.xxsmall};
     justify-items: center;
-
-    margin: ${theme.spacings.medium} 0;
   `}
 `
