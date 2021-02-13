@@ -1,3 +1,5 @@
+import * as nextImage from 'next/image'
+
 import { addDecorator } from '@storybook/react'
 import { withNextRouter } from 'storybook-addon-next-router'
 
@@ -15,3 +17,9 @@ export const decorators = [
     </ThemeProvider>
   )
 ]
+
+//nextImage no storybook
+Object.defineProperty(nextImage, 'default', {
+  configurable: true,
+  value: (props) => <img {...props} />
+})

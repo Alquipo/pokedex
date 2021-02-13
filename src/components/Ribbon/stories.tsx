@@ -18,11 +18,21 @@ export default {
 export const Default: Story<RibbonProps> = (args) => (
   <div
     style={{
-      width: '40rem',
-      height: '25rem',
+      height: '16rem',
+      width: '18rem ',
+
       position: 'relative',
-      marginLeft: '10rem',
-      backgroundColor: '#888'
+
+      padding: '0.3rem',
+      margin: '0.3rem 0.8rem',
+
+      borderRadius: '1rem',
+      border: '0.1rem solid',
+      textAlign: 'center',
+
+      cursor: 'default',
+
+      backgroundColor: 'white'
     }}
   >
     <Ribbon {...args} />

@@ -14,6 +14,15 @@ export const PokemonName = styled.h1`
     transition: opacity 0.6s ease-in-out;
 
     cursor: default;
+
+    /* &.pokemonCard-appear {
+      opacity: 0;
+    }
+
+    &.pokemonCard-appear-active {
+      opacity: 1;
+      transition: opacity 1000ms ease-in;
+    } */
   `}
 `
 

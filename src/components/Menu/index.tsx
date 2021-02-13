@@ -1,19 +1,14 @@
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import GithubCorner from 'react-github-corner'
 
 import { PokemonTypesProps } from 'components/PokemonCard'
-import {
-  CSSTransition,
-  TransitionGroup,
-  Transition
-} from 'react-transition-group'
 
 import * as S from './styles'
 
 export type MenuProps = {
+  bgColor?: PokemonTypesProps | 'transparent'
   hasLogo?: boolean
   hasGitHubCorner?: boolean
-  hasSearch?: boolean
-  bgColor?: PokemonTypesProps | 'transparent'
   hasTransition?: boolean
 }
 
@@ -29,8 +24,6 @@ const Menu = ({
         <TransitionGroup>
           <CSSTransition appear={true} timeout={1200} classNames="menu">
             <S.Wrapper bgColor={bgColor}>
-              {/* <Search onChange={handleOnChange} value={search} placeholder="teste" /> */}
-
               {hasLogo && (
                 <S.Logo src="img/pokemon-logo.svg" alt="Pokemon logo" />
               )}
@@ -48,8 +41,6 @@ const Menu = ({
         </TransitionGroup>
       ) : (
         <S.Wrapper bgColor={bgColor}>
-          {/* <Search onChange={handleOnChange} value={search} placeholder="teste" /> */}
-
           {hasLogo && <S.Logo src="img/pokemon-logo.svg" alt="Pokemon logo" />}
 
           {hasGitHubCorner && (

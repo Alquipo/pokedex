@@ -12,9 +12,9 @@ export default {
     types: ['Fire', 'Flying']
   },
   argTypes: {
-    type: {
+    types: {
       control: {
-        types: 'inline-check',
+        type: 'inline-check',
         options: [
           'Normal',
           'Fire',

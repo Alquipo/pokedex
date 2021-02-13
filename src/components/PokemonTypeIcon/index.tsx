@@ -12,8 +12,8 @@ const PokemonTypeIcon = ({ type }: PokemonTypeIconProps) => (
     <Image
       src={`/img/type-icons/${type.toLowerCase()}.png`}
       alt={type}
-      width={23}
-      height={23}
+      width={22}
+      height={22}
     />
   </S.Wrapper>
 )
