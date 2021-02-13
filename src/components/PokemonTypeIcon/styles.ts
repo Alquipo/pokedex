@@ -19,6 +19,11 @@ export const Wrapper = styled.div<WrapperProps>`
 
     background-color: ${theme.colors.pokemonType[typeIcon]};
     box-shadow: 0 0 2rem ${theme.colors.pokemonType[typeIcon]};
+
+    &:hover {
+      filter: saturate(200%);
+      transform: scale(1.1);
+    }
   `}
 `
 

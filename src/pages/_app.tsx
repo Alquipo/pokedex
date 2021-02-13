@@ -24,6 +24,7 @@ function App({ Component, pageProps }: AppProps) {
           content="Uma simples pokedex usando TypeScript, React, NextJS and Styled Components"
         />
       </Head>
+
       <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>

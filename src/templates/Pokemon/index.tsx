@@ -8,7 +8,12 @@ export type PokemonTemplateProps = {
 const Pokemon = ({ stats }: PokemonTemplateProps) => {
   return (
     <>
-      <Menu hasTransition bgColor={stats.types[0]} />
+      <Menu
+        hasLogo
+        positionLogo={'right'}
+        hasTransition
+        bgColor={stats.types[0]}
+      />
 
       <PokemonStatus {...stats} />
     </>

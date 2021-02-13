@@ -32,6 +32,12 @@ export const Wrapper = styled.div<TypeColorProps>`
 
     background-color: ${theme.colors.white};
 
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}
 `

@@ -8,6 +8,7 @@ import * as S from './styles'
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
   hasLogo?: boolean
+  positionLogo?: 'right' | 'left' | 'center'
   hasGitHubCorner?: boolean
   hasTransition?: boolean
 }
@@ -16,16 +17,17 @@ const Menu = ({
   hasGitHubCorner,
   hasLogo,
   bgColor,
-  hasTransition
+  hasTransition,
+  positionLogo = 'center'
 }: MenuProps) => {
   return (
     <>
       {hasTransition ? (
-        <TransitionGroup>
-          <CSSTransition appear={true} timeout={1200} classNames="menu">
-            <S.Wrapper bgColor={bgColor}>
+        <TransitionGroup appear={true} enter={true}>
+          <CSSTransition timeout={1000} classNames="menu">
+            <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
               {hasLogo && (
-                <S.Logo src="img/pokemon-logo.svg" alt="Pokemon logo" />
+                <S.Logo src="/img/pokemon-logo.svg" alt="Pokemon logo" />
               )}
 
               {hasGitHubCorner && (
@@ -40,7 +42,7 @@ const Menu = ({
           </CSSTransition>
         </TransitionGroup>
       ) : (
-        <S.Wrapper bgColor={bgColor}>
+        <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
           {hasLogo && <S.Logo src="img/pokemon-logo.svg" alt="Pokemon logo" />}
 
           {hasGitHubCorner && (
