@@ -15,14 +15,14 @@ export const PokemonName = styled.h1`
 
     cursor: default;
 
-    /* &.pokemonCard-appear {
+    &.pokemonStatus-appear {
       opacity: 0;
     }
 
-    &.pokemonCard-appear-active {
+    &.pokemonStatus-appear-active {
       opacity: 1;
       transition: opacity 1000ms ease-in;
-    } */
+    }
   `}
 `
 

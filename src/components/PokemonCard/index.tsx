@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
 import Ribbon, { RibbonPosition } from 'components/Ribbon'
@@ -38,7 +39,9 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
       #{formatNameID(id)}
     </Ribbon>
 
-    <Image src={formatNameImageHD(id)} alt={name} width={100} height={100} />
+    <Link href={`pokemon/6`} passHref>
+      <Image src={formatNameImageHD(id)} alt={name} width={100} height={100} />
+    </Link>
 
     <S.CardName>{name}</S.CardName>
 

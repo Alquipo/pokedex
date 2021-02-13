@@ -28,7 +28,7 @@ const PokemonStatus = ({
   wight
 }: PokemonStatusProps) => (
   <TransitionGroup>
-    <CSSTransition appear={true} timeout={1000} classNames="pokemonCard">
+    <CSSTransition appear={true} timeout={1000} classNames="pokemonStatus">
       <Container>
         <S.PokemonName>{name}</S.PokemonName>
 

@@ -8,14 +8,14 @@ export default function PokemonPage(props: PokemonTemplateProps) {
   return <Pokemon {...props} />
 }
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [{ params: { id: '6' } }],
-//     fallback: false
-//   }
-// }
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { id: '6' } }],
+    fallback: false
+  }
+}
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps = async () => {
   return {
     props: {
       stats: mockPokemon

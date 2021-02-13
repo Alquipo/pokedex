@@ -28,7 +28,7 @@ export const Wrapper = styled.div<TypeColorProps>`
     border: 0.1rem solid;
     text-align: center;
 
-    cursor: pointer;
+    cursor: default;
 
     background-color: ${theme.colors.white};
 
