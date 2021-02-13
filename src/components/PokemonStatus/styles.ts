@@ -152,10 +152,7 @@ export const WrapperImage = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  img {
-    width: 100%;
-  }
+  width: 100%;
 `
 
 export const WrapperStatus = styled.section`

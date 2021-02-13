@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { Container } from 'components/Container'
 import { Grid } from 'components/Grid'
 import { PokemonTypesProps } from 'components/PokemonCard'
@@ -82,7 +84,12 @@ const PokemonStatus = ({
       </S.WrapperInformation>
 
       <S.WrapperImage>
-        <img src={formatNameImageHD(id)} />
+        <Image
+          src={formatNameImageHD(id)}
+          alt={name}
+          height={400}
+          width={500}
+        />
       </S.WrapperImage>
 
       <S.WrapperStatus>
@@ -90,32 +97,46 @@ const PokemonStatus = ({
           <S.Table>
             <tbody>
               <tr>
-                <td>#003</td>
-                <td>HP</td>
+                <td>ID</td>
+                <td>#{formatNameID(id)}</td>
               </tr>
               <tr>
-                <td>2.0m {'(6.7)'}</td>
-                <td>Attack</td>
+                <td>Height</td>
+                <td>{height}m</td>
               </tr>
               <tr>
-                <td>13Kg</td>
-                <td>Defence</td>
+                <td>Wight</td>
+                <td>{wight}Kg</td>
               </tr>
               <tr>
-                <td>13Kg</td>
-                <td>Sp. Attack</td>
+                <td>Abilities</td>
+                <td>
+                  <span>
+                    {abilities.map((ability, index) => (
+                      <S.ButtonAbilities
+                        key={index}
+                        role="button"
+                        typeColor={types[0]}
+                      >
+                        {ability}
+                      </S.ButtonAbilities>
+                    ))}
+                  </span>
+                </td>
               </tr>
+
               <tr>
-                <td>13Kg</td>
-                <td>Sp. Defence</td>
-              </tr>
-              <tr>
-                <td>13Kg</td>
-                <td>Speed</td>
-              </tr>
-              <tr>
-                <td>13Kg</td>
-                <td>Total</td>
+                <td>Type</td>
+                <td>
+                  <S.WrapperTypes>
+                    {types.map((type, index) => (
+                      <S.Type key={index} typeColor={type}>
+                        <span>{type}</span>
+                        <PokemonTypeIcon type={type} />
+                      </S.Type>
+                    ))}
+                  </S.WrapperTypes>
+                </td>
               </tr>
             </tbody>
           </S.Table>

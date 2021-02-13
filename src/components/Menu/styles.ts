@@ -15,14 +15,18 @@ export const Wrapper = styled.header<Pick<MenuProps, 'bgColor'>>`
     z-index: ${theme.layers.menu};
     top: 0;
 
+    &.menu-appear {
+      opacity: 0;
+    }
+
+    &.menu-appear-active {
+      opacity: 1;
+      transition: opacity 1200ms ease-in, box-shadow 1200ms ease-in;
+    }
+
     background-color: ${theme.colors.pokemonText[bgColor!]};
-
-    transition: ${theme.transition.backgroundColor};
-
     backdrop-filter: saturate(180%) blur(0.2rem);
-
     box-shadow: 0 0 40px 8px rgb(0 0 0 / 18%);
-    transition: box-shadow 0.2s ease 0s;
   `}
 `
 

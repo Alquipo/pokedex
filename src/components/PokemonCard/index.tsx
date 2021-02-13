@@ -2,11 +2,7 @@ import Image from 'next/image'
 
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
 import Ribbon, { RibbonPosition } from 'components/Ribbon'
-import {
-  formatNameImageCompressed,
-  formatNameID,
-  formatNameImageHD
-} from 'utils/formatName'
+import { formatNameID, formatNameImageHD } from 'utils/formatName'
 import * as S from './styles'
 
 export type PokemonTypesProps =

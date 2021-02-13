@@ -86,7 +86,7 @@ export default {
 
   transition: {
     color: 'color 1000ms ease-in, width 1500ms ease-in-out',
-    backgroundColor: 'background-color 100ms ease-in, width 1500ms ease-in-out'
+    backgroundColor: 'background-color 1000ms ease-in, width 1500ms ease-in-out'
   },
 
   spacings: {
