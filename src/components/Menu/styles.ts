@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
+import { MenuProps } from '.'
 
-export const Wrapper = styled.header`
-  ${({ theme }) => css`
+export const Wrapper = styled.header<Pick<MenuProps, 'bgColor'>>`
+  ${({ theme, bgColor }) => css`
     height: 6.5rem;
 
     display: flex;
@@ -14,7 +15,10 @@ export const Wrapper = styled.header`
     z-index: ${theme.layers.menu};
     top: 0;
 
-    background-color: ${theme.colors.transparent};
+    background-color: ${theme.colors.pokemonText[bgColor!]};
+
+    transition: ${theme.transition.backgroundColor};
+
     backdrop-filter: saturate(180%) blur(0.2rem);
 
     box-shadow: 0 0 40px 8px rgb(0 0 0 / 18%);

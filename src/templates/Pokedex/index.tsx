@@ -11,7 +11,7 @@ export type PokedexTemplateProps = {
 const Pokedex = ({ pokemons }: PokedexTemplateProps) => {
   return (
     <>
-      <Menu hasLogo hasGitHubCorner hasSearch />
+      <Menu hasLogo hasGitHubCorner hasSearch bgColor="transparent" />
       <Container>
         <S.Wrapper>
           {pokemons.map((pokemon, index) => (

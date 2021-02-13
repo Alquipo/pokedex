@@ -9,7 +9,7 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
   console.log(stats)
   return (
     <>
-      <Menu />
+      <Menu bgColor={stats.types[0]} />
 
       <PokemonStatus {...stats} />
     </>

@@ -26,8 +26,8 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
     padding: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
 
-    background-color: ${theme.colors.pokemonType[typeColor]};
-    transition: background-color 1s ease-in, width 1.5s ease-in-out;
+    background-color: ${theme.colors.pokemonText[typeColor]};
+    transition: ${theme.transition.backgroundColor};
 
     text-transform: capitalize;
     border-radius: ${theme.border.radius.xsmall};
@@ -95,8 +95,8 @@ export const ButtonAbilities = styled.span<PokemonTypeColors>`
     color: ${theme.colors.white};
     font-weight: 500;
 
-    background-color: ${theme.colors.pokemonType[typeColor]};
-    transition: background-color 1s ease-in, width 1.5s ease-in-out;
+    background-color: ${theme.colors.pokemonText[typeColor]};
+    transition: ${theme.transition.backgroundColor};
 
     border-radius: ${theme.border.radius.xsmall};
     border: none;
