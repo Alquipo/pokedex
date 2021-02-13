@@ -32,16 +32,7 @@ export const Wrapper = styled.header<MenuProps>`
 
     ${positionLogo && wrapperModifiers[positionLogo]}
 
-    /* &.menu-enter {
-      background-color: ${theme.colors.pokemonText.transparent};
-    } */
-
-    /* &.menu-enter-active {
-      background-color: ${theme.colors.pokemonText[bgColor!]};
-      transition: background-color 1s ease-in;
-    } */
-
-    &.menu-enter-done {
+    &.menu-appear-done {
       background-color: ${theme.colors.pokemonText[bgColor!]};
       transition: background-color 1s ease-in-out;
     }
