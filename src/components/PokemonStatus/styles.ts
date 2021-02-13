@@ -1,11 +1,14 @@
+import { PokemonTypesProps } from 'components/PokemonCard'
 import styled, { css } from 'styled-components'
-import { PokemonStatusProps } from '.'
 
 export const PokemonName = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.gray};
     text-transform: uppercase;
     font-weight: 500;
+
+    margin-top: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.xsmall};
 
     opacity: 1;
     transition: opacity 0.6s ease-in-out;
@@ -14,12 +17,16 @@ export const PokemonName = styled.h1`
   `}
 `
 
-export const PokemonCategory = styled.span<Pick<PokemonStatusProps, 'type'>>`
-  ${({ theme, type }) => css`
+type PokemonTypeColors = {
+  typeColor: PokemonTypesProps
+}
+
+export const PokemonCategory = styled.span<PokemonTypeColors>`
+  ${({ theme, typeColor }) => css`
     padding: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
 
-    background-color: ${theme.pokemonTypeColors[type]};
+    background-color: ${theme.pokemonTypeColors[typeColor]};
     transition: background-color 1s ease-in, width 1.5s ease-in-out;
 
     text-transform: capitalize;
@@ -37,14 +44,19 @@ export const WrapperInformation = styled.section`
 
   padding-left: 1rem;
 
-  perspective: 400px;
+  perspective: 30rem;
 
   cursor: default;
 `
 export const RotateDivRight = styled.div`
   transition: 0.3s;
   transform: rotateY(30deg);
+  height: 100%;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     transform: rotateY(0);
@@ -54,12 +66,13 @@ export const RotateDivRight = styled.div`
 export const Table = styled.table`
   ${({ theme }) => css`
     width: 100%;
+    height: 50%;
 
-    font-weight: 700;
     line-height: 1.5;
     color: ${theme.colors.gray};
 
     td:first-child {
+      font-weight: 700;
       text-align: right;
     }
 
@@ -77,12 +90,12 @@ export const Table = styled.table`
   `}
 `
 
-export const ButtonAbilities = styled.span<Pick<PokemonStatusProps, 'type'>>`
-  ${({ theme, type }) => css`
+export const ButtonAbilities = styled.span<PokemonTypeColors>`
+  ${({ theme, typeColor }) => css`
     color: ${theme.colors.white};
     font-weight: 500;
 
-    background-color: ${theme.pokemonTypeColors[type]};
+    background-color: ${theme.pokemonTypeColors[typeColor]};
     transition: background-color 1s ease-in, width 1.5s ease-in-out;
 
     border-radius: ${theme.border.radius.xsmall};
@@ -102,8 +115,8 @@ export const WrapperTypes = styled.div`
   flex-direction: row;
 `
 
-export const Type = styled.div<Pick<PokemonStatusProps, 'type'>>`
-  ${({ theme, type }) => css`
+export const Type = styled.div<PokemonTypeColors>`
+  ${({ theme, typeColor }) => css`
     text-transform: capitalize;
 
     border-radius: ${theme.border.radius.small};
@@ -116,8 +129,8 @@ export const Type = styled.div<Pick<PokemonStatusProps, 'type'>>`
     flex-direction: row;
     justify-content: space-between;
 
-    background: ${theme.pokemonTypeColors[type]};
-    box-shadow: 0 0 20px ${theme.pokemonTypeColors[type]};
+    background: ${theme.pokemonTypeColors[typeColor]};
+    box-shadow: 0 0 20px ${theme.pokemonTypeColors[typeColor]};
     transition: all 0.2s;
     filter: saturate(100%) brightness(110%);
 
@@ -153,7 +166,7 @@ export const WrapperStatus = styled.section`
 
   padding-left: 1rem;
 
-  perspective: 400px;
+  perspective: 30rem;
 
   cursor: default;
 `

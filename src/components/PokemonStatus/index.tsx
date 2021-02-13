@@ -2,16 +2,32 @@ import { Container } from 'components/Container'
 import { Grid } from 'components/Grid'
 import { PokemonTypesProps } from 'components/PokemonCard'
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
+import { formatNameID, formatNameImageHD } from 'utils/formatName'
 import * as S from './styles'
 
 export type PokemonStatusProps = {
-  type: PokemonTypesProps
+  name: string
+  category: string
+  id: number
+  height: number
+  wight: number
+  abilities: string[]
+  types: PokemonTypesProps[]
 }
-const PokemonStatus = ({ type }: PokemonStatusProps) => (
-  <Container>
-    <S.PokemonName>Charizard</S.PokemonName>
 
-    <S.PokemonCategory type={(type = 'Grass')}>Seed Pokemon</S.PokemonCategory>
+const PokemonStatus = ({
+  types,
+  abilities,
+  category,
+  height,
+  id,
+  name,
+  wight
+}: PokemonStatusProps) => (
+  <Container>
+    <S.PokemonName>{name}</S.PokemonName>
+
+    <S.PokemonCategory typeColor={types[0]}>{category}</S.PokemonCategory>
 
     <Grid>
       <S.WrapperInformation>
@@ -20,26 +36,29 @@ const PokemonStatus = ({ type }: PokemonStatusProps) => (
             <tbody>
               <tr>
                 <td>ID</td>
-                <td>#003</td>
+                <td>#{formatNameID(id)}</td>
               </tr>
               <tr>
                 <td>Height</td>
-                <td>2.0m {'(6.7)'}</td>
+                <td>{height}m</td>
               </tr>
               <tr>
                 <td>Wight</td>
-                <td>13Kg</td>
+                <td>{wight}Kg</td>
               </tr>
               <tr>
                 <td>Abilities</td>
                 <td>
                   <span>
-                    <S.ButtonAbilities role="button" type={(type = 'Grass')}>
-                      Overgrow
-                    </S.ButtonAbilities>
-                    <S.ButtonAbilities role="button" type={(type = 'Grass')}>
-                      Chlorophyll
-                    </S.ButtonAbilities>
+                    {abilities.map((ability, index) => (
+                      <S.ButtonAbilities
+                        key={index}
+                        role="button"
+                        typeColor={types[0]}
+                      >
+                        {ability}
+                      </S.ButtonAbilities>
+                    ))}
                   </span>
                 </td>
               </tr>
@@ -48,14 +67,12 @@ const PokemonStatus = ({ type }: PokemonStatusProps) => (
                 <td>Type</td>
                 <td>
                   <S.WrapperTypes>
-                    <S.Type type={(type = 'Grass')}>
-                      <span>{type}</span>
-                      <PokemonTypeIcon typeIcon={'Grass'} />
-                    </S.Type>
-                    <S.Type type={(type = 'Poison')}>
-                      <span>{type}</span>
-                      <PokemonTypeIcon typeIcon={'Poison'} />
-                    </S.Type>
+                    {types.map((type, index) => (
+                      <S.Type key={index} typeColor={type}>
+                        <span>{type}</span>
+                        <PokemonTypeIcon type={type} />
+                      </S.Type>
+                    ))}
                   </S.WrapperTypes>
                 </td>
               </tr>
@@ -65,7 +82,7 @@ const PokemonStatus = ({ type }: PokemonStatusProps) => (
       </S.WrapperInformation>
 
       <S.WrapperImage>
-        <img src="https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/003.png" />
+        <img src={formatNameImageHD(id)} />
       </S.WrapperImage>
 
       <S.WrapperStatus>
