@@ -17,8 +17,8 @@ export const Wrapper = styled.div<WrapperProps>`
     align-items: center;
     justify-content: center;
 
-    background-color: ${theme.pokemonTypeColors[typeIcon]};
-    box-shadow: 0 0 2rem ${theme.pokemonTypeColors[typeIcon]};
+    background-color: ${theme.colors.pokemonType[typeIcon]};
+    box-shadow: 0 0 2rem ${theme.colors.pokemonType[typeIcon]};
   `}
 `
 

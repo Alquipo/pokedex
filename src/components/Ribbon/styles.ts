@@ -4,11 +4,11 @@ import { RibbonColors, RibbonProps } from '.'
 
 const wrapperModifiers = {
   color: (theme: DefaultTheme, color: RibbonColors) => css`
-    background-color: ${theme.pokemonTypeColors[color]};
+    background-color: ${theme.colors.pokemonType[color]};
 
     &::before {
-      border-left-color: ${darken(0.2, theme.pokemonTypeColors[color])};
-      border-top-color: ${darken(0.2, theme.pokemonTypeColors[color])};
+      border-left-color: ${darken(0.2, theme.colors.pokemonType[color])};
+      border-top-color: ${darken(0.2, theme.colors.pokemonType[color])};
     }
   `,
 

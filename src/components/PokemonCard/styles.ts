@@ -7,11 +7,11 @@ export type TypeColorProps = {
 
 export const wrapperModifiers = {
   type: (theme: DefaultTheme, typeColor: PokemonTypesProps) => css`
-    border-color: ${theme.pokemonTypeColors[typeColor]};
-    color: ${theme.pokemonTypeColors[typeColor]};
+    border-color: ${theme.colors.pokemonType[typeColor]};
+    color: ${theme.colors.pokemonType[typeColor]};
 
     &:hover {
-      box-shadow: 0 0 1rem ${theme.pokemonTypeColors[typeColor]};
+      box-shadow: 0 0 1rem ${theme.colors.pokemonType[typeColor]};
     }
   `
 }

@@ -28,13 +28,34 @@ export default {
     // primary: '#ecf0f1',
     // secondary: '#e4c439',
     // mainBg: '#06092B',
+    // black: '#030517',
+    // darkGray: '#2E2F42',
     lightBg: '#F2F2F2',
     white: '#FAFAFA',
-    black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#505050',
-    darkGray: '#2E2F42',
-    transparent: 'hsla(0,0%,100%,0.5)'
+    transparent: 'hsla(0,0%,100%,0.5)',
+
+    pokemonType: {
+      Normal: '#A0A29F',
+      Fire: '#FBA54C',
+      Water: '#539DDF',
+      Electric: '#F2D94E',
+      Grass: '#5FBD58',
+      Ice: '#75D0C1',
+      Ground: '#DA7C4D',
+      Flying: '#A1BBEC',
+      Ghost: '#5F6DBC',
+      Rock: '#C9BB8A',
+      Fighting: '#D3425F',
+      Poison: '#B763CF',
+      Psychic: '#FA8581',
+      Bug: '#92BC2C',
+      Dark: '#595761',
+      Steel: '#5695A3',
+      Dragon: '#0C69C8',
+      Fairy: '#EE90E6'
+    }
   },
   spacings: {
     xxsmall: '0.3rem',
@@ -51,43 +72,5 @@ export default {
     overlay: 30,
     modal: 40,
     alwaysOnTop: 50
-  },
-
-  pokemonTypeColors: {
-    Normal: '#A0A29F',
-
-    Fire: '#FBA54C',
-
-    Water: '#539DDF',
-
-    Electric: '#F2D94E',
-
-    Grass: '#5FBD58',
-
-    Ice: '#75D0C1',
-
-    Ground: '#DA7C4D',
-
-    Flying: '#A1BBEC',
-
-    Ghost: '#5F6DBC',
-
-    Rock: '#C9BB8A',
-
-    Fighting: '#D3425F',
-
-    Poison: '#B763CF',
-
-    Psychic: '#FA8581',
-
-    Bug: '#92BC2C',
-
-    Dark: '#595761',
-
-    Steel: '#5695A3',
-
-    Dragon: '#0C69C8',
-
-    Fairy: '#EE90E6'
   }
 } as const

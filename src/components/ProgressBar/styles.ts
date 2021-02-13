@@ -32,7 +32,7 @@ export const fillerStyles = styled.div<fillerStylesProps>`
   ${({ theme, bgColor, size, progressBar }) => css`
     height: 100%;
 
-    background-color: ${theme.pokemonTypeColors[bgColor]};
+    background-color: ${theme.colors.pokemonType[bgColor]};
     border-radius: inherit;
 
     transition: background-color 1.5s ease-in, width 1.5s ease-in-out;

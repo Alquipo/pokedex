@@ -8,10 +8,11 @@ export type PokemonTemplateProps = {
 const Pokemon = ({ stats }: PokemonTemplateProps) => {
   console.log(stats)
   return (
-    <S.Wrapper>
+    <>
       <Menu />
+
       <PokemonStatus {...stats} />
-    </S.Wrapper>
+    </>
   )
 }
 

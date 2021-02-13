@@ -26,7 +26,7 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
     padding: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
 
-    background-color: ${theme.pokemonTypeColors[typeColor]};
+    background-color: ${theme.colors.pokemonType[typeColor]};
     transition: background-color 1s ease-in, width 1.5s ease-in-out;
 
     text-transform: capitalize;
@@ -83,7 +83,7 @@ export const Table = styled.table`
     span {
       cursor: pointer;
 
-      button:last-child {
+      span:last-child {
         filter: brightness(110%) saturate(50%);
       }
     }
@@ -95,7 +95,7 @@ export const ButtonAbilities = styled.span<PokemonTypeColors>`
     color: ${theme.colors.white};
     font-weight: 500;
 
-    background-color: ${theme.pokemonTypeColors[typeColor]};
+    background-color: ${theme.colors.pokemonType[typeColor]};
     transition: background-color 1s ease-in, width 1.5s ease-in-out;
 
     border-radius: ${theme.border.radius.xsmall};
@@ -129,8 +129,8 @@ export const Type = styled.div<PokemonTypeColors>`
     flex-direction: row;
     justify-content: space-between;
 
-    background: ${theme.pokemonTypeColors[typeColor]};
-    box-shadow: 0 0 20px ${theme.pokemonTypeColors[typeColor]};
+    background: ${theme.colors.pokemonType[typeColor]};
+    box-shadow: 0 0 20px ${theme.colors.pokemonType[typeColor]};
     transition: all 0.2s;
     filter: saturate(100%) brightness(110%);
 

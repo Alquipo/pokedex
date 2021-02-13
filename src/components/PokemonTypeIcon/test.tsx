@@ -5,14 +5,14 @@ import theme from 'styles/theme'
 import PokemonTypeIcon, { PokemonTypeIconProps } from '.'
 
 const props: PokemonTypeIconProps = {
-  typeIcon: 'Fire'
+  type: 'Fire'
 }
 
 describe('<PokemonTypeIcon />', () => {
   it('should render the PokemonTypeIcon correctly', () => {
     const { container } = renderWithTheme(<PokemonTypeIcon {...props} />)
 
-    expect(screen.getByRole('img', { name: props.typeIcon })).toHaveAttribute(
+    expect(screen.getByRole('img', { name: props.type })).toHaveAttribute(
       'src',
       `img/type-icons/fire.png`
     )
@@ -24,8 +24,8 @@ describe('<PokemonTypeIcon />', () => {
     const { container } = renderWithTheme(<PokemonTypeIcon {...props} />)
 
     expect(container.firstChild).toHaveStyle({
-      backgroundColor: theme.pokemonTypeColors[props.typeIcon],
-      boxShadow: `0 0 2rem ${theme.pokemonTypeColors[props.typeIcon]}`
+      backgroundColor: theme.colors.pokemonType[props.type],
+      boxShadow: `0 0 2rem ${theme.colors.pokemonType[props.type]}`
     })
   })
 })

@@ -37,7 +37,7 @@ describe('<Ribbon />', () => {
     renderWithTheme(<Ribbon color={'Normal'}>#005</Ribbon>)
 
     expect(screen.getByText(/#005/i)).toHaveStyle({
-      backgroundColor: theme.pokemonTypeColors.Normal
+      backgroundColor: theme.colors.pokemonType.Normal
     })
   })
 })
