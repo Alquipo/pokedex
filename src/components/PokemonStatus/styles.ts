@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media, { generateMedia } from 'styled-media-query'
+import { generateMedia } from 'styled-media-query'
 
 import { Container } from 'components/Container'
 import { PokemonTypesProps } from 'components/PokemonCard'
@@ -97,12 +97,11 @@ export const RotateDivRight = styled.div`
     justify-content: center;
     align-items: center;
 
-    transition: 0.4s;
-
     width: 100%;
 
     ${customMedia.greaterThan('desktop')`
       transform: rotateY(30deg);
+      transition: 0.4s;
       &:hover {
         transform: rotateY(0);
       }
@@ -222,16 +221,18 @@ export const RotateDivLeft = styled.div`
   justify-content: center;
   align-items: center;
 
-  transition: 0.5s;
-  transform: rotateY(-30deg);
-
   width: 100%;
 
   padding-right: 5rem;
 
-  &:hover {
-    transform: rotateY(0);
-  }
+  ${customMedia.greaterThan('desktop')`
+      transform: rotateY(-30deg);
+      transition: 0.4s;
+
+      &:hover {
+        transform: rotateY(0);
+      }
+    `}
 `
 
 export const TableStats = styled.table`

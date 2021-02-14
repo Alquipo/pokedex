@@ -5,8 +5,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-smooth: antialiased;
     scroll-behavior: smooth;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     //scrollbar configuration
     ::-webkit-scrollbar{
@@ -26,7 +28,48 @@ const GlobalStyles = createGlobalStyle`
     }
     ::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local(''),
+          url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('/fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+      src: local(''),
+          url('/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
+      src: local(''),
+          url('/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+
+    }
+    @font-face {
+      font-family: 'Reggae One';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/reggae-one-v1-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local(''),
+          url('/fonts/reggae-one-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+
+    }
   }
 
   ${({ theme }) => css`

@@ -14,7 +14,8 @@ export default {
 
   font: {
     family: {
-      roboto: "'Roboto', sans-serif",
+      roboto:
+        "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       reggae: "'Reggae One', cursive"
     },
     light: 300,

@@ -127,12 +127,8 @@ const PokemonStatus = ({
       </S.WrapperStats>
     </S.Wrapper>
     <br />
-    <br />
-    <br />
-    <br /> <br />
-    <br /> <br />
-    <br />
-    <h1>More Content Coming Soon!</h1>
+
+    <S.PokemonName>More Content Coming Soon!</S.PokemonName>
   </S.ContainerInformation>
 )
 
