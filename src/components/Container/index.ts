@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   ${({ theme }) => css`
     width: 100%;
-    max-width: ${theme.grid.container};
+
     min-width: 450px;
 
     display: flex;

@@ -1,8 +1,14 @@
+import styled, { css } from 'styled-components'
+import media, { generateMedia } from 'styled-media-query'
+
 import { Container } from 'components/Container'
 import { PokemonTypesProps } from 'components/PokemonCard'
-import styled, { css } from 'styled-components'
 
-export const Wrapper = styled(Container)`
+const customMedia = generateMedia({
+  desktop: '980px'
+})
+
+export const ContainerInformation = styled(Container)`
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -16,6 +22,7 @@ export const Wrapper = styled(Container)`
     animation: fadeIn 1.5s ease-in-out;
   }
 `
+
 export const PokemonName = styled.h1`
   ${({ theme }) => css`
     width: 100%;
@@ -51,25 +58,45 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
   `}
 `
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  ${customMedia.lessThan('desktop')`
+    flex-direction: column;
+
+  `}
+`
+
 export const WrapperInformation = styled.section`
   display: flex;
-  align-items: center;
 
   width: 100%;
   padding-left: 2rem;
-  margin: auto 0;
 
-  perspective: 35rem;
+  ${customMedia.greaterThan('desktop')`
+   perspective: 35rem;
+  `}
+
+  ${customMedia.lessThan('desktop')`
+   margin-top: 5rem;
+  `}
+
   cursor: default;
 `
 export const RotateDivRight = styled.div`
-  transition: 0.3s;
-  transform: rotateY(30deg);
-  width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: 0.5s;
+  transform: rotateY(30deg);
+
+  width: 100%;
 
   &:hover {
     transform: rotateY(0);
@@ -166,27 +193,36 @@ export const Type = styled.div<PokemonTypeColors>`
 `
 
 export const WrapperImage = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 `
 
 export const WrapperStatus = styled.section`
   display: flex;
-  align-items: center;
 
   width: 100%;
+  padding-left: 2rem;
 
-  padding-left: 1rem;
+  ${customMedia.greaterThan('desktop')`
+ perspective: 35rem;
+`}
 
-  perspective: 30rem;
+  ${customMedia.lessThan('desktop')`
+ margin-top: 5rem;
+`}
 
-  cursor: default;
+cursor: default;
 `
-export const RotateDivL = styled.div`
-  transition: 0.3s;
+export const RotateDivLeft = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
   transform: rotateY(-30deg);
+
   width: 100%;
 
   &:hover {
