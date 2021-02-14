@@ -8,6 +8,8 @@ export const Container = styled.main`
     display: flex;
     align-items: center;
 
+    /* z-index: ${theme.layers.base}; */
+
     flex-direction: column;
 
     margin-left: auto;

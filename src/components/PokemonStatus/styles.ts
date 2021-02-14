@@ -65,7 +65,6 @@ export const WrapperInformation = styled.section`
 export const RotateDivRight = styled.div`
   transition: 0.3s;
   transform: rotateY(30deg);
-  /* height: 100%; */
   width: 100%;
 
   display: flex;

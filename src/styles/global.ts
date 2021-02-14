@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-smooth: antialiased;
+    scroll-behavior: smooth;
 
   }
 

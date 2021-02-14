@@ -26,6 +26,7 @@ export const Wrapper = styled.header<MenuProps>`
     width: 100%;
 
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.xsmall};
 
     z-index: ${theme.layers.menu};
 
@@ -43,12 +44,13 @@ export const Wrapper = styled.header<MenuProps>`
     }
 
     &.menu-appear {
-      animation: fadeInMenu 0.5s ease-in;
+      animation: fadeInMenu 1s ease-out;
     }
 
-    &.menu-enter-done {
+    /* &.menu-appear-active {
       background-color: ${theme.colors.pokemonText[bgColor!]};
-    }
+    } */
+    background-color: ${theme.colors.pokemonText[bgColor!]};
 
     ${positionLogo && wrapperModifiers[positionLogo]}
 

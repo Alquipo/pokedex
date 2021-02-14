@@ -154,8 +154,26 @@ const PokemonStatus = ({
     <br />
     <br />
     <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
     <br />
-
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br /> <br />
+    <br />
+    <br />
+    <br /> <br />
+    <br />
+    <br />
+    <br /> <br />
     <br />
     <br />
     <br />
