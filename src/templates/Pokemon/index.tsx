@@ -23,7 +23,7 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
         <CSSTransition timeout={1000} classNames="menu">
           <Menu
             hasLogo
-            positionLogo={'right'}
+            positionLogo={'center'}
             hasTransition
             bgColor={stats.types[0]}
           />

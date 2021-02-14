@@ -9,6 +9,8 @@ const customMedia = generateMedia({
 })
 
 export const ContainerInformation = styled(Container)`
+  flex-direction: column;
+
   @keyframes fadeIn {
     0% {
       opacity: 0;

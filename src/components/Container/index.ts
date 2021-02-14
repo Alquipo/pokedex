@@ -4,15 +4,13 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   ${({ theme }) => css`
     width: 100%;
-
     min-width: 450px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     z-index: ${theme.layers.base};
-
-    flex-direction: column;
 
     margin-left: auto;
     margin-right: auto;
