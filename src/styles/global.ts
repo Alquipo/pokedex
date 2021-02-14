@@ -8,6 +8,22 @@ const GlobalStyles = createGlobalStyle`
     font-smooth: antialiased;
     scroll-behavior: smooth;
 
+    //scrollbar configuration
+    ::-webkit-scrollbar{
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   }
 
   ${({ theme }) => css`
@@ -23,6 +39,8 @@ const GlobalStyles = createGlobalStyle`
 
       min-height: 100vh;
       height: 100vh;
+
+      overflow-x: hidden;
     }
   `}
 
