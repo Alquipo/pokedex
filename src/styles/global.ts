@@ -15,6 +15,8 @@ const GlobalStyles = createGlobalStyle`
     }
     ::-webkit-scrollbar-track {
       background: #f1f1f1;
+      /* margin-top: 6.4rem; */
+
     }
 
     ::-webkit-scrollbar-thumb {
@@ -41,16 +43,16 @@ const GlobalStyles = createGlobalStyle`
       min-height: 100vh;
       height: 100vh;
 
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    main {
+    /* main {
       position: absolute;
-      top: 4.8rem;
+       top: 4.8rem;
       bottom: 0;
       overflow-y: scroll;
       overflow-x: hidden;
-    }
+    } */
   `}
 
 `

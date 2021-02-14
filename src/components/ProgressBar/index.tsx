@@ -9,7 +9,7 @@ export type ProgressBarProps = {
   bgColor: PokemonTypesProps
   stats: number
   hasFunction?: boolean
-  size: Sizes
+  size?: Sizes
 }
 const ProgressBar = ({
   bgColor,
@@ -57,7 +57,6 @@ const ProgressBar = ({
       }
     }
   }, [size, stats])
-
   return (
     <S.Wrapper>
       {hasFunction ? (

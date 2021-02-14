@@ -44,13 +44,26 @@ export const Wrapper = styled.header<MenuProps>`
       }
     }
 
+    @keyframes fadeInLogo {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
     &.menu-appear {
       animation: fadeInMenu 1s ease-out;
     }
 
-    /* &.menu-appear-active {
-      background-color: ${theme.colors.pokemonText[bgColor!]};
-    } */
+    img {
+      &.menu-appear {
+        animation: fadeInLogo 1s ease-out;
+      }
+    }
+
     background-color: ${theme.colors.pokemonText[bgColor!]};
 
     ${positionLogo && wrapperModifiers[positionLogo]}

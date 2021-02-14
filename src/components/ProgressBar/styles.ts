@@ -3,11 +3,10 @@ import { ProgressBarProps } from '.'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    height: 2rem;
+    height: 1.6rem;
     width: 100%;
     background-color: ${theme.colors.lightGray};
     border-radius: ${theme.border.radius.small};
-    margin: 5rem;
   `}
 `
 type fillerStylesProps = {
@@ -16,11 +15,11 @@ type fillerStylesProps = {
 
 const fillerStylesModifiers = {
   base: (completed: string | number) => css`
-    width: calc(${completed} / 2.5);
+    width: calc(${completed} / 2);
   `,
 
   min: (completed: string | number) => css`
-    width: calc(${completed} / 4.5);
+    width: calc(${completed} / 3.5);
   `,
 
   max: (completed: string | number) => css`
@@ -49,5 +48,7 @@ export const labelStyles = styled.span`
     padding-right: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
     font-weight: 500;
+
+    cursor: default;
   `}
 `

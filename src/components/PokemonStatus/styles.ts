@@ -19,7 +19,6 @@ export const ContainerInformation = styled(Container)`
       opacity: 1;
     }
   }
-
   &.pokemonStatus-appear {
     animation: fadeIn 1.5s ease-in-out;
   }
@@ -76,60 +75,62 @@ export const Wrapper = styled.div`
 
 export const WrapperInformation = styled.section`
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
   padding-left: 2rem;
 
   ${customMedia.greaterThan('desktop')`
-   perspective: 35rem;
+   perspective: 30rem;
   `}
 
   ${customMedia.lessThan('desktop')`
-   margin-top: 5rem;
+   margin-top: 2rem;
   `}
 
   cursor: default;
 `
 export const RotateDivRight = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  transition: 0.5s;
-  transform: rotateY(30deg);
+    transition: 0.4s;
 
-  width: 100%;
+    width: 100%;
 
-  &:hover {
-    transform: rotateY(0);
-  }
+    ${customMedia.greaterThan('desktop')`
+      transform: rotateY(30deg);
+      &:hover {
+        transform: rotateY(0);
+      }
+    `}
+  `}
 `
 
-export const Table = styled.table`
+export const TableInformation = styled.table`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
-
-    margin-bottom: 1rem;
-    line-height: 1.5;
+    line-height: 2;
     color: ${theme.colors.gray};
 
     border-collapse: collapse;
 
+    font-size: ${theme.font.sizes.large};
+
     td {
-      padding: ${theme.spacings.xsmall};
+      padding: 0.5rem;
       vertical-align: top;
     }
 
     td:first-child {
-      font-weight: 700;
+      font-weight: 500;
       text-align: right;
     }
 
-    span {
-      cursor: pointer;
-
-      span:last-child {
+    tr:nth-child(4) {
+      span:nth-child(2) {
         filter: brightness(110%) saturate(50%);
       }
     }
@@ -153,6 +154,8 @@ export const ButtonAbilities = styled.span<PokemonTypeColors>`
 
     line-height: inherit;
     text-transform: uppercase;
+
+    cursor: pointer;
   `}
 `
 
@@ -183,7 +186,8 @@ export const Type = styled.div<PokemonTypeColors>`
     cursor: default;
 
     span {
-      padding: 0.3rem 0 0 0.5rem;
+      line-height: 1;
+      padding: 0.5rem 0 0 0.5rem;
       color: ${theme.colors.white};
       cursor: default;
     }
@@ -194,28 +198,24 @@ export const Type = styled.div<PokemonTypeColors>`
   `}
 `
 
-export const WrapperImage = styled.section`
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-`
+export const WrapperStats = styled.section`
+  ${({ theme }) => css`
+    display: flex;
 
-export const WrapperStatus = styled.section`
-  display: flex;
+    width: 100%;
+    padding-left: 2rem;
+    font-size: ${theme.font.sizes.xlarge};
 
-  width: 100%;
-  padding-left: 2rem;
-
-  ${customMedia.greaterThan('desktop')`
+    ${customMedia.greaterThan('desktop')`
  perspective: 35rem;
 `}
 
-  ${customMedia.lessThan('desktop')`
+    ${customMedia.lessThan('desktop')`
  margin-top: 5rem;
 `}
 
 cursor: default;
+  `}
 `
 export const RotateDivLeft = styled.div`
   display: flex;
@@ -227,7 +227,36 @@ export const RotateDivLeft = styled.div`
 
   width: 100%;
 
+  padding-right: 5rem;
+
   &:hover {
     transform: rotateY(0);
   }
+`
+
+export const TableStats = styled.table`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: ${theme.colors.gray};
+
+    border-collapse: collapse;
+
+    text-transform: capitalize;
+
+    td {
+      padding: ${theme.spacings.xsmall};
+      vertical-align: center;
+    }
+
+    td:first-child {
+      font-weight: 700;
+      text-align: right;
+      width: 8rem;
+      vertical-align: top;
+    }
+  `}
 `

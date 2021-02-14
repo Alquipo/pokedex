@@ -13,12 +13,14 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
       <TransitionGroup
         appear={true}
         enter={true}
-        style={{
-          display: 'flex',
-          zIndex: 20,
-          position: 'sticky',
-          top: 0
-        }}
+        style={
+          {
+            // display: 'flex',
+            // zIndex: 20,
+            // position: 'sticky',
+            // top: 0
+          }
+        }
       >
         <CSSTransition timeout={1000} classNames="menu">
           <Menu
@@ -30,11 +32,13 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
         </CSSTransition>
       </TransitionGroup>
 
+      {/* <S.Wrapper> */}
       <TransitionGroup appear={true} enter={true}>
         <CSSTransition timeout={1500} classNames="pokemonStatus">
           <PokemonStatus {...stats} />
         </CSSTransition>
       </TransitionGroup>
+      {/* </S.Wrapper>s */}
     </>
   )
 }
