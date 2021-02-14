@@ -32,50 +32,61 @@ const PokemonStatus = ({
       <S.WrapperInformation>
         <S.RotateDivRight>
           <S.Table>
-            <tbody>
-              <tr>
-                <td>ID</td>
-                <td>#{formatNameID(id)}</td>
-              </tr>
-              <tr>
-                <td>Height</td>
-                <td>{height}m</td>
-              </tr>
-              <tr>
-                <td>Wight</td>
-                <td>{wight}Kg</td>
-              </tr>
-              <tr>
-                <td>Abilities</td>
-                <td>
-                  <span>
-                    {abilities.map((ability, index) => (
-                      <S.ButtonAbilities
-                        key={index}
-                        role="button"
-                        typeColor={types[0]}
-                      >
-                        {ability}
-                      </S.ButtonAbilities>
-                    ))}
-                  </span>
-                </td>
-              </tr>
+            <tr>
+              <td>ID</td>
+              <td>#{formatNameID(id)}</td>
+            </tr>
+            <tr>
+              <td>Height</td>
+              <td>{height}m</td>
+            </tr>
+            <tr>
+              <td>Wight</td>
+              <td>{wight}Kg</td>
+            </tr>
+            <tr>
+              <td>Abilities</td>
+              <td>
+                <span>
+                  {abilities.map((ability, index) => (
+                    <S.ButtonAbilities
+                      key={index}
+                      role="button"
+                      typeColor={types[0]}
+                    >
+                      {ability}
+                    </S.ButtonAbilities>
+                  ))}
+                </span>
+              </td>
+            </tr>
 
-              <tr>
-                <td>Type</td>
-                <td>
-                  <S.WrapperTypes>
-                    {types.map((type, index) => (
-                      <S.Type key={index} typeColor={type}>
-                        <span>{type}</span>
-                        <PokemonTypeIcon type={type} />
-                      </S.Type>
-                    ))}
-                  </S.WrapperTypes>
-                </td>
-              </tr>
-            </tbody>
+            <tr>
+              <td>Type</td>
+              <td>
+                <S.WrapperTypes>
+                  {types.map((type, index) => (
+                    <S.Type key={index} typeColor={type}>
+                      <span>{type}</span>
+                      <PokemonTypeIcon type={type} />
+                    </S.Type>
+                  ))}
+                </S.WrapperTypes>
+              </td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>
+                <S.WrapperTypes>
+                  {types.map((type, index) => (
+                    <S.Type key={index} typeColor={type}>
+                      <span>{type}</span>
+                      <PokemonTypeIcon type={type} />
+                    </S.Type>
+                  ))}
+                </S.WrapperTypes>
+              </td>
+            </tr>
           </S.Table>
         </S.RotateDivRight>
       </S.WrapperInformation>

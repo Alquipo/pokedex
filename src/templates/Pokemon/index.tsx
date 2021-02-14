@@ -11,7 +11,7 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
   return (
     <>
       <TransitionGroup appear={true} enter={true}>
-        <CSSTransition timeout={2000} classNames="menu">
+        <CSSTransition timeout={500} classNames="menu">
           <Menu
             hasLogo
             positionLogo={'right'}
@@ -22,7 +22,7 @@ const Pokemon = ({ stats }: PokemonTemplateProps) => {
       </TransitionGroup>
 
       <TransitionGroup appear={true} enter={true}>
-        <CSSTransition timeout={2000} classNames="pokemonStatus">
+        <CSSTransition timeout={1500} classNames="pokemonStatus">
           <PokemonStatus {...stats} />
         </CSSTransition>
       </TransitionGroup>

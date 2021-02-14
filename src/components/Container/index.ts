@@ -13,7 +13,7 @@ export const Container = styled.main`
     margin-left: auto;
     margin-right: auto;
 
-    padding-left: calc(${theme.grid.gutter} / 2);
-    padding-right: calc(${theme.grid.gutter} / 2);
+    padding-left: ${theme.grid.gutter};
+    padding-right: ${theme.grid.gutter};
   `}
 `

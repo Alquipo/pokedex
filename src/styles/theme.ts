@@ -1,6 +1,6 @@
 export default {
   grid: {
-    container: '130rem',
+    container: '140rem',
     gutter: '3.2rem'
   },
 
@@ -13,7 +13,10 @@ export default {
   },
 
   font: {
-    family: "'Roboto', sans-serif",
+    family: {
+      roboto: "'Roboto', sans-serif",
+      reggae: "'Reggae One', cursive"
+    },
     light: 300,
     normal: 400,
     bold: 700,
@@ -23,7 +26,7 @@ export default {
       medium: '1.6rem',
       large: '1.8rem',
       xlarge: '2.0rem',
-      xxlarge: '2.8rem'
+      xxlarge: '3.5rem'
     }
   },
 
@@ -33,7 +36,7 @@ export default {
     // mainBg: '#06092B',
     // black: '#030517',
     // darkGray: '#2E2F42',
-    lightBg: '#F2F2F2',
+    lightBg: '#FFF',
     white: '#FAFAFA',
     lightGray: '#EAEAEA',
     gray: '#505050',

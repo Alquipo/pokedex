@@ -19,6 +19,12 @@ function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
 
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"
+          rel="stylesheet"
+        />
+
         <meta
           name="description"
           content="Uma simples pokedex usando TypeScript, React, NextJS and Styled Components"

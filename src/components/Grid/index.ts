@@ -5,7 +5,7 @@ export const Grid = styled.div`
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
+    grid-template-columns: 1fr 1.3fr 1fr;
     display: inline-grid;
     grid-gap: ${theme.spacings.xxsmall};
     justify-items: center;

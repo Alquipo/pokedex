@@ -22,17 +22,17 @@ export const wrapperModifiers = {
 
 export const Wrapper = styled.header<MenuProps>`
   ${({ theme, bgColor, positionLogo }) => css`
-    height: 6.5rem;
+    height: 6.4rem;
+    width: 100%;
 
-    margin-bottom: ${theme.spacings.xsmall};
+    padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+
+    z-index: ${theme.layers.menu};
 
     position: sticky;
-    z-index: ${theme.layers.menu};
     top: 0;
 
-    ${positionLogo && wrapperModifiers[positionLogo]}
-
-    @keyframes fadeI {
+    @keyframes fadeInMenu {
       0% {
         background-color: ${theme.colors.pokemonText.transparent};
       }
@@ -43,18 +43,16 @@ export const Wrapper = styled.header<MenuProps>`
     }
 
     &.menu-appear {
-      animation: fadeI 2s ease-in-out;
+      animation: fadeInMenu 0.5s ease-in;
     }
-    &.menu-appear-done {
+
+    &.menu-enter-done {
       background-color: ${theme.colors.pokemonText[bgColor!]};
     }
+
+    ${positionLogo && wrapperModifiers[positionLogo]}
 
     backdrop-filter: saturate(180%) blur(0.2rem);
     box-shadow: 0 0 40px 8px rgb(0 0 0 / 18%);
   `}
-`
-
-export const Logo = styled.img`
-  height: 5.9rem;
-  width: 20rem;
 `

@@ -5,8 +5,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-smooth: antialiased;
+
   }
 
   ${({ theme }) => css`
@@ -15,10 +15,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: ${theme.font.family};
+      font-family: ${theme.font.family.roboto};
       font-size: ${theme.font.sizes.medium};
 
       background-color: ${theme.colors.lightBg};
+
+      min-height: 100vh;
+      height: 100vh;
     }
   `}
 

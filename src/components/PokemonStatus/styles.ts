@@ -3,32 +3,31 @@ import { PokemonTypesProps } from 'components/PokemonCard'
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled(Container)`
-  ${({ theme }) => css`
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
+    100% {
+      opacity: 1;
+    }
+  }
 
-    &.pokemonStatus-appear {
-      animation: fadeIn 2s ease-in-out;
-    }
-  `}
+  &.pokemonStatus-appear {
+    animation: fadeIn 1.5s ease-in-out;
+  }
 `
 export const PokemonName = styled.h1`
   ${({ theme }) => css`
-    color: ${theme.colors.gray};
-    text-transform: uppercase;
-    font-weight: 500;
-
+    width: 100%;
     margin-top: ${theme.spacings.small};
     margin-bottom: ${theme.spacings.xsmall};
 
-    opacity: 1;
-    transition: opacity 0.6s ease-in-out;
+    color: ${theme.colors.gray};
+
+    text-transform: uppercase;
+    font-size: ${theme.font.sizes.xxlarge};
+    text-align: center;
+    font-family: ${theme.font.family.reggae};
 
     cursor: default;
   `}
@@ -44,7 +43,6 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
     color: ${theme.colors.white};
 
     background-color: ${theme.colors.pokemonText[typeColor]};
-    transition: ${theme.transition.backgroundColor};
 
     text-transform: capitalize;
     border-radius: ${theme.border.radius.xsmall};
@@ -58,17 +56,16 @@ export const WrapperInformation = styled.section`
   align-items: center;
 
   width: 100%;
+  padding-left: 2rem;
+  margin: auto 0;
 
-  padding-left: 1rem;
-
-  perspective: 30rem;
-
+  perspective: 35rem;
   cursor: default;
 `
 export const RotateDivRight = styled.div`
   transition: 0.3s;
   transform: rotateY(30deg);
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 
   display: flex;
@@ -83,18 +80,22 @@ export const RotateDivRight = styled.div`
 export const Table = styled.table`
   ${({ theme }) => css`
     width: 100%;
-    height: 50%;
+    height: 100%;
 
+    margin-bottom: 1rem;
     line-height: 1.5;
     color: ${theme.colors.gray};
+
+    border-collapse: collapse;
+
+    td {
+      padding: ${theme.spacings.xsmall};
+      vertical-align: top;
+    }
 
     td:first-child {
       font-weight: 700;
       text-align: right;
-    }
-
-    td {
-      padding: ${theme.spacings.xsmall};
     }
 
     span {

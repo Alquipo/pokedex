@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import GithubCorner from 'react-github-corner'
 
 import { PokemonTypesProps } from 'components/PokemonCard'
@@ -20,7 +22,14 @@ const Menu = ({
 }: MenuProps) => {
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
-      {hasLogo && <S.Logo src="/img/pokemon-logo.svg" alt="Pokemon logo" />}
+      {hasLogo && (
+        <Image
+          src="/img/pokemon-logo.svg"
+          alt="Pokemon logo"
+          height={59}
+          width={200}
+        />
+      )}
 
       {hasGitHubCorner && (
         <GithubCorner
