@@ -5,10 +5,11 @@ import * as S from './styles'
 
 export type PokemonTypeIconProps = {
   type: PokemonTypesProps
+  hasHover?: boolean
 }
 
-const PokemonTypeIcon = ({ type }: PokemonTypeIconProps) => (
-  <S.Wrapper typeIcon={type}>
+const PokemonTypeIcon = ({ type, hasHover = false }: PokemonTypeIconProps) => (
+  <S.Wrapper typeIcon={type} hasHover={hasHover}>
     <Image
       src={`/img/type-icons/${type.toLowerCase()}.png`}
       alt={type}

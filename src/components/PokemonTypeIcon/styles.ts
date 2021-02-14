@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
 import { PokemonTypesProps } from 'components/PokemonCard'
+import { PokemonTypeIconProps } from '.'
 
 type WrapperProps = {
   typeIcon: PokemonTypesProps
-}
+} & Pick<PokemonTypeIconProps, 'hasHover'>
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ theme, typeIcon }) => css`
+  ${({ theme, typeIcon, hasHover }) => css`
     border-radius: 100%;
     height: 3rem;
     width: 3rem;
@@ -20,10 +21,13 @@ export const Wrapper = styled.div<WrapperProps>`
     background-color: ${theme.colors.pokemonType[typeIcon]};
     box-shadow: 0 0 2rem ${theme.colors.pokemonType[typeIcon]};
 
-    &:hover {
+  ${
+    hasHover &&
+    `&:hover {
       filter: saturate(200%);
       transform: scale(1.1);
-    }
+    }`
+  }}
   `}
 `
 

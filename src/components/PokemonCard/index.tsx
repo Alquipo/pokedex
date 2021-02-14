@@ -58,7 +58,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
     <Link href={`pokemon/6`} passHref>
       <S.WrapperIcons>
         {types.map((type, index) => (
-          <PokemonTypeIcon key={index} type={type} />
+          <PokemonTypeIcon hasHover key={index} type={type} />
         ))}
       </S.WrapperIcons>
     </Link>
