@@ -24,10 +24,11 @@ export const Wrapper = styled.header<MenuProps>`
   ${({ theme, bgColor, positionLogo }) => css`
     height: 6.4rem;
     width: 100%;
-
+    overflow: hidden;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
     margin-bottom: ${theme.spacings.xsmall};
 
+    min-width: 450px;
     z-index: ${theme.layers.menu};
 
     position: sticky;
