@@ -78,7 +78,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: ${theme.font.family.roboto};
+      font-family: "'Roboto','Reggae One', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,cursive";
+
       font-size: ${theme.font.sizes.medium};
 
       background-color: ${theme.colors.lightBg};

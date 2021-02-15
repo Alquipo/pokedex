@@ -50,6 +50,8 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
     padding: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
 
+    font-family: ${theme.font.family.roboto};
+
     background-color: ${theme.colors.pokemonText[typeColor]};
 
     text-transform: capitalize;
@@ -60,12 +62,16 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
 `
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: row;
 
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    font-family: ${theme.font.family.roboto};
+  `}
 
   ${customMedia.lessThan('desktop')`
     flex-direction: column;
@@ -235,9 +241,9 @@ export const RotateDivLeft = styled.div`
     `}
 `
 
-export const TableStats = styled.table`
-  ${({ theme }) => css`
-    width: 100%;
+export const TableStats = styled.table<PokemonTypeColors>`
+  ${({ theme, typeColor }) => css`
+    /* width: 100%; */
     height: 100%;
 
     margin-bottom: 1rem;
@@ -251,6 +257,10 @@ export const TableStats = styled.table`
     td {
       padding: ${theme.spacings.xsmall};
       vertical-align: center;
+    }
+
+    div.progress-bar {
+      background-color: ${theme.colors.pokemonText[typeColor]};
     }
 
     td:first-child {

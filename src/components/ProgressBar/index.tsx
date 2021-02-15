@@ -1,3 +1,5 @@
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+
 import { PokemonTypesProps } from 'components/PokemonCard'
 import { useEffect, useState } from 'react'
 import { calculateMaxStats } from 'utils/calculateStatsPokemon'
@@ -19,47 +21,52 @@ const ProgressBar = ({
 }: ProgressBarProps) => {
   const [completedFunction, setCompletedFunction] = useState<number>(0)
   const [statusPokemon, setStatusPokemon] = useState<number>(0)
+  const [value, setValue] = useState<number>(0)
 
   useEffect(() => {
-    switch (size) {
-      case 'base': {
-        setInterval(
-          () => setCompletedFunction(Math.floor(Math.random() * 250) + 1),
-          1500
-        )
-        setStatusPokemon(stats)
+    setValue(stats)
+  }, [stats])
 
-        break
-      }
+  // useEffect(() => {
+  //   switch (size) {
+  //     case 'base': {
+  //       setInterval(
+  //         () => setCompletedFunction(Math.floor(Math.random() * 250) + 1),
+  //         1500
+  //       )
+  //       setStatusPokemon(stats)
 
-      case 'min': {
-        setInterval(
-          () => setCompletedFunction(Math.floor(Math.random() * 400) + 1),
-          1500
-        )
+  //       break
+  //     }
 
-        const statusMinPokemon = Math.floor(
-          Math.floor((2 * stats * 100) / 100 + 5) * 0.9
-        )
-        setStatusPokemon(Math.trunc(statusMinPokemon))
+  //     case 'min': {
+  //       setInterval(
+  //         () => setCompletedFunction(Math.floor(Math.random() * 400) + 1),
+  //         1500
+  //       )
 
-        break
-      }
+  //       const statusMinPokemon = Math.floor(
+  //         Math.floor((2 * stats * 100) / 100 + 5) * 0.9
+  //       )
+  //       setStatusPokemon(Math.trunc(statusMinPokemon))
 
-      case 'max': {
-        setInterval(
-          () => setCompletedFunction(Math.floor(Math.random() * 500) + 1),
-          1500
-        )
+  //       break
+  //     }
 
-        setStatusPokemon(calculateMaxStats(stats))
-        break
-      }
-    }
-  }, [size, stats])
+  //     case 'max': {
+  //       setInterval(
+  //         () => setCompletedFunction(Math.floor(Math.random() * 500) + 1),
+  //         1500
+  //       )
+
+  //       setStatusPokemon(calculateMaxStats(stats))
+  //       break
+  //     }
+  //   }
+  // }, [size, stats])
   return (
     <S.Wrapper>
-      {hasFunction ? (
+      {/* {hasFunction ? (
         <S.fillerStyles
           size={size}
           bgColor={bgColor}
@@ -67,15 +74,22 @@ const ProgressBar = ({
         >
           <S.labelStyles>{completedFunction}</S.labelStyles>
         </S.fillerStyles>
-      ) : (
-        <S.fillerStyles
-          size={size}
-          bgColor={bgColor}
-          progressBar={`${statusPokemon}%`}
-        >
-          <S.labelStyles>{statusPokemon}</S.labelStyles>
-        </S.fillerStyles>
-      )}
+      ) : ( */}
+      {/* <TransitionGroup enter={true}>
+      <CSSTransition */}
+      {/* //   appear={true}
+        //   enter={true}
+        //   timeout={3000}
+        //   classNames="progressBar"
+        // > */}
+      <S.fillerStyles size={'base'} bgColor={bgColor} progressBar={`${value}%`}>
+        {console.log(`${value}%`)}
+        <S.labelStyles>{value}</S.labelStyles>
+      </S.fillerStyles>
+      {/* // </CSSTransition> */}
+
+      {/* /* </TransitionGroup> */}
+      {/* // )} */}
     </S.Wrapper>
   )
 }
