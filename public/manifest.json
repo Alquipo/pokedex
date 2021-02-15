@@ -10,11 +10,16 @@
     {
       "src": "/img/icons/icon-512.png",
       "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/img/icons/icon-512.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "background_color": "#FFF",
-  "description": "Pokedex",
+  "description": "Pokedex developer by Alquipo",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#FFF"
