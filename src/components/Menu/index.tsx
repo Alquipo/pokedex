@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import GithubCorner from 'react-github-corner'
 
@@ -23,12 +24,14 @@ const Menu = ({
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasLogo && (
-        <Image
-          src="/img/pokemon-logo.svg"
-          alt="Pokemon logo"
-          height={59}
-          width={200}
-        />
+        <Link href="/" passHref>
+          <Image
+            src="/img/pokemon-logo.svg"
+            alt="Pokemon logo"
+            height={59}
+            width={200}
+          />
+        </Link>
       )}
 
       {hasGitHubCorner && (
