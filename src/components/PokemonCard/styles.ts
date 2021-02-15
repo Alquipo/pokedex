@@ -1,5 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import { PokemonTypesProps } from '.'
+import media from 'styled-media-query'
 
 export type TypeColorProps = {
   typeColor: PokemonTypesProps
@@ -34,9 +35,11 @@ export const Wrapper = styled.div<TypeColorProps>`
 
     transition: all 0.2s ease-in-out;
 
-    &:hover {
-      transform: scale(1.01);
-    }
+    ${media.greaterThan('medium')`
+      &:hover {
+          transform: scale(1.01);
+        }
+    `}
 
     ${!!typeColor && wrapperModifiers.type(theme, typeColor)}
   `}

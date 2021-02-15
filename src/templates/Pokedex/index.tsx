@@ -14,7 +14,6 @@ const Pokedex = ({ pokemons }: PokedexTemplateProps) => {
       <S.Wrapper>
         {pokemons.map((pokemon, index) => (
           <PokemonCard
-            key={index}
             id={pokemon.id}
             name={pokemon.name}
             types={pokemon.types}

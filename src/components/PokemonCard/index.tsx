@@ -38,12 +38,12 @@ export type PokemonCardProps = {
 }
 
 const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
-  <S.Wrapper typeColor={types[0]}>
-    <Ribbon position={ribbonPosition} color={types[0]}>
-      #{formatNameID(id)}
-    </Ribbon>
+  <Link href={`pokemon/6`} passHref>
+    <S.Wrapper typeColor={types[0]}>
+      <Ribbon position={ribbonPosition} color={types[0]}>
+        #{formatNameID(id)}
+      </Ribbon>
 
-    <Link href={`pokemon/6`} passHref>
       <Image
         className="pokemonImage"
         src={formatNameImageCompressed(id)}
@@ -51,18 +51,18 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
         width={100}
         height={100}
       />
-    </Link>
 
-    <S.CardName>{name}</S.CardName>
+      <S.CardName>{name}</S.CardName>
 
-    <Link href={`pokemon/6`} passHref>
-      <S.WrapperIcons>
-        {types.map((type, index) => (
-          <PokemonTypeIcon hasHover key={index} type={type} />
-        ))}
-      </S.WrapperIcons>
-    </Link>
-  </S.Wrapper>
+      <Link href={`pokemon/6`} passHref>
+        <S.WrapperIcons>
+          {types.map((type, index) => (
+            <PokemonTypeIcon hasHover key={index} type={type} />
+          ))}
+        </S.WrapperIcons>
+      </Link>
+    </S.Wrapper>
+  </Link>
 )
 
 export default PokemonCard

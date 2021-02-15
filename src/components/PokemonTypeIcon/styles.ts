@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { PokemonTypesProps } from 'components/PokemonCard'
 import { PokemonTypeIconProps } from '.'
+import media from 'styled-media-query'
 
 type WrapperProps = {
   typeIcon: PokemonTypesProps
@@ -21,13 +22,15 @@ export const Wrapper = styled.div<WrapperProps>`
     background-color: ${theme.colors.pokemonType[typeIcon]};
     box-shadow: 0 0 2rem ${theme.colors.pokemonType[typeIcon]};
 
-  ${
-    hasHover &&
-    `&:hover {
-      filter: saturate(200%);
-      transform: scale(1.1);
-    }`
-  }}
+    ${media.greaterThan('medium')`
+      ${
+        hasHover &&
+        `&:hover {
+        filter: saturate(200%);
+        transform: scale(1.1);
+      }`
+      }}
+    `}
   `}
 `
 
