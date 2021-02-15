@@ -30,49 +30,43 @@ const GlobalStyles = createGlobalStyle`
     background: #555;
     }
 
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
-      src: local(''),
-          url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-          url('/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    }
-
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url('/fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
-      src: local(''),
-          url('/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-          url('/fonts/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-    }
-
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url('/fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
-      src: local(''),
-          url('/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-          url('/fonts/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    }
-
-    @font-face {
-      font-family: 'Reggae One';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('/fonts/reggae-one-v1-latin-regular.eot'); /* IE9 Compat Modes */
-      src: local(''),
-          url('/fonts/reggae-one-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-          url('/fonts/reggae-one-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    }
+   /* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/poppins-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('/fonts/poppins-v15-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/poppins-v15-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('/fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/poppins-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/poppins-v15-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/poppins-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/poppins-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+}
   }
 
   ${({ theme }) => css`
@@ -81,8 +75,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: ${theme.font.family.roboto};
-
+      font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
 
       background-color: ${theme.colors.lightBg};

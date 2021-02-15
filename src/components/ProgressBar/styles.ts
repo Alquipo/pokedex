@@ -15,7 +15,7 @@ export const Wrapper = styled.div<Pick<ProgressBarProps, 'bgColor'>>`
       padding-right: 0.4rem;
       padding-bottom: 0.1rem;
 
-      font-weight: 500;
+      font-weight: ${theme.font.medium};
       font-size: 1.6rem;
       text-align: right;
     }

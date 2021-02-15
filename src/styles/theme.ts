@@ -13,12 +13,9 @@ export default {
   },
 
   font: {
-    family: {
-      roboto:
-        "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-      reggae: "'Reggae One', cursive"
-    },
-    light: 300,
+    family:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    medium: 600,
     normal: 400,
     bold: 700,
     sizes: {
