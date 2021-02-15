@@ -263,11 +263,6 @@ export const TableStats = styled.table`
 
       padding-right: 2rem;
     }
-
-    th {
-      button {
-      }
-    }
   `}
 `
 
@@ -288,10 +283,16 @@ export const Button = styled.button<ButtonProps>`
 
     color: ${theme.colors.gray};
     background-color: ${theme.colors.lightBg};
+
     ${buttonActive &&
     css`
       color: ${theme.colors.white};
       background-color: ${theme.colors.pokemonText[typeColor]};
+      transition: background-color 1s ease-in, width 1.5s ease-in-out;
     `}
+
+    &:focus {
+      outline: 0;
+    }
   `}
 `
