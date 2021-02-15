@@ -4,7 +4,6 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   ${({ theme }) => css`
     width: 100%;
-    /* min-width: 450px; */
 
     display: flex;
     align-items: center;

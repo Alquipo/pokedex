@@ -5,6 +5,6 @@ export const Wrapper = styled(Container)`
   ${({ theme }) => css`
     flex-direction: row;
     flex-wrap: wrap;
-    /* padding-top: ${theme.spacings.xxlarge}; */
+    min-width: 450px;
   `}
 `
