@@ -1,9 +1,7 @@
 import { Container } from 'components/Container'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Wrapper = styled(Container)`
-  ${({ theme }) => css`
-    flex-direction: row;
-    flex-wrap: wrap;
-  `}
+  flex-direction: row;
+  flex-wrap: wrap;
 `

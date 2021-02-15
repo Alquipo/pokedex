@@ -12,7 +12,7 @@
     "test:watch": "yarn test --watch",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
+    "build-storybook": "build-storybook  -s ./public -o ./src/pages/storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "husky": {

@@ -15,6 +15,7 @@ const Pokedex = ({ pokemons }: PokedexTemplateProps) => {
         {pokemons.map((pokemon, index) => (
           <PokemonCard
             id={pokemon.id}
+            key={index}
             name={pokemon.name}
             types={pokemon.types}
           />

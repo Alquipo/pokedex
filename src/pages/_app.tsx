@@ -11,7 +11,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Pokedex V2</title>
+        <title>Pokedex</title>
         <link rel="manifest" href="/manifest.json" />
 
         <meta charSet="utf-8" />
