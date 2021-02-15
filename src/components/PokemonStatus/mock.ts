@@ -8,7 +8,7 @@ export default {
   abilities: ['blaze', 'solar-power'],
   stats: [
     {
-      baseStat: 180,
+      baseStat: 100,
       name: 'hp'
     },
     {
@@ -16,7 +16,7 @@ export default {
       name: 'attack'
     },
     {
-      baseStat: 230,
+      baseStat: 80,
       name: 'defense'
     },
     {

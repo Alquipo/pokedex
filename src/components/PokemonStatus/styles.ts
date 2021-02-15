@@ -34,8 +34,8 @@ export const PokemonName = styled.h1`
 
     text-transform: uppercase;
     font-size: ${theme.font.sizes.xxlarge};
+    font-weight: ${theme.font.medium};
     text-align: center;
-    font-family: ${theme.font.family.reggae};
 
     cursor: default;
   `}
@@ -69,8 +69,6 @@ export const Wrapper = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
-
-    font-family: ${theme.font.family.roboto};
   `}
 
   ${customMedia.lessThan('desktop')`
@@ -130,7 +128,7 @@ export const TableInformation = styled.table`
     }
 
     td:first-child {
-      font-weight: 500;
+      font-weight: ${theme.font.medium};
       text-align: right;
       padding-right: 2rem;
     }
@@ -146,7 +144,7 @@ export const TableInformation = styled.table`
 export const ButtonAbilities = styled.span<PokemonTypeColors>`
   ${({ theme, typeColor }) => css`
     color: ${theme.colors.white};
-    font-weight: 500;
+    font-weight: ${theme.font.medium};
 
     background-color: ${theme.colors.pokemonText[typeColor]};
     transition: ${theme.transition.backgroundColor};
@@ -242,8 +240,8 @@ export const RotateDivLeft = styled.div`
     `}
 `
 
-export const TableStats = styled.table<PokemonTypeColors>`
-  ${({ theme, typeColor }) => css`
+export const TableStats = styled.table`
+  ${({ theme }) => css`
     height: 100%;
 
     margin-bottom: 1rem;
@@ -260,7 +258,7 @@ export const TableStats = styled.table<PokemonTypeColors>`
     }
 
     td:first-child {
-      font-weight: 700;
+      font-weight: ${theme.font.medium};
       text-align: right;
       width: 8rem;
       vertical-align: top;
@@ -270,18 +268,32 @@ export const TableStats = styled.table<PokemonTypeColors>`
 
     th {
       button {
-        border-radius: 5rem;
-        font-weight: 700;
-        text-align: center;
-        font-size: 1.6rem;
-        line-height: 1.7;
-
-        border: 1px solid transparent;
-        padding: 0.375rem 0.75rem;
-
-        color: ${theme.colors.white};
-        background-color: ${theme.colors.pokemonText[typeColor]};
       }
     }
+  `}
+`
+
+type ButtonProps = {
+  buttonActive: boolean
+} & PokemonTypeColors
+
+export const Button = styled.button<ButtonProps>`
+  ${({ theme, typeColor, buttonActive }) => css`
+    border-radius: 5rem;
+    font-weight: ${theme.font.bold};
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    border: 1px solid transparent;
+    padding: 0.4rem 0.8rem;
+
+    color: ${theme.colors.gray};
+    background-color: ${theme.colors.lightBg};
+    ${buttonActive &&
+    css`
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.pokemonText[typeColor]};
+    `}
   `}
 `

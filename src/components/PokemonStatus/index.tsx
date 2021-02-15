@@ -118,19 +118,6 @@ const PokemonStatus = ({
                     </S.WrapperTypes>
                   </td>
                 </tr>
-                <tr>
-                  <td>Type</td>
-                  <td>
-                    <S.WrapperTypes>
-                      {types.map((type, index) => (
-                        <S.Type key={index} typeColor={type}>
-                          <span>{type}</span>
-                          <PokemonTypeIcon type={type} />
-                        </S.Type>
-                      ))}
-                    </S.WrapperTypes>
-                  </td>
-                </tr>
               </tbody>
             </S.TableInformation>
           </S.RotateDivRight>
@@ -144,18 +131,36 @@ const PokemonStatus = ({
         />
         <S.WrapperStats>
           <S.RotateDivLeft>
-            <S.TableStats typeColor={types[0]}>
+            <S.TableStats>
               <tbody>
                 <tr>
                   <th></th>
                   <th>
-                    <button onClick={() => setClickStats('base')}>Base</button>
+                    <S.Button
+                      typeColor={types[0]}
+                      buttonActive={statsBase}
+                      onClick={() => setClickStats('base')}
+                    >
+                      Base
+                    </S.Button>
                   </th>
                   <th>
-                    <button onClick={() => setClickStats('min')}>Min</button>
+                    <S.Button
+                      typeColor={types[0]}
+                      buttonActive={statsMin}
+                      onClick={() => setClickStats('min')}
+                    >
+                      Min
+                    </S.Button>
                   </th>
                   <th>
-                    <button onClick={() => setClickStats('max')}>Max</button>
+                    <S.Button
+                      typeColor={types[0]}
+                      buttonActive={statsMax}
+                      onClick={() => setClickStats('max')}
+                    >
+                      Max
+                    </S.Button>
                   </th>
                 </tr>
 
