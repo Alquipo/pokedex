@@ -132,6 +132,7 @@ export const TableInformation = styled.table`
     td:first-child {
       font-weight: 500;
       text-align: right;
+      padding-right: 2rem;
     }
 
     tr:nth-child(4) {
@@ -241,8 +242,8 @@ export const RotateDivLeft = styled.div`
     `}
 `
 
-export const TableStats = styled.table`
-  ${({ theme }) => css`
+export const TableStats = styled.table<PokemonTypeColors>`
+  ${({ theme, typeColor }) => css`
     height: 100%;
 
     margin-bottom: 1rem;
@@ -263,6 +264,24 @@ export const TableStats = styled.table`
       text-align: right;
       width: 8rem;
       vertical-align: top;
+
+      padding-right: 2rem;
+    }
+
+    th {
+      button {
+        border-radius: 5rem;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.7;
+
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+
+        color: ${theme.colors.white};
+        background-color: ${theme.colors.pokemonText[typeColor]};
+      }
     }
   `}
 `

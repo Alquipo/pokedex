@@ -144,7 +144,7 @@ const PokemonStatus = ({
         />
         <S.WrapperStats>
           <S.RotateDivLeft>
-            <S.TableStats>
+            <S.TableStats typeColor={types[0]}>
               <tbody>
                 <tr>
                   <th></th>
@@ -152,7 +152,7 @@ const PokemonStatus = ({
                     <button onClick={() => setClickStats('base')}>Base</button>
                   </th>
                   <th>
-                    <button onClick={() => setClickStats('min')}>MIN</button>
+                    <button onClick={() => setClickStats('min')}>Min</button>
                   </th>
                   <th>
                     <button onClick={() => setClickStats('max')}>Max</button>

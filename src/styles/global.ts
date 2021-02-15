@@ -38,8 +38,9 @@ const GlobalStyles = createGlobalStyle`
       src: url('/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
       src: local(''),
           url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-
+          url('/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
     }
+
     @font-face {
       font-family: 'Roboto';
       font-style: normal;
@@ -48,8 +49,9 @@ const GlobalStyles = createGlobalStyle`
       src: url('/fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
       src: local(''),
           url('/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-
+          url('/fonts/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
     }
+
     @font-face {
       font-family: 'Roboto';
       font-style: normal;
@@ -58,8 +60,9 @@ const GlobalStyles = createGlobalStyle`
       src: url('/fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
       src: local(''),
           url('/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-
+          url('/fonts/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
     }
+
     @font-face {
       font-family: 'Reggae One';
       font-style: normal;
@@ -68,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
       src: url('/fonts/reggae-one-v1-latin-regular.eot'); /* IE9 Compat Modes */
       src: local(''),
           url('/fonts/reggae-one-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-
+          url('/fonts/reggae-one-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
     }
   }
 
