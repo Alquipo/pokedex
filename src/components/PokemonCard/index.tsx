@@ -46,7 +46,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
     <Link href={`pokemon/6`} passHref>
       <Image
         className="pokemonImage"
-        src={formatNameImageCompressed(id)}
+        src={formatNameImageHD(id)}
         alt={name}
         width={100}
         height={100}

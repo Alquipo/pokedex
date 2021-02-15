@@ -123,7 +123,7 @@ const PokemonStatus = ({
           </S.RotateDivRight>
         </S.WrapperInformation>
         <Image
-          src="/img/006.png"
+          src={formatNameImageHD(id)}
           alt={name}
           layout="intrinsic"
           width={1280}
