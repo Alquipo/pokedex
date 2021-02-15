@@ -2,6 +2,8 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 
@@ -16,13 +18,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta
           name="description"
           content="Uma simples pokedex usando TypeScript, React, NextJS and Styled Components"
-        />
-
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-          crossOrigin="anonymous"
         />
       </Head>
 

@@ -1,14 +1,15 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import ProgressBar, { ProgressBarProps } from '.'
+import ProgressBarPokemon, { ProgressBarProps } from '.'
 
 export default {
-  title: 'ProgressBar',
-  component: ProgressBar,
-  args: {
-    bgColor: 'Grass',
-    stats: 190,
-    size: 'base'
-  },
+  title: 'ProgressBarPokemon',
+  component: ProgressBarPokemon,
+  // args: {
+  //   bgColor: 'Grass',
+  //   stats: 100,
+  //   hasFunctions: false,
+  //   size: 'base'
+  // },
   parameters: {
     backgrounds: {
       default: 'dark'
@@ -24,6 +25,6 @@ export const Default: Story<ProgressBarProps> = (args) => (
       flexDirection: 'column'
     }}
   >
-    <ProgressBar {...args} />
+    <ProgressBarPokemon {...args} />
   </div>
 )

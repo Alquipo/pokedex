@@ -3,6 +3,8 @@ import * as nextImage from 'next/image'
 import { addDecorator } from '@storybook/react'
 import { withNextRouter } from 'storybook-addon-next-router'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'

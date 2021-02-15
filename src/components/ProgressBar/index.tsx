@@ -1,97 +1,85 @@
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
-
 import { PokemonTypesProps } from 'components/PokemonCard'
 import { useEffect, useState } from 'react'
-import { calculateMaxStats } from 'utils/calculateStatsPokemon'
+
+import {
+  calculateMaxStats,
+  calculateMinStats
+} from 'utils/calculateStatsPokemon'
+
+import ProgressBar from 'react-bootstrap/ProgressBar'
+
 import * as S from './styles'
 
 export type Sizes = 'base' | 'min' | 'max'
 
 export type ProgressBarProps = {
-  bgColor: PokemonTypesProps
   stats: number
+  bgColor: PokemonTypesProps
+  size: Sizes
   hasFunction?: boolean
-  size?: Sizes
 }
-const ProgressBar = ({
+const ProgressBarPokemon = ({
   bgColor,
   stats,
-  hasFunction,
-  size = 'base'
+  size,
+  hasFunction
 }: ProgressBarProps) => {
-  const [completedFunction, setCompletedFunction] = useState<number>(0)
-  const [statusPokemon, setStatusPokemon] = useState<number>(0)
-  const [value, setValue] = useState<number>(0)
+  const [completedFunction, setCompletedFunction] = useState(0)
+  const [statusPokemon, setStatusPokemon] = useState(0)
+  const [percentDivider, setPercentDivider] = useState(0)
 
   useEffect(() => {
-    setValue(stats)
-  }, [stats])
+    switch (size) {
+      case 'base':
+        setInterval(
+          () => setCompletedFunction(Math.floor(Math.random() * 250) + 1),
+          1500
+        )
 
-  // useEffect(() => {
-  //   switch (size) {
-  //     case 'base': {
-  //       setInterval(
-  //         () => setCompletedFunction(Math.floor(Math.random() * 250) + 1),
-  //         1500
-  //       )
-  //       setStatusPokemon(stats)
+        setStatusPokemon(stats)
+        setPercentDivider(1.8)
+        break
 
-  //       break
-  //     }
+      case 'min':
+        setInterval(
+          () => setCompletedFunction(Math.floor(Math.random() * 400) + 1),
+          1500
+        )
 
-  //     case 'min': {
-  //       setInterval(
-  //         () => setCompletedFunction(Math.floor(Math.random() * 400) + 1),
-  //         1500
-  //       )
+        setStatusPokemon(calculateMinStats(stats))
+        setPercentDivider(3)
+        break
 
-  //       const statusMinPokemon = Math.floor(
-  //         Math.floor((2 * stats * 100) / 100 + 5) * 0.9
-  //       )
-  //       setStatusPokemon(Math.trunc(statusMinPokemon))
+      case 'max':
+        setInterval(
+          () => setCompletedFunction(Math.floor(Math.random() * 500) + 1),
+          1500
+        )
 
-  //       break
-  //     }
-
-  //     case 'max': {
-  //       setInterval(
-  //         () => setCompletedFunction(Math.floor(Math.random() * 500) + 1),
-  //         1500
-  //       )
-
-  //       setStatusPokemon(calculateMaxStats(stats))
-  //       break
-  //     }
-  //   }
-  // }, [size, stats])
+        setStatusPokemon(calculateMaxStats(stats))
+        setPercentDivider(6)
+        break
+    }
+  }, [size, stats])
   return (
-    <S.Wrapper>
-      {/* {hasFunction ? (
-        <S.fillerStyles
-          size={size}
-          bgColor={bgColor}
-          progressBar={`${completedFunction}%`}
-        >
-          <S.labelStyles>{completedFunction}</S.labelStyles>
-        </S.fillerStyles>
-      ) : ( */}
-      {/* <TransitionGroup enter={true}>
-      <CSSTransition */}
-      {/* //   appear={true}
-        //   enter={true}
-        //   timeout={3000}
-        //   classNames="progressBar"
-        // > */}
-      <S.fillerStyles size={'base'} bgColor={bgColor} progressBar={`${value}%`}>
-        {console.log(`${value}%`)}
-        <S.labelStyles>{value}</S.labelStyles>
-      </S.fillerStyles>
-      {/* // </CSSTransition> */}
-
-      {/* /* </TransitionGroup> */}
-      {/* // )} */}
+    <S.Wrapper bgColor={bgColor}>
+      {!hasFunction ? (
+        <ProgressBar
+          animated
+          now={statusPokemon / percentDivider}
+          max={100}
+          label={statusPokemon}
+        />
+      ) : (
+        <ProgressBar
+          animated
+          now={completedFunction / percentDivider}
+          max={100}
+          label={completedFunction}
+        />
+      )}
     </S.Wrapper>
   )
 }
 
-export default ProgressBar
+export default ProgressBarPokemon

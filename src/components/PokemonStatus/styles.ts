@@ -241,9 +241,8 @@ export const RotateDivLeft = styled.div`
     `}
 `
 
-export const TableStats = styled.table<PokemonTypeColors>`
-  ${({ theme, typeColor }) => css`
-    /* width: 100%; */
+export const TableStats = styled.table`
+  ${({ theme }) => css`
     height: 100%;
 
     margin-bottom: 1rem;
@@ -257,10 +256,6 @@ export const TableStats = styled.table<PokemonTypeColors>`
     td {
       padding: ${theme.spacings.xsmall};
       vertical-align: center;
-    }
-
-    div.progress-bar {
-      background-color: ${theme.colors.pokemonText[typeColor]};
     }
 
     td:first-child {

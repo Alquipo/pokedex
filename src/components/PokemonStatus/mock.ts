@@ -12,23 +12,23 @@ export default {
       name: 'hp'
     },
     {
-      baseStat: 84,
+      baseStat: 110,
       name: 'attack'
     },
     {
-      baseStat: 78,
+      baseStat: 230,
       name: 'defense'
     },
     {
-      baseStat: 109,
+      baseStat: 154,
       name: 'Sp.attack'
     },
     {
-      baseStat: 85,
+      baseStat: 90,
       name: 'Sp.defense'
     },
     {
-      baseStat: 100,
+      baseStat: 130,
       name: 'speed'
     }
   ]
