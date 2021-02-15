@@ -50,8 +50,6 @@ export const PokemonCategory = styled.span<PokemonTypeColors>`
     padding: ${theme.spacings.xxsmall};
     color: ${theme.colors.white};
 
-    font-family: ${theme.font.family.roboto};
-
     background-color: ${theme.colors.pokemonText[typeColor]};
 
     text-transform: capitalize;
