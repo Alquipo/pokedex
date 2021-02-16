@@ -39,6 +39,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
       <Ribbon position={ribbonPosition} color={types[0]}>
         #{formatNameID(id)}
       </Ribbon>
+
       <Image
         className="pokemonImage"
         src={formatNameImageCompressed(id)}

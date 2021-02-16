@@ -21,7 +21,7 @@ export const wrapperModifiers = {
 
 export const Wrapper = styled.a<TypeColorProps>`
   ${({ theme, typeColor }) => css`
-    width: 12rem auto;
+    width: auto;
     position: relative;
 
     padding: ${theme.spacings.xxsmall};
@@ -33,7 +33,7 @@ export const Wrapper = styled.a<TypeColorProps>`
 
     text-decoration: none;
 
-    cursor: default;
+    cursor: pointer;
 
     background-color: ${theme.colors.white};
     text-decoration: none;
@@ -56,7 +56,7 @@ export const CardName = styled.h1`
     text-transform: capitalize;
     font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.bold};
-    width: 18rem;
+    width: 19rem;
   `}
 `
 

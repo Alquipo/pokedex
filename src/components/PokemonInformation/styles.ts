@@ -74,7 +74,7 @@ export const Table = styled.table`
 `
 
 export const WrapperAbilities = styled.span`
-  width: 30rem;
+  width: 23rem;
   display: flex;
   flex-wrap: wrap;
 `

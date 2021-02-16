@@ -27,6 +27,8 @@ export const PokemonName = styled.h1`
 
     color: ${theme.colors.gray};
 
+    padding-left: 3rem;
+
     text-transform: uppercase;
     font-size: ${theme.font.sizes.xxlarge};
     font-weight: ${theme.font.medium};

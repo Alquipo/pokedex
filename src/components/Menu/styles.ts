@@ -59,6 +59,7 @@ export const Wrapper = styled.header<MenuProps>`
     }
 
     img {
+      cursor: pointer;
       &.menu-appear {
         animation: fadeInLogo 1s ease-out;
       }
