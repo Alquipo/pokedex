@@ -13,7 +13,10 @@
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook  -s ./public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "schema:download": "apollo client:download-schema --endpoint=https://pokeapi.dev schema.gql",
+    "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
+    "types:generate": "yarn schema:download &&  yarn codegen"
   },
   "husky": {
     "hooks": {
@@ -27,7 +30,9 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.3.11",
     "bootstrap": "^4.6.0",
+    "graphql": "^14.0.0",
     "next": "10.0.6",
     "next-pwa": "^5.0.4",
     "react": "17.0.1",
@@ -55,6 +60,7 @@
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "apollo": "^2.32.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.19.0",

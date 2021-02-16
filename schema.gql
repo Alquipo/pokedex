@@ -1,0 +1,201 @@
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
+"""
+Direct the client to resolve this field locally, either from the cache or local resolvers.
+"""
+directive @client(
+  """
+  When true, the client will never use the cache for this value. See
+  https://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true
+  """
+  always: Boolean
+) on FIELD | FRAGMENT_DEFINITION | INLINE_FRAGMENT
+
+"""
+Export this locally resolved field as a variable to be used in the remainder of this query. See
+https://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables
+"""
+directive @export(
+  """The variable name to export this field as."""
+  as: String!
+) on FIELD
+
+"""
+Specify a custom store key for this result. See
+https://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive
+"""
+directive @connection(
+  """Specify the store key."""
+  key: String!
+
+  """
+  An array of query argument names to include in the generated custom store key.
+  """
+  filter: [String!]
+) on FIELD
+
+type Ability {
+  id: String
+  name: String
+  slot: Int
+  is_hidden: Boolean
+  is_main_series: Boolean
+  pokemons: [Int]
+}
+
+type AbilityInfo {
+  name: String
+  slot: Int
+}
+
+enum CacheControlScope {
+  PUBLIC
+  PRIVATE
+}
+
+type Color {
+  light: String
+  dark: String
+}
+
+type Form {
+  id: Int
+  name: String
+  order: Int
+  form_order: Int
+  is_default: Boolean
+  is_battle_only: Boolean
+  is_mega: Boolean
+  form_name: String
+}
+
+type GameIndex {
+  value: Int
+}
+
+type Height {
+  value: Int
+  in_meter: String
+  in_feet: String
+}
+
+type HeldItem {
+  item: Item
+}
+
+type Item {
+  id: Int
+  name: String
+  cost: Int
+  fling_power: Int
+  category: ItemCategory
+  attributes: [ItemAttribute]
+}
+
+type ItemAttribute {
+  id: Int
+  name: String
+  items: [Item]
+  description: String
+}
+
+type ItemCategory {
+  id: Int
+  name: String
+  items: [Item]
+}
+
+type Move {
+  id: Int
+  name: String
+  accuracy: Int
+  effect_chance: Int
+  pp: Int
+  priority: Int
+  power: Int
+}
+
+type Mutation {
+  sayHello(name: String!): String!
+}
+
+type Pokemon {
+  id: Int!
+  name: String!
+  base_experience: Int
+  color: Color!
+  height: Height
+  is_default: Boolean
+  order: Int
+  weight: Weight
+  abilities: [AbilityInfo]
+  forms: [Form]
+  held_items: [HeldItem]
+  location_area_encounters: String
+  moves: [Move]
+  sprites: Sprite
+  species: SpeciesInfo
+  stats: [Stat]
+  types: [Type]
+  avatar: String!
+}
+
+type PokemonList {
+  count: Int
+  next: String
+  previous: String
+  results: [Pokemon]
+}
+
+type Query {
+  pokemons(limit: Int!, offset: Int!): PokemonList
+  pokemon(id: ID!): Pokemon
+}
+
+type Species {
+  id: Int
+  name: String
+  order: Int
+  gender_rate: Int
+  capture_rate: Int
+  base_happiness: Int
+  is_baby: Boolean
+  hatch_counter: Int
+  has_gender_differences: Boolean
+  forms_switchable: Boolean
+}
+
+type SpeciesInfo {
+  name: String!
+  url: String!
+}
+
+type Sprite {
+  front_default: String
+  front_shiny: String
+  front_female: String
+  front_shiny_female: String
+  back_default: String
+  back_shiny: String
+  back_female: String
+  back_shiny_female: String
+}
+
+type Stat {
+  id: Int
+  name: String
+}
+
+type Type {
+  slot: Int
+  name: String
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+type Weight {
+  value: Int
+  in_kg: String
+  in_lbs: String
+}
