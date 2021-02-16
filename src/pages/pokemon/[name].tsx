@@ -8,7 +8,7 @@ export default function PokemonPage(props: PokemonTemplateProps) {
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: '6' } }],
+    paths: [{ params: { name: 'charizard' } }],
     fallback: false
   }
 }
