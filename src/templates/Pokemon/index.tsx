@@ -2,14 +2,12 @@ import Image from 'next/image'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import Menu from 'components/Menu'
-
-import * as S from './styles'
-import React from 'react'
 import PokemonInformation, {
   PokemonInformationProps
 } from 'components/PokemonInformation'
 import PokemonStats, { PokemonStatsProps } from 'components/PokemonStats'
 
+import * as S from './styles'
 export type PokemonTemplateProps = {
   pokemonInformation: PokemonInformationProps
   pokemonStats: PokemonStatsProps
@@ -63,10 +61,7 @@ const Pokemon = ({
                 width={1280}
                 height={1280}
               />
-              <PokemonStats
-                types={pokemonInformation.types}
-                stats={pokemonStats}
-              />
+              <PokemonStats {...pokemonStats} />
             </S.WrapperBase>
           </S.WrapperContainer>
         </CSSTransition>

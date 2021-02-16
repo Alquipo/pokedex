@@ -1,18 +1,19 @@
-import { PokemonInformationProps } from 'components/PokemonInformation'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import * as S from './styles'
+import { useState, useEffect } from 'react'
 
 import ProgressBarPokemon, { Sizes } from 'components/ProgressBar'
 
-export type teste = {
+import * as S from './styles'
+import { PokemonTypesProps } from 'components/PokemonCard'
+
+export type StatsProps = {
   baseStat: number
   name: string
 }
 
 export type PokemonStatsProps = {
-  stats: teste[]
-} & Pick<PokemonInformationProps, 'types'>
+  stats: StatsProps[]
+  types: PokemonTypesProps[]
+}
 
 const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
   const [statsBase, setStatsBase] = useState(true)
@@ -94,7 +95,6 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
                 </td>
               </tr>
             ))}
-            {console.log(stats)}
           </tbody>
         </S.Table>
       </S.WrapperRotate>

@@ -1,5 +1,3 @@
-import { GetServerSideProps } from 'next'
-
 import Pokemon, { PokemonTemplateProps } from 'templates/Pokemon'
 
 import mockPokemon from 'templates/Pokemon/mock'
@@ -18,6 +16,8 @@ export async function getStaticPaths() {
 export const getStaticProps = async () => {
   return {
     props: {
+      name: mockPokemon.name,
+      category: mockPokemon.category,
       pokemonInformation: {
         id: mockPokemon.id,
         types: mockPokemon.types,
@@ -25,9 +25,15 @@ export const getStaticProps = async () => {
         wight: mockPokemon.wight,
         abilities: mockPokemon.abilities
       },
-      pokemonStats: mockPokemon.stats,
-      name: mockPokemon.name,
-      category: mockPokemon.category
+      pokemonStats: {
+        stats: mockPokemon.stats,
+        types: mockPokemon.types
+      }
+
+      // .map((stat) => ({
+      //   baseStat: stat.baseStat,
+      //   name: stat.name
+      // })),
 
       // stats: mockPokemon.stats
     }
