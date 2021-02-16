@@ -14,6 +14,7 @@ export const wrapperModifiers = {
     &:hover {
       box-shadow: 0 0 1rem ${theme.colors.pokemonType[typeColor]};
       color: ${theme.colors.pokemonType[typeColor]};
+      text-decoration: none;
     }
   `
 }
@@ -35,6 +36,7 @@ export const Wrapper = styled.a<TypeColorProps>`
     cursor: default;
 
     background-color: ${theme.colors.white};
+    text-decoration: none;
 
     transition: all 0.2s ease-in-out;
 
