@@ -73,6 +73,12 @@ export const Table = styled.table`
   `}
 `
 
+export const WrapperAbilities = styled.span`
+  width: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+`
+
 export const ButtonAbilities = styled.span<PokemonTypeColors>`
   ${({ theme, typeColor }) => css`
     color: ${theme.colors.white};
@@ -87,6 +93,7 @@ export const ButtonAbilities = styled.span<PokemonTypeColors>`
 
     padding: 0.2rem 0.3rem;
     margin-right: ${theme.spacings.xsmall};
+    margin-bottom: ${theme.spacings.xsmall};
 
     line-height: inherit;
     text-transform: uppercase;

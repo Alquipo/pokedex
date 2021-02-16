@@ -39,7 +39,7 @@ const PokemonInformation = ({
           <tr>
             <td>Abilities</td>
             <td>
-              <span>
+              <S.WrapperAbilities>
                 {abilities.map((ability, index) => (
                   <S.ButtonAbilities
                     key={index}
@@ -49,7 +49,7 @@ const PokemonInformation = ({
                     {ability}
                   </S.ButtonAbilities>
                 ))}
-              </span>
+              </S.WrapperAbilities>
             </td>
           </tr>
 
