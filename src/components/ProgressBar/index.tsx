@@ -57,7 +57,7 @@ const ProgressBarPokemon = ({
         )
 
         setStatusPokemon(calculateMaxStats(stats))
-        setPercentDivider(6)
+        setPercentDivider(4.5)
         break
     }
   }, [size, stats])
