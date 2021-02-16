@@ -1,6 +1,12 @@
 {
-  "name": "pokedex-v2",
+  "name": "pokedex",
+  "author": {
+    "name": "Alquipo Neto",
+    "url": "https://github.com/Alquipo",
+    "email": "alquiponeto@outlook.com.br"
+  },
   "version": "1.0.0",
+  "description": "A simple pokedex using TypeScript, React, NextJS and Styled Components",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +20,7 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook  -s ./public",
     "deploy-storybook": "storybook-to-ghpages",
-    "schema:download": "apollo client:download-schema --endpoint=https://pokeapi.dev schema.gql",
+    "schema:download": "apollo client:download-schema --endpoint=https://graphql-pokeapi.vercel.app/api/graphql schema.gql",
     "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
     "types:generate": "yarn schema:download &&  yarn codegen"
   },

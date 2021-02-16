@@ -21,6 +21,6 @@ export function formatNameID(id: number) {
   return pad(id, 3)
 }
 
-export function pokemonFilteredName(name: string) {
-  return console.log(name)
-}
+// export function pokemonFilteredName(name: string) {
+//   return console.log(name)
+// }

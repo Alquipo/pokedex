@@ -1,7 +1,7 @@
 import Pokedex, { PokedexTemplateProps } from 'templates/Pokedex'
 
 import { initializeApollo } from 'utils/apollo'
-import { QUERY_POKEMONS } from 'graphql/queries/pokemonList'
+import { QUERY_POKEMONS } from 'graphql/queries/pokemons'
 import {
   QueryPokemons,
   QueryPokemonsVariables
@@ -24,11 +24,13 @@ export async function getStaticProps() {
 
   return {
     props: {
-      revalidate: 3600,
+      // revalidate: 3600,
       pokemons: data.pokemons.results.map((pokemon) => ({
         id: pokemon.id,
         name: pokemon.name,
-        types: pokemon.types
+        types: pokemon.types.map((type) => {
+          return type.name
+        })
       }))
     }
   }

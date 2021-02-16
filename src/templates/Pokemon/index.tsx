@@ -8,19 +8,20 @@ import PokemonInformation, {
 import PokemonStats, { PokemonStatsProps } from 'components/PokemonStats'
 
 import * as S from './styles'
+import { formatNameImageHD } from 'utils/formatName'
 export type PokemonTemplateProps = {
   pokemonInformation: PokemonInformationProps
   pokemonStats: PokemonStatsProps
   name: string
-  category: string
+  // category: string
 }
 
 const Pokemon = ({
   pokemonInformation,
   pokemonStats,
-  name,
-  category
-}: PokemonTemplateProps) => {
+  name
+}: // category
+PokemonTemplateProps) => {
   return (
     <>
       <TransitionGroup
@@ -45,22 +46,22 @@ const Pokemon = ({
 
       <TransitionGroup appear={true} enter={true}>
         <CSSTransition timeout={1500} classNames="pokemonStatus">
-          {/* <PokemonStatus {...stats} />  */}
           <S.WrapperContainer>
             <S.PokemonName>{name}</S.PokemonName>
-            <S.PokemonCategory typeColor={pokemonInformation.types[0]}>
+            {/* <S.PokemonCategory typeColor={pokemonInformation.types[0]}>
               {category}
-            </S.PokemonCategory>
+            </S.PokemonCategory> */}
 
             <S.WrapperBase>
               <PokemonInformation {...pokemonInformation} />
               <Image
-                src="/img/006.png"
+                src={formatNameImageHD(pokemonInformation.id)}
                 alt={name}
                 layout="intrinsic"
                 width={1280}
                 height={1280}
               />
+
               <PokemonStats {...pokemonStats} />
             </S.WrapperBase>
           </S.WrapperContainer>

@@ -22,7 +22,7 @@ function App({ Component, pageProps }: AppProps) {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Uma simples pokedex usando TypeScript, React, NextJS and Styled Components"
+            content="A simple pokedex using TypeScript, React, NextJS and Styled Components"
           />
         </Head>
 

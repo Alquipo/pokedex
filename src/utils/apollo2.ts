@@ -12,14 +12,14 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: 'https://pokeapi.dev/'
+      uri: 'https://graphql-pokeapi.vercel.app/api/graphql'
     }),
     cache: new InMemoryCache()
   })
 }
 
 //inicializar  apolloclient SSR com cache
-export function initializeApollo(initialState = {}) {
+export function initializeApollo2(initialState = {}) {
   //serve para verificar se já existe uma instância, para nao criar outra
   const apolloClientGlobal = apolloClient ?? createApolloClient()
 
@@ -36,7 +36,7 @@ export function initializeApollo(initialState = {}) {
 }
 
 export function useApollo(initialState = {}) {
-  const store = useMemo(() => initializeApollo(initialState), [initialState])
+  const store = useMemo(() => initializeApollo2(initialState), [initialState])
 
   return store
 }

@@ -3,11 +3,7 @@ import Link from 'next/link'
 
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
 import Ribbon, { RibbonPosition } from 'components/Ribbon'
-import {
-  formatNameID,
-  formatNameImageCompressed,
-  formatNameImageHD
-} from 'utils/formatName'
+import { formatNameID, formatNameImageCompressed } from 'utils/formatName'
 import * as S from './styles'
 
 export type PokemonTypesProps =
@@ -33,14 +29,14 @@ export type PokemonTypesProps =
 export type PokemonCardProps = {
   id: number
   name: string
-  types: [{ name: PokemonTypesProps }]
+  types: PokemonTypesProps[]
   ribbonPosition?: RibbonPosition
 }
 
 const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
-  <Link href={`pokemon/charizard`} passHref>
-    <S.Wrapper typeColor={types[0].name}>
-      <Ribbon position={ribbonPosition} color={types[0].name}>
+  <Link href={`pokemon/${name}`} passHref>
+    <S.Wrapper typeColor={types[0]}>
+      <Ribbon position={ribbonPosition} color={types[0]}>
         #{formatNameID(id)}
       </Ribbon>
       <Image
@@ -54,7 +50,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
 
       <S.WrapperIcons>
         {types.map((type, index) => (
-          <PokemonTypeIcon hasHover key={index} type={type.name} />
+          <PokemonTypeIcon hasHover key={index} type={type} />
         ))}
       </S.WrapperIcons>
     </S.Wrapper>

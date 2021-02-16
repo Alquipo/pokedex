@@ -1,5 +1,11 @@
 directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
 
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
 """
 Direct the client to resolve this field locally, either from the cache or local resolvers.
 """
@@ -35,17 +41,30 @@ directive @connection(
 ) on FIELD
 
 type Ability {
-  id: String
-  name: String
-  slot: Int
+  ability: BaseName
   is_hidden: Boolean
-  is_main_series: Boolean
-  pokemons: [Int]
+  slot: Int
 }
 
-type AbilityInfo {
+type BaseList {
+  count: Int
+  next: String
+  previous: String
+  results: [BaseName]
+  status: Boolean
+  message: String
+}
+
+type BaseName {
+  url: String
   name: String
-  slot: Int
+}
+
+type BaseResponse {
+  message: String
+  status: Boolean
+  response: JSON
+  params: JSON
 }
 
 enum CacheControlScope {
@@ -53,149 +72,135 @@ enum CacheControlScope {
   PRIVATE
 }
 
-type Color {
-  light: String
-  dark: String
-}
-
-type Form {
-  id: Int
-  name: String
-  order: Int
-  form_order: Int
-  is_default: Boolean
-  is_battle_only: Boolean
-  is_mega: Boolean
-  form_name: String
-}
-
 type GameIndex {
-  value: Int
-}
-
-type Height {
-  value: Int
-  in_meter: String
-  in_feet: String
+  game_index: Int
+  version: BaseName
 }
 
 type HeldItem {
-  item: Item
+  item: BaseName
+  version_details: [VersionDetail]
 }
 
-type Item {
-  id: Int
-  name: String
-  cost: Int
-  fling_power: Int
-  category: ItemCategory
-  attributes: [ItemAttribute]
-}
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
 
-type ItemAttribute {
-  id: Int
-  name: String
-  items: [Item]
-  description: String
-}
-
-type ItemCategory {
-  id: Int
-  name: String
-  items: [Item]
-}
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
 
 type Move {
-  id: Int
-  name: String
-  accuracy: Int
-  effect_chance: Int
-  pp: Int
-  priority: Int
-  power: Int
-}
-
-type Mutation {
-  sayHello(name: String!): String!
+  move: BaseName
+  version_group_details: [VersionGroupDetail]
 }
 
 type Pokemon {
-  id: Int!
-  name: String!
+  abilities: [Ability]
   base_experience: Int
-  color: Color!
-  height: Height
-  is_default: Boolean
-  order: Int
-  weight: Weight
-  abilities: [AbilityInfo]
-  forms: [Form]
+  forms: [BaseName]
+  game_indices: [GameIndex]
+  height: Int
   held_items: [HeldItem]
+  id: Int
+  is_default: Boolean
   location_area_encounters: String
   moves: [Move]
+  name: String
+  order: Int
+  species: BaseName
   sprites: Sprite
-  species: SpeciesInfo
   stats: [Stat]
   types: [Type]
-  avatar: String!
+  weight: Int
+  status: Boolean
+  message: String
+}
+
+type PokemonItem {
+  url: String
+  name: String
+  image: String
+  id: Int
 }
 
 type PokemonList {
   count: Int
   next: String
   previous: String
-  results: [Pokemon]
+  nextOffset: Int
+  prevOffset: Int
+  params: JSON
+  results: [PokemonItem]
+  status: Boolean
+  message: String
 }
 
 type Query {
-  pokemons(limit: Int!, offset: Int!): PokemonList
-  pokemon(id: ID!): Pokemon
-}
-
-type Species {
-  id: Int
-  name: String
-  order: Int
-  gender_rate: Int
-  capture_rate: Int
-  base_happiness: Int
-  is_baby: Boolean
-  hatch_counter: Int
-  has_gender_differences: Boolean
-  forms_switchable: Boolean
-}
-
-type SpeciesInfo {
-  name: String!
-  url: String!
+  abilities: BaseList
+  ability(ability: String!): BaseResponse
+  berries: BaseList
+  berry(berry: String!): BaseResponse
+  eggGroups: BaseList
+  eggGroup(eggGroup: String!): BaseResponse
+  encounterMethods: BaseList
+  encounterMethod(encounterMethod: String!): BaseResponse
+  evolutionChains: BaseList
+  evolutionChain(id: String!): BaseResponse
+  evolutionTriggers: BaseList
+  evolutionTrigger(name: String!): BaseResponse
+  genders: BaseList
+  gender(gender: String!): BaseResponse
+  growthRates: BaseList
+  growthRate(growthRate: String!): BaseResponse
+  locations: BaseList
+  location(location: String!): BaseResponse
+  moves: BaseList
+  move(move: String!): BaseResponse
+  natures: BaseList
+  nature(nature: String!): BaseResponse
+  pokemons(limit: Int, offset: Int): PokemonList
+  pokemon(name: String!): Pokemon
+  regions: BaseList
+  region(region: String!): BaseResponse
+  species: BaseList
+  types: BaseList
 }
 
 type Sprite {
-  front_default: String
-  front_shiny: String
-  front_female: String
-  front_shiny_female: String
   back_default: String
-  back_shiny: String
   back_female: String
+  back_shiny: String
   back_shiny_female: String
+  front_default: String
+  front_female: String
+  front_shiny: String
+  front_shiny_female: String
 }
 
 type Stat {
-  id: Int
-  name: String
+  base_stat: Int
+  effort: Int
+  stat: BaseName
 }
 
 type Type {
   slot: Int
-  name: String
+  type: BaseName
 }
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
 
-type Weight {
-  value: Int
-  in_kg: String
-  in_lbs: String
+type VersionDetail {
+  rarity: Int
+  version: BaseName
+}
+
+type VersionGroupDetail {
+  level_learned_at: Int
+  move_learn_method: BaseName
+  version_group: BaseName
 }
