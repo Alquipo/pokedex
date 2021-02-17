@@ -3,7 +3,11 @@ import Menu from '.'
 
 export default {
   title: 'Menu',
-  component: Menu
+  component: Menu,
+  args: {
+    hasLogo: true,
+    hasGitHubCorner: true
+  }
 } as Meta
 
 export const Default: Story = (args) => <Menu {...args} />

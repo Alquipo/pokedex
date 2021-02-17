@@ -6,13 +6,13 @@ import GithubCorner from 'react-github-corner'
 import { PokemonTypesProps } from 'components/PokemonCard'
 
 import * as S from './styles'
+import React from 'react'
 
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
   hasLogo?: boolean
   positionLogo?: 'right' | 'left' | 'center'
   hasGitHubCorner?: boolean
-  hasTransition?: boolean
 }
 
 const Menu = ({
@@ -21,25 +21,33 @@ const Menu = ({
   bgColor,
   positionLogo = 'center'
 }: MenuProps) => {
+  // fix error console LInk forward ref
+  const CustomComponentImage = React.forwardRef(function CustomComponent() {
+    return (
+      <Image
+        src="/img/pokemon-logo.svg"
+        alt="Pokemon logo"
+        height={59}
+        width={200}
+      />
+    )
+  })
+
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasLogo && (
         <Link href="/" passHref>
-          <Image
-            src="/img/pokemon-logo.svg"
-            alt="Pokemon logo"
-            height={59}
-            width={200}
-          />
+          <CustomComponentImage />
         </Link>
       )}
 
       {hasGitHubCorner && (
         <GithubCorner
-          href="https://github.com/Alquipo/pokedex-v2"
+          href="https://github.com/Alquipo/pokedex"
           size={65}
           bannerColor={'#8F8F8F'}
           target="_blank"
+          aria-label="Open GitHub project"
         />
       )}
     </S.Wrapper>

@@ -6,12 +6,15 @@ export const wrapperModifiers = {
   left: () => css`
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
   `,
   right: () => css`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    img {
+      margin-right: 1rem;
+    }
   `,
   center: () => css`
     display: flex;
