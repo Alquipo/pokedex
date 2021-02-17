@@ -46,6 +46,12 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
       }
     }
   }, [clickStats])
+
+  const totalStats = stats.reduce(
+    (acumulador, stat) => acumulador + stat.baseStat,
+    0
+  )
+
   return (
     <S.Wrapper>
       <S.WrapperRotate>
@@ -98,6 +104,10 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
                 </td>
               </tr>
             ))}
+            <tr>
+              <td>Total</td>
+              <td>{totalStats}</td>
+            </tr>
           </tbody>
         </S.Table>
       </S.WrapperRotate>
