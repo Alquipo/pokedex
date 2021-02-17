@@ -2,11 +2,11 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import Ribbon, { RibbonProps } from '.'
 
 export default {
-  title: 'Ribbon',
+  title: 'Home/Ribbon',
   component: Ribbon,
   args: {
     children: '#005',
-    color: 'Normal'
+    color: 'normal'
   },
   argTypes: {
     children: {
