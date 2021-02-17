@@ -38,7 +38,6 @@ PokemonTemplateProps) => {
           <Menu
             hasLogo
             positionLogo={'center'}
-            hasTransition
             bgColor={pokemonInformation.types[0]}
           />
         </CSSTransition>

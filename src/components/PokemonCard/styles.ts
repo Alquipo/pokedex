@@ -14,12 +14,11 @@ export const wrapperModifiers = {
     &:hover {
       box-shadow: 0 0 1rem ${theme.colors.pokemonType[typeColor]};
       color: ${theme.colors.pokemonType[typeColor]};
-      text-decoration: none;
     }
   `
 }
 
-export const Wrapper = styled.a<TypeColorProps>`
+export const Wrapper = styled.div<TypeColorProps>`
   ${({ theme, typeColor }) => css`
     width: auto;
     position: relative;
@@ -31,8 +30,6 @@ export const Wrapper = styled.a<TypeColorProps>`
     border: 0.1rem solid;
     text-align: center;
 
-    text-decoration: none;
-
     cursor: pointer;
 
     background-color: ${theme.colors.white};
@@ -43,8 +40,6 @@ export const Wrapper = styled.a<TypeColorProps>`
     ${media.greaterThan('medium')`
       &:hover {
           transform: scale(1.01);
-          text-decoration: none;
-
         }
     `}
 

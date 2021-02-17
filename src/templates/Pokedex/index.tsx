@@ -1,5 +1,6 @@
 import PokemonCard, { PokemonCardProps } from 'components/PokemonCard'
 import Menu from 'components/Menu'
+import Link from 'next/link'
 
 import * as S from './styles'
 
@@ -13,12 +14,15 @@ const Pokedex = ({ pokemons }: PokedexTemplateProps) => {
       <Menu hasLogo hasGitHubCorner bgColor="transparent" />
       <S.Wrapper>
         {pokemons.map((pokemon, index) => (
-          <PokemonCard
-            id={pokemon.id}
-            key={index}
-            name={pokemon.name}
-            types={pokemon.types}
-          />
+          <Link key={index} href={`/pokemon/${pokemon.name}`} passHref>
+            <a style={{ textDecoration: 'none' }}>
+              <PokemonCard
+                id={pokemon.id}
+                name={pokemon.name}
+                types={pokemon.types}
+              />
+            </a>
+          </Link>
         ))}
       </S.Wrapper>
     </>

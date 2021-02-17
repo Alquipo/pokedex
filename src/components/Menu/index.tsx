@@ -21,23 +21,18 @@ const Menu = ({
   bgColor,
   positionLogo = 'center'
 }: MenuProps) => {
-  // fix error console LInk forward ref
-  const CustomComponentImage = React.forwardRef(function CustomComponent() {
-    return (
-      <Image
-        src="/img/pokemon-logo.svg"
-        alt="Pokemon logo"
-        height={59}
-        width={200}
-      />
-    )
-  })
-
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasLogo && (
         <Link href="/" passHref>
-          <CustomComponentImage />
+          <a>
+            <Image
+              src="/img/pokemon-logo.svg"
+              alt="Pokemon logo"
+              height={59}
+              width={200}
+            />
+          </a>
         </Link>
       )}
 
