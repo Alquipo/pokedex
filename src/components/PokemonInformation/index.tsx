@@ -1,5 +1,9 @@
 import { PokemonTypesProps } from 'components/PokemonCard'
 import PokemonTypeIcon from 'components/PokemonTypeIcon'
+import {
+  convertDecimetersToFeet,
+  convertHectogramsToFeet
+} from 'utils/convertInfPokemon'
 
 import { formatNameID } from 'utils/formatName'
 
@@ -31,13 +35,13 @@ const PokemonInformation = ({
           <tr>
             <td>Height</td>
             <td>
-              {height / 10}m {`(${(height / 3.048).toFixed(1)}ft)`}
+              {height / 10}m {`(${convertDecimetersToFeet(height)})`}
             </td>
           </tr>
           <tr>
             <td>Wight</td>
             <td>
-              {wight / 10}Kg {`( ${(wight / 4.536).toFixed(1)}lbs. )`}
+              {wight / 10}Kg {`( ${convertHectogramsToFeet(wight)} )`}
             </td>
           </tr>
           <tr>

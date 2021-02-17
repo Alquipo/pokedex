@@ -2,14 +2,15 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import ProgressBarPokemon, { ProgressBarProps } from '.'
 
 export default {
-  title: 'ProgressBarPokemon',
+  title: 'PokemonPage/ProgressBarPokemon',
   component: ProgressBarPokemon,
   // args: {
-  //   bgColor: 'Grass',
+  //   bgColor: 'fire',
   //   stats: 100,
   //   hasFunctions: false,
   //   size: 'base'
   // },
+
   parameters: {
     backgrounds: {
       default: 'dark'

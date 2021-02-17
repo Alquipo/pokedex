@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import PokemonStats, { PokemonStatsProps } from '.'
 
 export default {
-  title: 'PokemonStats',
+  title: 'PokemonPage/PokemonStats',
   component: PokemonStats,
   args: {
     types: ['Fire', 'Flying'],

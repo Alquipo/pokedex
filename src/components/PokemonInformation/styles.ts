@@ -92,11 +92,10 @@ export const ButtonAbilities = styled.span<PokemonTypeColors>`
     border: none;
     outline: none;
 
-    padding: 0.2rem 0.3rem;
+    padding: 0 0.3rem;
     margin-right: ${theme.spacings.xsmall};
     margin-bottom: ${theme.spacings.xsmall};
 
-    line-height: inherit;
     text-transform: uppercase;
 
     cursor: pointer;

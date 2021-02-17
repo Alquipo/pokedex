@@ -19,9 +19,8 @@ export async function getStaticProps() {
     QueryPokemonsVariables
   >({
     query: QUERY_POKEMONS,
-    variables: { limit: 807, offset: 0 }
+    variables: { limit: 150, offset: 0 }
   })
-
   return {
     props: {
       // revalidate: 3600,

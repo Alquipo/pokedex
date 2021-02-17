@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PokemonInformation /> should render the PokemonInformation correctly 1`] = `
+.c7 {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2px 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FBA54C;
+  box-shadow: 0 0 2rem #FBA54C;
+}
+
+.c9 {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2px 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #A1BBEC;
+  box-shadow: 0 0 2rem #A1BBEC;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 2rem;
+  cursor: default;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c2 {
+  line-height: 2;
+  color: #505050;
+  margin-left: 4rem;
+  border-collapse: collapse;
+  font-size: 1.8rem;
+}
+
+.c2 td {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.c2 td:first-child {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.c2 tr:nth-child(4) span:nth-child(2) {
+  -webkit-filter: brightness(110%) saturate(50%);
+  filter: brightness(110%) saturate(50%);
+}
+
+.c3 {
+  width: 27rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c4 {
+  color: #FAFAFA;
+  font-weight: 600;
+  background-color: #ff8a80;
+  -webkit-transition: background-color 1000ms ease-in,width 1500ms ease-in-out;
+  transition: background-color 1000ms ease-in,width 1500ms ease-in-out;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  padding: 0 0.3rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 9rem;
+  margin-right: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #FBA54C;
+  box-shadow: 0 0 20px #FBA54C;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-filter: saturate(100%) brightness(110%);
+  filter: saturate(100%) brightness(110%);
+  cursor: default;
+}
+
+.c6 span {
+  line-height: 1;
+  padding: 0.5rem 0 0 0.5rem;
+  color: #FAFAFA;
+  cursor: default;
+}
+
+.c6 div {
+  margin: 0;
+}
+
+.c8 {
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 9rem;
+  margin-right: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #A1BBEC;
+  box-shadow: 0 0 20px #A1BBEC;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-filter: saturate(100%) brightness(110%);
+  filter: saturate(100%) brightness(110%);
+  cursor: default;
+}
+
+.c8 span {
+  line-height: 1;
+  padding: 0.5rem 0 0 0.5rem;
+  color: #FAFAFA;
+  cursor: default;
+}
+
+.c8 div {
+  margin: 0;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:980px) {
+  .c0 {
+    -webkit-perspective: 30rem;
+    -moz-perspective: 30rem;
+    -ms-perspective: 30rem;
+    perspective: 30rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c0 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c1 {
+    -webkit-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    transform: rotateY(30deg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .c1:hover {
+    -webkit-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <table
+      class="c2"
+    >
+      <tbody>
+        <tr>
+          <td>
+            ID
+          </td>
+          <td>
+            #
+            006
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Height
+          </td>
+          <td>
+            0.16999999999999998
+            m 
+            (0.6ft)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wight
+          </td>
+          <td>
+            9
+            Kg 
+            ( 19.8lbs. )
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Abilities
+          </td>
+          <td>
+            <span
+              class="c3"
+            >
+              <span
+                class="c4"
+                role="button"
+              >
+                blaze
+              </span>
+              <span
+                class="c4"
+                role="button"
+              >
+                solar-power
+              </span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Type
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <div
+                class="c6"
+              >
+                <span>
+                  fire
+                </span>
+                <div
+                  class="c7"
+                >
+                  <img
+                    alt="fire"
+                    height="22"
+                    src="/img/type-icons/fire.png"
+                    width="22"
+                  />
+                </div>
+              </div>
+              <div
+                class="c8"
+              >
+                <span>
+                  flying
+                </span>
+                <div
+                  class="c9"
+                >
+                  <img
+                    alt="flying"
+                    height="22"
+                    src="/img/type-icons/flying.png"
+                    width="22"
+                  />
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+`;
