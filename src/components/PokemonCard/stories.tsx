@@ -4,36 +4,36 @@ import PokemonCard, { PokemonCardProps, PokemonTypesProps } from '.'
 export type RibbonColors = PokemonTypesProps
 
 export default {
-  title: 'PokemonCard',
+  title: 'Home/PokemonCard',
   component: PokemonCard,
   args: {
     id: 6,
-    name: 'Charizard',
-    types: ['Fire', 'Flying']
+    name: 'pikachu',
+    types: ['fire', 'flying']
   },
   argTypes: {
     types: {
       control: {
         type: 'inline-check',
         options: [
-          'Normal',
-          'Fire',
-          'Water',
-          'Electric',
-          'Grass',
-          'Ice',
-          'Ground',
-          'Flying',
-          'Ghost',
-          'Rock',
-          'Fighting',
-          'Poison',
-          'Psychic',
-          'Bug',
-          'Dark',
-          'Steel',
-          'Dragon',
-          'Fairy'
+          'normal',
+          'fire',
+          'water',
+          'electric',
+          'grass',
+          'ice',
+          'ground',
+          'flying',
+          'ghost',
+          'rock',
+          'fighting',
+          'poison',
+          'psychic',
+          'bug',
+          'dark',
+          'steel',
+          'dragon',
+          'fairy'
         ]
       }
     }

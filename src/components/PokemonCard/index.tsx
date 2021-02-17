@@ -40,11 +40,11 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
     </Ribbon>
 
     <Image
-      className="pokemonImage"
       src={formatNameImageCompressed(id)}
       alt={name}
       width={100}
       height={100}
+      role="img"
     />
     <S.CardName>{name}</S.CardName>
 
