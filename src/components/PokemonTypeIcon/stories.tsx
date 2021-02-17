@@ -11,7 +11,27 @@ export default {
 
 export const Default: Story<PokemonTypeIconProps> = (args) => (
   <div
-    style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-end',
+
+      height: '16rem',
+      width: '18rem ',
+
+      position: 'relative',
+
+      padding: '0.3rem',
+      margin: '0.3rem 0.8rem',
+
+      borderRadius: '1rem',
+      border: '0.1rem solid',
+      textAlign: 'center',
+
+      cursor: 'default',
+
+      backgroundColor: 'white'
+    }}
   >
     <PokemonTypeIcon {...args} />
     <PokemonTypeIcon {...args} />
