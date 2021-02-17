@@ -2,10 +2,10 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import PokemonTypeIcon, { PokemonTypeIconProps } from '.'
 
 export default {
-  title: 'PokemonTypeIcon',
+  title: 'Reusable/PokemonTypeIcon',
   component: PokemonTypeIcon,
   args: {
-    type: 'Fire'
+    type: 'fire'
   }
 } as Meta
 

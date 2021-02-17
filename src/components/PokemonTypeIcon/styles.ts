@@ -33,8 +33,3 @@ export const Wrapper = styled.div<WrapperProps>`
     `}
   `}
 `
-
-// export const Icon = styled.img`
-//   height: 60%;
-//   width: 60%;
-// `

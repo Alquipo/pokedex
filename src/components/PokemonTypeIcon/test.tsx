@@ -5,7 +5,7 @@ import theme from 'styles/theme'
 import PokemonTypeIcon, { PokemonTypeIconProps } from '.'
 
 const props: PokemonTypeIconProps = {
-  type: 'Fire'
+  type: 'fire'
 }
 
 describe('<PokemonTypeIcon />', () => {
@@ -14,7 +14,7 @@ describe('<PokemonTypeIcon />', () => {
 
     expect(screen.getByRole('img', { name: props.type })).toHaveAttribute(
       'src',
-      `img/type-icons/fire.png`
+      `/img/type-icons/fire.png`
     )
 
     expect(container.firstChild).toMatchSnapshot()
