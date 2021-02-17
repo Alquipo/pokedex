@@ -67,7 +67,8 @@ PokemonTemplateProps) => {
           </S.WrapperContainer>
         </CSSTransition>
       </TransitionGroup>
-
+      <br />
+      <br />
       <S.PokemonName>More Content Coming Soon!</S.PokemonName>
     </>
   )

@@ -50,6 +50,7 @@ export const Table = styled.table`
     line-height: 2;
     color: ${theme.colors.gray};
 
+    margin-left: 4rem;
     border-collapse: collapse;
 
     font-size: ${theme.font.sizes.large};
@@ -74,7 +75,7 @@ export const Table = styled.table`
 `
 
 export const WrapperAbilities = styled.span`
-  width: 23rem;
+  width: 27rem;
   display: flex;
   flex-wrap: wrap;
 `
