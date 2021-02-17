@@ -26,7 +26,7 @@ const Menu = ({
       {hasLogo && (
         <Link href="/" passHref>
           <a>
-            <Image
+            <img
               src="/img/pokemon-logo.svg"
               alt="Pokemon logo"
               height={59}

@@ -21,6 +21,11 @@ describe('<Menu />', () => {
   it('should render the complete menu', () => {
     renderWithTheme(<Menu hasLogo hasGitHubCorner />)
 
+    expect(screen.getByRole('img', { name: /Pokemon logo/i })).toHaveAttribute(
+      'src',
+      `/img/pokemon-logo.svg`
+    )
+
     expect(
       screen.getByRole('link', { name: /Open GitHub project/i })
     ).toHaveAttribute('href', 'https://github.com/Alquipo/pokedex')
