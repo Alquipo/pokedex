@@ -52,6 +52,11 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
     0
   )
 
+  stats.map((stat) => {
+    stat.name === 'special-defense' && (stat.name = 'Sp.Defense')
+
+    stat.name === 'special-attack' && (stat.name = 'Sp.Attack')
+  })
   return (
     <S.Wrapper>
       <S.WrapperRotate>
@@ -90,9 +95,6 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
 
             {stats.map((stat, index) => (
               <tr key={index}>
-                {stat.name === 'special-defense' && (stat.name = 'Sp.Defense')}
-                {stat.name === 'special-attack' && (stat.name = 'Sp.Attack')}
-
                 <td colSpan={1}>{stat.name}</td>
 
                 <td colSpan={3}>
