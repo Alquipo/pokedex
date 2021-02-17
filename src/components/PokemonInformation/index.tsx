@@ -30,11 +30,15 @@ const PokemonInformation = ({
           </tr>
           <tr>
             <td>Height</td>
-            <td>{height}m</td>
+            <td>
+              {height / 10}m {`(${(height / 3.048).toFixed(1)}ft)`}
+            </td>
           </tr>
           <tr>
             <td>Wight</td>
-            <td>{wight}Kg</td>
+            <td>
+              {wight / 10}Kg {`( ${(wight / 4.536).toFixed(1)}lbs. )`}
+            </td>
           </tr>
           <tr>
             <td>Abilities</td>
