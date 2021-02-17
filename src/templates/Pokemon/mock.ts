@@ -1,7 +1,7 @@
 export default {
   id: 6,
   name: 'Charizard',
-  types: ['Fire', 'Flying'],
+  types: ['fire', 'flying'],
   category: 'Flame Pokémon',
   height: 1.7,
   wight: 90,
