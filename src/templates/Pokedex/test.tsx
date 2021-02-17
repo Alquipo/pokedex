@@ -1,18 +1,30 @@
-// import { screen } from '@testing-library/react'
-// import  { PokemonCardProps } from 'components/PokemonCard'
-// import { renderWithTheme } from 'utils/tests/helpers'
+import { screen } from '@testing-library/react'
+import { PokemonCardProps } from 'components/PokemonCard'
+import { renderWithTheme } from 'utils/tests/helpers'
 
-import { PokedexTemplateProps } from '.'
+import Pokedex, { PokedexTemplateProps } from '.'
 
 const props: PokedexTemplateProps = {
   pokemons: [
     {
       id: 6,
       name: 'Charizard',
-      types: ['Fire', 'Flying']
+      types: ['fire', 'flying']
+    },
+    {
+      id: 9,
+      name: 'Blastoise',
+      types: ['water']
     }
   ]
 }
+
+jest.mock('components/Menu', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock Menu" />
+  }
+}))
 
 jest.mock('components/PokemonCard', () => ({
   __esModule: true,
@@ -21,23 +33,11 @@ jest.mock('components/PokemonCard', () => ({
   }
 }))
 
-// jest.mock('components/PokemonTypeIcon', () => ({
-//   __esModule: true,
-//   default: function Mock() {
-//     return <div data-testid="Mock Menu" />
-//   }
-// }))
+describe('<Pokedex />', () => {
+  it('should render the template Pokedex with components', () => {
+    renderWithTheme(<Pokedex {...props} />)
 
-// jest.mock('components/Ribbon', () => ({
-//   __esModule: true,
-//   default: function Mock() {
-//     return <div data-testid="Mock Menu" />
-//   }
-// }))
-
-describe('<PokedexList />', () => {
-  it('should render the heading', () => {
-    // renderWithTheme(<PokedexList pokemons={props} />)
-    // expect(screen.getByTestId('Mock PokemonCard')).toBeInTheDocument()
+    expect(screen.getByTestId('Mock Menu')).toBeInTheDocument()
+    expect(screen.getAllByTestId('Mock PokemonCard')).toHaveLength(2)
   })
 })
