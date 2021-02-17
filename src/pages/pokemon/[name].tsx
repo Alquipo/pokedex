@@ -56,6 +56,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true }
   }
 
+  // const res = await fetch(
+  //   `https://pokeapi.co/api/v2/pokemon-species/${data.pokemon.id}`
+  // )
+
+  // const tesd = await res.json
+
+  // console.log(res)
   return {
     props: {
       name: data.pokemon.name,
