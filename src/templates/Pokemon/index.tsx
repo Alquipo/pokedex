@@ -36,9 +36,10 @@ PokemonTemplateProps) => {
       >
         <CSSTransition timeout={1000} classNames="menu">
           <Menu
+            hasBackButton
             hasLogo
-            positionLogo={'center'}
             bgColor={pokemonInformation.types[0]}
+            positionLogo="right"
           />
         </CSSTransition>
       </TransitionGroup>
