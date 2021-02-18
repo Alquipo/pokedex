@@ -13,6 +13,9 @@ const GlobalStyles = createGlobalStyle`
     //scrollbar configuration
     ::-webkit-scrollbar{
       width: 0.5rem;
+      &:hover{
+        width: 1rem;
+      }
 
     }
     ::-webkit-scrollbar-track {
