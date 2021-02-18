@@ -5,7 +5,7 @@ export default {
   title: 'PokemonPage/PokemonStats',
   component: PokemonStats,
   args: {
-    types: ['Fire', 'Flying'],
+    types: ['fire', 'flying'],
     stats: [
       {
         baseStat: 100,
@@ -32,9 +32,42 @@ export default {
         name: 'speed'
       }
     ]
+  },
+  argTypes: {
+    types: {
+      control: {
+        type: 'inline-check',
+        options: [
+          'normal',
+          'fire',
+          'water',
+          'electric',
+          'grass',
+          'ice',
+          'ground',
+          'flying',
+          'ghost',
+          'rock',
+          'fighting',
+          'poison',
+          'psychic',
+          'bug',
+          'dark',
+          'steel',
+          'dragon',
+          'fairy'
+        ]
+      }
+    }
   }
 } as Meta
 
 export const Default: Story<PokemonStatsProps> = (args) => (
-  <PokemonStats {...args} />
+  <div
+    style={{
+      margin: '2.5rem auto 0 auto'
+    }}
+  >
+    <PokemonStats {...args} />
+  </div>
 )
