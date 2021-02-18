@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import GithubCorner from 'react-github-corner'
@@ -11,6 +10,7 @@ import React from 'react'
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
   hasLogo?: boolean
+  hasBackButton?: boolean
   positionLogo?: 'right' | 'left' | 'center'
   hasGitHubCorner?: boolean
 }
@@ -18,11 +18,20 @@ export type MenuProps = {
 const Menu = ({
   hasGitHubCorner,
   hasLogo,
-  bgColor,
-  positionLogo = 'center'
+  bgColor = 'transparent',
+  positionLogo = 'center',
+  hasBackButton
 }: MenuProps) => {
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
+      {hasBackButton && (
+        <Link href="/" passHref>
+          <a>
+            <S.BackButton aria-label="back button" />
+          </a>
+        </Link>
+      )}
+
       {hasLogo && (
         <Link href="/" passHref>
           <a>

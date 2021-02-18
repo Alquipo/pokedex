@@ -6,7 +6,8 @@ export default {
   component: Menu,
   args: {
     hasLogo: true,
-    hasGitHubCorner: true
+    hasGitHubCorner: true,
+    hasBackButton: true
   }
 } as Meta
 

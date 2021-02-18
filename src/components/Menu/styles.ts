@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import styled, { css } from 'styled-components'
 import { MenuProps } from '.'
+import { ArrowBack } from '@styled-icons/ionicons-outline/ArrowBack'
 
 export const wrapperModifiers = {
   left: () => css`
@@ -11,7 +12,7 @@ export const wrapperModifiers = {
   right: () => css`
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     img {
       margin-right: 1rem;
     }
@@ -22,6 +23,14 @@ export const wrapperModifiers = {
     justify-content: center;
   `
 }
+
+export const BackButton = styled(ArrowBack)`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray};
+    width: 3rem;
+    height: 3rem;
+  `}
+`
 
 export const Wrapper = styled.header<MenuProps>`
   ${({ theme, bgColor, positionLogo }) => css`

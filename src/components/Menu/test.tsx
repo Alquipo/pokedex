@@ -6,8 +6,12 @@ import theme from 'styles/theme'
 import Menu from '.'
 
 describe('<Menu />', () => {
-  it('should a not render Logo and github corner when is not passed', () => {
+  it('should a not render Logo, github corner and BackArrow when is not passed', () => {
     renderWithTheme(<Menu />)
+
+    expect(
+      screen.queryByRole('img', { name: /Back Button/i })
+    ).not.toBeInTheDocument()
 
     expect(
       screen.queryByRole('img', { name: /Pokemon logo/i })
@@ -19,12 +23,16 @@ describe('<Menu />', () => {
   })
 
   it('should render the complete menu', () => {
-    renderWithTheme(<Menu hasLogo hasGitHubCorner />)
+    renderWithTheme(<Menu hasBackButton hasLogo hasGitHubCorner />)
 
     expect(screen.getByRole('img', { name: /Pokemon logo/i })).toHaveAttribute(
       'src',
       `/img/pokemon-logo.svg`
     )
+
+    expect(
+      screen.queryByRole('img', { name: /Pokemon logo/i })
+    ).toBeInTheDocument()
 
     expect(
       screen.getByRole('link', { name: /Open GitHub project/i })
@@ -45,7 +53,7 @@ describe('<Menu />', () => {
     const { container } = renderWithTheme(<Menu positionLogo="right" />)
 
     expect(container.firstChild).toHaveStyle({
-      justifyContent: 'flex-end'
+      justifyContent: 'space-between'
     })
   })
 
