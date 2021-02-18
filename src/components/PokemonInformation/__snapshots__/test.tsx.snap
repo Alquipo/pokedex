@@ -91,7 +91,6 @@ exports[`<PokemonInformation /> should render the PokemonInformation correctly 1
 
 .c2 td {
   padding: 0.5rem;
-  vertical-align: top;
 }
 
 .c2 td:first-child {
@@ -291,7 +290,7 @@ exports[`<PokemonInformation /> should render the PokemonInformation correctly 1
           <td>
             9
             Kg 
-            ( 19.8lbs. )
+            ( 19.8lbs )
           </td>
         </tr>
         <tr>

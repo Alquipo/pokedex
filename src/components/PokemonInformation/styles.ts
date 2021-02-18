@@ -57,7 +57,6 @@ export const Table = styled.table`
 
     td {
       padding: 0.5rem;
-      vertical-align: top;
     }
 
     td:first-child {
