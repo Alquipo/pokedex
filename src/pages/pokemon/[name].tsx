@@ -2,18 +2,15 @@ import {
   QueryPokemon,
   QueryPokemonVariables
 } from 'graphql/generated/QueryPokemon'
-import {
-  QueryPokemons,
-  QueryPokemonsVariables
-} from 'graphql/generated/QueryPokemons'
+
 import { QUERY_POKEMON } from 'graphql/queries/pokemon'
-import { QUERY_POKEMONS } from 'graphql/queries/pokemons'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import Pokemon, { PokemonTemplateProps } from 'templates/Pokemon'
 
 import { initializeApollo } from 'utils/apollo'
-import { initializeApollo2 } from 'utils/apollo2'
+
+import pokemonList from 'graphql/data/pokemons.json'
 
 export default function PokemonPage(props: PokemonTemplateProps) {
   const router = useRouter()
@@ -24,15 +21,7 @@ export default function PokemonPage(props: PokemonTemplateProps) {
 }
 
 export async function getStaticPaths() {
-  const apolloClient = initializeApollo()
-
-  const { data } = await apolloClient.query<
-    QueryPokemons,
-    QueryPokemonsVariables
-  >({
-    query: QUERY_POKEMONS,
-    variables: { limit: 150, offset: 0 }
-  })
+  const { data } = pokemonList
 
   const paths = data.pokemons.results.map(({ name }) => ({
     params: { name }
@@ -42,7 +31,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const apolloClient = initializeApollo2()
+  const apolloClient = initializeApollo()
 
   const { data } = await apolloClient.query<
     QueryPokemon,
@@ -56,17 +45,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true }
   }
 
-  // const res = await fetch(
-  //   `https://pokeapi.co/api/v2/pokemon-species/${data.pokemon.id}`
-  // )
-
-  // const tesd = await res.json
-
-  // console.log(res)
   return {
     props: {
-      name: data.pokemon.name,
+      // revalidate: 3600,
       // category: mockPokemon.category,
+      name: data.pokemon.name,
       pokemonInformation: {
         id: data.pokemon.id,
         types: data.pokemon.types.map((type) => {

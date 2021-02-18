@@ -12,8 +12,7 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: 'https://pokeapi.dev/'
-      // uri: 'http://localhost:8080/graphql'
+      uri: 'https://graphql-pokeapi.vercel.app/api/graphql'
     }),
     cache: new InMemoryCache()
   })

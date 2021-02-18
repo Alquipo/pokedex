@@ -1,26 +1,13 @@
 import Pokedex, { PokedexTemplateProps } from 'templates/Pokedex'
 
-import { initializeApollo } from 'utils/apollo'
-import { QUERY_POKEMONS } from 'graphql/queries/pokemons'
-import {
-  QueryPokemons,
-  QueryPokemonsVariables
-} from 'graphql/generated/QueryPokemons'
+import pokemonList from 'graphql/data/pokemons.json'
 
 export default function Index(props: PokedexTemplateProps) {
   return <Pokedex {...props} />
 }
 
-export async function getStaticProps() {
-  const apolloClient = initializeApollo()
-
-  const { data } = await apolloClient.query<
-    QueryPokemons,
-    QueryPokemonsVariables
-  >({
-    query: QUERY_POKEMONS,
-    variables: { limit: 150, offset: 0 }
-  })
+export function getStaticProps() {
+  const { data } = pokemonList
   return {
     props: {
       // revalidate: 3600,

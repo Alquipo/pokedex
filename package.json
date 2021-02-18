@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "graphql": "^14.0.0",
     "next": "10.0.6",
