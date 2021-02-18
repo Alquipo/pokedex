@@ -10,7 +10,7 @@ import Pokemon, { PokemonTemplateProps } from 'templates/Pokemon'
 
 import { initializeApollo } from 'utils/apollo'
 
-import pokemonList from 'graphql/data/pokemons.json'
+import pokemonList from 'graphql/data/pokemonInitialStaticPage.json'
 
 export default function PokemonPage(props: PokemonTemplateProps) {
   const router = useRouter()
