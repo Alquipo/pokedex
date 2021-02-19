@@ -52,6 +52,7 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
     0
   )
 
+  /* istanbul ignore next */
   stats.map((stat) => {
     stat.name === 'special-defense' && (stat.name = 'Sp.Defense')
 
@@ -69,6 +70,7 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
                   typeColor={types[0]}
                   buttonActive={statsBase}
                   onClick={() => setClickStats('base')}
+                  aria-label="button base"
                 >
                   Base
                 </S.Button>
@@ -78,6 +80,7 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
                   typeColor={types[0]}
                   buttonActive={statsMin}
                   onClick={() => setClickStats('min')}
+                  aria-label="button min"
                 >
                   Min
                 </S.Button>
@@ -87,6 +90,7 @@ const PokemonStats = ({ stats, types }: PokemonStatsProps) => {
                   typeColor={types[0]}
                   buttonActive={statsMax}
                   onClick={() => setClickStats('max')}
+                  aria-label="button max"
                 >
                   Max
                 </S.Button>

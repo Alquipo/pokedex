@@ -1,5 +1,4 @@
 import { screen } from '@testing-library/react'
-import { PokemonCardProps } from 'components/PokemonCard'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import Pokedex, { PokedexTemplateProps } from '.'

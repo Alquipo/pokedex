@@ -4,12 +4,12 @@ import ProgressBarPokemon, { ProgressBarProps } from '.'
 export default {
   title: 'PokemonPage/ProgressBarPokemon',
   component: ProgressBarPokemon,
-  // args: {
-  //   bgColor: 'fire',
-  //   stats: 100,
-  //   hasFunctions: false,
-  //   size: 'base'
-  // },
+  args: {
+    bgColor: 'fire',
+    stats: 100,
+    hasFunctions: false,
+    size: 'base'
+  },
 
   parameters: {
     backgrounds: {

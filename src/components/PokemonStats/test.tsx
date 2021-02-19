@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import PokemonStats, { PokemonStatsProps } from '.'
@@ -32,5 +32,13 @@ describe('<PokemonStats />', () => {
     expect(screen.getAllByTestId('Mock ProgressBar')).toHaveLength(6)
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should handle switch stats or button clicked', () => {
+    renderWithTheme(<PokemonStats {...props} />)
+
+    fireEvent.click(screen.getByRole('button', { name: /button min/i }))
+    fireEvent.click(screen.getByRole('button', { name: /button base/i }))
+    fireEvent.click(screen.getByRole('button', { name: /button max/i }))
   })
 })

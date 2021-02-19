@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { generateMedia } from 'styled-media-query'
 
 import { Container } from 'components/Container'
-import { PokemonTypesProps } from 'components/PokemonCard'
+// import { PokemonTypesProps } from 'components/PokemonCard'
 
 export const WrapperContainer = styled(Container)`
   flex-direction: column;
@@ -37,23 +37,23 @@ export const PokemonName = styled.h1`
   `}
 `
 
-type PokemonTypeColors = {
-  typeColor: PokemonTypesProps
-}
+// type PokemonTypeColors = {
+//   typeColor: PokemonTypesProps
+// }
 
-export const PokemonCategory = styled.span<PokemonTypeColors>`
-  ${({ theme, typeColor }) => css`
-    padding: ${theme.spacings.xxsmall};
-    color: ${theme.colors.white};
+// export const PokemonCategory = styled.span<PokemonTypeColors>`
+//   ${({ theme, typeColor }) => css`
+//     padding: ${theme.spacings.xxsmall};
+//     color: ${theme.colors.white};
 
-    background-color: ${theme.colors.pokemonText[typeColor]};
+//     background-color: ${theme.colors.pokemonText[typeColor]};
 
-    text-transform: capitalize;
-    border-radius: ${theme.border.radius.xsmall};
+//     text-transform: capitalize;
+//     border-radius: ${theme.border.radius.xsmall};
 
-    cursor: pointer;
-  `}
-`
+//     cursor: pointer;
+//   `}
+// `
 const customMedia = generateMedia({
   desktop: '980px'
 })

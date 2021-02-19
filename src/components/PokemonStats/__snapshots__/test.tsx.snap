@@ -132,6 +132,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
           <th />
           <th>
             <button
+              aria-label="button base"
               class="c3"
             >
               Base
@@ -139,6 +140,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
           </th>
           <th>
             <button
+              aria-label="button min"
               class="c4"
             >
               Min
@@ -146,6 +148,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
           </th>
           <th>
             <button
+              aria-label="button max"
               class="c4"
             >
               Max
@@ -248,4 +251,4 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
     </table>
   </div>
 </section>
-`;
+`
