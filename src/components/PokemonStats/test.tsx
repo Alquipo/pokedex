@@ -21,13 +21,13 @@ describe('<PokemonStats />', () => {
   it('should render the PokemonStats correctly', () => {
     const { container } = renderWithTheme(<PokemonStats {...props} />)
 
-    expect(screen.getByRole('row', { name: 'hp' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: 'attack' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: 'defense' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: 'Sp.attack' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: 'Sp.defense' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: 'speed' })).toBeInTheDocument()
-    expect(screen.getByRole('row', { name: /Total/i })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: /hp/i })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: 'attack' })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: 'defense' })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: 'Sp.attack' })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: 'Sp.defense' })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: /speed/i })).toBeInTheDocument()
+    expect(screen.getByRole('cell', { name: /Total/i })).toBeInTheDocument()
 
     expect(screen.getAllByTestId('Mock ProgressBar')).toHaveLength(6)
 
