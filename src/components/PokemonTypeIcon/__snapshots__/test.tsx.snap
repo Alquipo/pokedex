@@ -33,9 +33,8 @@ exports[`<PokemonTypeIcon /> should render the PokemonTypeIcon correctly 1`] = `
 >
   <img
     alt="fire"
-    height="22"
+    data-testid="Mock Image"
     src="/img/type-icons/fire.png"
-    width="22"
   />
 </div>
-`;
+`

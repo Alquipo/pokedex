@@ -186,22 +186,16 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
       class="c4"
     >
       <img
-        alt="fire"
-        height="22"
-        src="/img/type-icons/fire.png"
-        width="22"
+        data-testid="Mock Image"
       />
     </div>
     <div
       class="c5"
     >
       <img
-        alt="flying"
-        height="22"
-        src="/img/type-icons/flying.png"
-        width="22"
+        data-testid="Mock Image"
       />
     </div>
   </div>
 </div>
-`;
+`

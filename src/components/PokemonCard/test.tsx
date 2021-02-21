@@ -25,17 +25,7 @@ describe('<PokemonCard />', () => {
 
     expect(screen.getByText('#006')).toBeInTheDocument()
 
-    expect(screen.getByTestId('Mock Image')).toBeInTheDocument()
-
-    expect(screen.getByRole('img', { name: props.types[0] })).toHaveAttribute(
-      'src',
-      `/img/type-icons/fire.png`
-    )
-
-    expect(screen.getByRole('img', { name: props.types[1] })).toHaveAttribute(
-      'src',
-      `/img/type-icons/flying.png`
-    )
+    expect(screen.getAllByTestId('Mock Image')).toHaveLength(3)
 
     expect(container.firstChild).toMatchSnapshot()
   })
