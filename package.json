@@ -22,24 +22,14 @@
     "deploy-storybook": "storybook-to-ghpages",
     "schema:download": "apollo client:download-schema --endpoint=https://graphql-pokeapi.vercel.app/api/graphql schema.gql",
     "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
-    "types:generate": "yarn schema:download &&  yarn codegen"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
-    ]
+    "types:generate": "yarn schema:download &&  yarn codegen",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
     "bootstrap": "^4.6.0",
     "graphql": "^14.0.0",
-    "next": "10.0.6",
+    "next": "10.0.7",
     "next-pwa": "^5.0.4",
     "nprogress": "^0.2.0",
     "react": "17.0.1",
@@ -60,21 +50,21 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.22",
+    "@types/node": "^14.14.31",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
-    "apollo": "^2.32.1",
+    "apollo": "^2.32.5",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.8",
+    "husky": "5",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.3",
     "lint-staged": "^10.5.3",
