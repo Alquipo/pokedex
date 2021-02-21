@@ -60,6 +60,7 @@ PokemonTemplateProps) => {
                 layout="intrinsic"
                 width={1280}
                 height={1280}
+                priority
               />
 
               <PokemonStats {...pokemonStats} />

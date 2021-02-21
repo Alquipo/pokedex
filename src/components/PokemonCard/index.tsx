@@ -44,6 +44,7 @@ const PokemonCard = ({ id, name, types, ribbonPosition }: PokemonCardProps) => (
       width={100}
       height={100}
       role="img"
+      priority
     />
     <S.CardName>{name}</S.CardName>
 
