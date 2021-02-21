@@ -165,7 +165,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -179,7 +179,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -193,7 +193,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -207,7 +207,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -221,7 +221,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -235,7 +235,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
             colspan="3"
           >
             <img
-              data-testid="Mock ProgressBar"
+              data-testid="Mock ProgressBarPokemon"
             />
           </td>
         </tr>
@@ -251,4 +251,4 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
     </table>
   </div>
 </section>
-`
+`;

@@ -10,10 +10,10 @@ const props: PokemonStatsProps = {
   types: ['fire', 'flying']
 }
 
-jest.mock('components/ProgressBar', () => ({
+jest.mock('components/ProgressBarPokemon', () => ({
   __esModule: true,
   default: function Mock({ children }: { children: React.ReactNode }) {
-    return <img data-testid="Mock ProgressBar">{children}</img>
+    return <img data-testid="Mock ProgressBarPokemon">{children}</img>
   }
 }))
 
@@ -29,7 +29,7 @@ describe('<PokemonStats />', () => {
     expect(screen.getByRole('cell', { name: /speed/i })).toBeInTheDocument()
     expect(screen.getByRole('cell', { name: /Total/i })).toBeInTheDocument()
 
-    expect(screen.getAllByTestId('Mock ProgressBar')).toHaveLength(6)
+    expect(screen.getAllByTestId('Mock ProgressBarPokemon')).toHaveLength(6)
 
     expect(container.firstChild).toMatchSnapshot()
   })

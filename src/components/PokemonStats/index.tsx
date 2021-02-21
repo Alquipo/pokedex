@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import ProgressBarPokemon, { Sizes } from 'components/ProgressBar'
+import ProgressBarPokemon, { Sizes } from 'components/ProgressBarPokemon'
 
 import * as S from './styles'
 import { PokemonTypesProps } from 'components/PokemonCard'
