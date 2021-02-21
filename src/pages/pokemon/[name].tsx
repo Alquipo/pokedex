@@ -17,7 +17,11 @@ export default function PokemonPage(props: PokemonTemplateProps) {
 
   //se a rota nao tiver sido gerada ainda voce pode mostrar um loading ou uma tela de esqueleto
   if (router.isFallback) return null
-  return <Pokemon {...props} />
+  return (
+    <div className="page">
+      <Pokemon {...props} />
+    </div>
+  )
 }
 
 export async function getStaticPaths() {

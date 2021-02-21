@@ -46,35 +46,8 @@ export const Wrapper = styled.header<MenuProps>`
     position: sticky;
     top: 0;
 
-    @keyframes fadeInMenu {
-      0% {
-        background-color: ${theme.colors.pokemonText.transparent};
-      }
-
-      100% {
-        background-color: ${theme.colors.pokemonText[bgColor!]};
-      }
-    }
-
-    @keyframes fadeInLogo {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    &.menu-appear {
-      animation: fadeInMenu 1s ease-out;
-    }
-
     img {
       cursor: pointer;
-      &.menu-appear {
-        animation: fadeInLogo 1s ease-out;
-      }
     }
 
     background-color: ${theme.colors.pokemonText[bgColor!]};

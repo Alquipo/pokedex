@@ -2,22 +2,9 @@ import styled, { css } from 'styled-components'
 import { generateMedia } from 'styled-media-query'
 
 import { Container } from 'components/Container'
-// import { PokemonTypesProps } from 'components/PokemonCard'
 
 export const WrapperContainer = styled(Container)`
   flex-direction: column;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  &.pokemonStatus-appear {
-    animation: fadeIn 1.5s ease-in-out;
-  }
 `
 export const PokemonName = styled.h1`
   ${({ theme }) => css`

@@ -30,21 +30,11 @@ exports[`<Menu /> should render the correctly background-color menu 1`] = `
   box-shadow: 0 0 40px 8px rgb(0 0 0 / 18%);
 }
 
-.c0.menu-appear {
-  -webkit-animation: fadeInMenu 1s ease-out;
-  animation: fadeInMenu 1s ease-out;
-}
-
 .c0 img {
   cursor: pointer;
-}
-
-.c0 img.menu-appear {
-  -webkit-animation: fadeInLogo 1s ease-out;
-  animation: fadeInLogo 1s ease-out;
 }
 
 <header
   class="c0"
 />
-`;
+`

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import Menu from 'components/Menu'
 import PokemonInformation, {
@@ -24,50 +23,34 @@ const Pokemon = ({
 PokemonTemplateProps) => {
   return (
     <>
-      <TransitionGroup
-        appear={true}
-        enter={true}
-        style={{
-          display: 'flex',
-          zIndex: 20,
-          position: 'sticky',
-          top: 0
-        }}
-      >
-        <CSSTransition timeout={1000} classNames="menu">
-          <Menu
-            hasBackButton
-            hasLogo
-            bgColor={pokemonInformation.types[0]}
-            positionLogo="right"
-          />
-        </CSSTransition>
-      </TransitionGroup>
+      <Menu
+        hasBackButton
+        hasLogo
+        bgColor={pokemonInformation.types[0]}
+        positionLogo="right"
+      />
 
-      <TransitionGroup appear={true} enter={true}>
-        <CSSTransition timeout={1500} classNames="pokemonStatus">
-          <S.WrapperContainer>
-            <S.PokemonName>{name}</S.PokemonName>
-            {/* <S.PokemonCategory typeColor={pokemonInformation.types[0]}>
+      <S.WrapperContainer>
+        <S.PokemonName>{name}</S.PokemonName>
+        {/* <S.PokemonCategory typeColor={pokemonInformation.types[0]}>
               {category}
             </S.PokemonCategory> */}
 
-            <S.WrapperBase>
-              <PokemonInformation {...pokemonInformation} />
-              <Image
-                src={formatNameImageHD(pokemonInformation.id)}
-                alt={name}
-                layout="intrinsic"
-                width={1280}
-                height={1280}
-                priority
-              />
+        <S.WrapperBase>
+          <PokemonInformation {...pokemonInformation} />
+          <Image
+            src={formatNameImageHD(pokemonInformation.id)}
+            alt={name}
+            layout="intrinsic"
+            width={1280}
+            height={1280}
+            priority
+          />
 
-              <PokemonStats {...pokemonStats} />
-            </S.WrapperBase>
-          </S.WrapperContainer>
-        </CSSTransition>
-      </TransitionGroup>
+          <PokemonStats {...pokemonStats} />
+        </S.WrapperBase>
+      </S.WrapperContainer>
+
       <br />
       <br />
       <S.PokemonName>More Content Coming Soon!</S.PokemonName>
