@@ -25,7 +25,7 @@ const Menu = ({
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasBackButton && (
-        <Link href="/" passHref>
+        <Link href="/" scroll={false}>
           <a>
             <S.BackButton aria-label="back button" />
           </a>
