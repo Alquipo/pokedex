@@ -14,7 +14,7 @@ const Pokedex = ({ pokemons }: PokedexTemplateProps) => {
       <Menu hasLogo hasGitHubCorner bgColor="transparent" />
       <S.Wrapper>
         {pokemons.map((pokemon, index) => (
-          <Link key={index} href={`/pokemon/${pokemon.name}`}>
+          <Link key={index} href={`/pokemon/${pokemon.name}`} passHref>
             <a style={{ textDecoration: 'none' }}>
               <PokemonCard
                 id={pokemon.id}
