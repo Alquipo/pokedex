@@ -6,6 +6,7 @@ import { PokemonTypesProps } from 'components/PokemonCard'
 
 import * as S from './styles'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
@@ -22,14 +23,16 @@ const Menu = ({
   positionLogo = 'center',
   hasBackButton
 }: MenuProps) => {
+  const router = useRouter()
+
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasBackButton && (
-        <Link href="/" scroll={false}>
-          <a>
-            <S.BackButton aria-label="back button" />
-          </a>
-        </Link>
+        // <Link href="/" scroll={false}>
+        //   <a>
+        <S.BackButton aria-label="back button" onClick={() => router.back()} />
+        //  </a>
+        // </Link>
       )}
 
       {hasLogo && (
