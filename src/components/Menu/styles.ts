@@ -29,6 +29,7 @@ export const BackButton = styled(ArrowBack)`
     color: ${theme.colors.gray};
     width: 3rem;
     height: 3rem;
+    cursor: pointer;
   `}
 `
 

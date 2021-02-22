@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import GithubCorner from 'react-github-corner'
@@ -6,7 +7,6 @@ import { PokemonTypesProps } from 'components/PokemonCard'
 
 import * as S from './styles'
 import React from 'react'
-import { useRouter } from 'next/router'
 
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
@@ -28,11 +28,7 @@ const Menu = ({
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasBackButton && (
-        // <Link href="/" scroll={false}>
-        //   <a>
         <S.BackButton aria-label="back button" onClick={() => router.back()} />
-        //  </a>
-        // </Link>
       )}
 
       {hasLogo && (
