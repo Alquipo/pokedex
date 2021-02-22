@@ -15,7 +15,6 @@ const PokemonTypeIcon = ({ type, hasHover = false }: PokemonTypeIconProps) => (
       alt={type}
       width={22}
       height={22}
-      priority
     />
   </S.Wrapper>
 )
