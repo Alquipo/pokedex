@@ -5,7 +5,7 @@ import {
 
 import { QUERY_POKEMON } from 'graphql/queries/pokemon'
 import { GetStaticProps } from 'next'
-// import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router'
 import Pokemon, { PokemonTemplateProps } from 'templates/Pokemon'
 
 import { initializeApollo } from 'utils/apollo'
@@ -13,8 +13,10 @@ import { initializeApollo } from 'utils/apollo'
 import pokemonList from 'graphql/data/pokemonInitialStaticPage.json'
 
 export default function PokemonPage(props: PokemonTemplateProps) {
+  const router = useRouter()
+
   //se a rota nao tiver sido gerada ainda voce pode mostrar um loading ou uma tela de esqueleto
-  // if (router.isFallback) return null
+  if (router.isFallback) return null
   return (
     <div className="page">
       <Pokemon {...props} />
