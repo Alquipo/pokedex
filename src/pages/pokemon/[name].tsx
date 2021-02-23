@@ -2,6 +2,7 @@ import {
   QueryPokemon,
   QueryPokemonVariables
 } from 'graphql/generated/QueryPokemon'
+import SEO from 'components/SEO'
 
 import { QUERY_POKEMON } from 'graphql/queries/pokemon'
 import { GetStaticProps } from 'next'
@@ -19,6 +20,12 @@ export default function PokemonPage(props: PokemonTemplateProps) {
   if (router.isFallback) return null
   return (
     <div className="page">
+      <SEO
+        title={props.name[0].toUpperCase() + props.name.slice(1).toLowerCase()}
+        description={` ${props.name} information`}
+        image="img/icons/icon-512.png"
+        shouldIndexPage
+      />
       <Pokemon {...props} />
     </div>
   )

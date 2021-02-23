@@ -60,8 +60,8 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
   border: 1px solid transparent;
   padding: 0.4rem 0.8rem;
   color: #505050;
-  background-color: #FFF;
-  color: #FAFAFA;
+  background-color: #f2f3f5;
+  color: #fff;
   background-color: #ff8a80;
   -webkit-transition: background-color 1s ease-in-out,width 1.5s ease-in-out,color 0.5s ease-in;
   transition: background-color 1s ease-in-out,width 1.5s ease-in-out,color 0.5s ease-in;
@@ -80,7 +80,7 @@ exports[`<PokemonStats /> should render the PokemonStats correctly 1`] = `
   border: 1px solid transparent;
   padding: 0.4rem 0.8rem;
   color: #505050;
-  background-color: #FFF;
+  background-color: #f2f3f5;
 }
 
 .c4:focus {

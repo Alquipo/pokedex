@@ -36,8 +36,19 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pt-BR">
-        <Head />
+      <Html lang="pt-br">
+        <Head>
+          <link
+            rel="shortcut icon"
+            href="img/icons/icon-72.png"
+            type="image/png"
+          />
+
+          <link rel="manifest" href="manifest.json" />
+
+          {/* Import CSS for nprogress */}
+          <link rel="stylesheet" type="text/css" href="css/nprogress.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />

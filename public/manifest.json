@@ -18,9 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "background_color": "#FFF",
+  "background_color": "#f2f3f5",
   "description": "Pokedex developer by Alquipo",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#FFF"
+  "theme_color": "#f2f3f5"
 }

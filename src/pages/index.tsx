@@ -1,9 +1,21 @@
+import SEO from 'components/SEO'
 import Pokedex, { PokedexTemplateProps } from 'templates/Pokedex'
 
 import pokemonList from 'graphql/data/pokemons.json'
 
 export default function Index(props: PokedexTemplateProps) {
-  return <Pokedex {...props} />
+  return (
+    <>
+      <SEO
+        title="Pokedex"
+        description="A simple pokedex using TypeScript, React, NextJS and Styled Components"
+        shouldExcludeTitleSuffix
+        shouldIndexPage
+        image="img/icons/icon-512.png"
+      />
+      <Pokedex {...props} />
+    </>
+  )
 }
 
 export function getStaticProps() {

@@ -116,7 +116,7 @@ exports[`<PokemonInformation /> should render the PokemonInformation correctly 1
 }
 
 .c4 {
-  color: #FAFAFA;
+  color: #fff;
   font-weight: 600;
   background-color: #ff8a80;
   -webkit-transition: background-color 1000ms ease-in,width 1500ms ease-in-out;
@@ -170,7 +170,7 @@ exports[`<PokemonInformation /> should render the PokemonInformation correctly 1
 .c6 span {
   line-height: 1;
   padding: 0.5rem 0 0 0.5rem;
-  color: #FAFAFA;
+  color: #fff;
   cursor: default;
 }
 
@@ -207,7 +207,7 @@ exports[`<PokemonInformation /> should render the PokemonInformation correctly 1
 .c8 span {
   line-height: 1;
   padding: 0.5rem 0 0 0.5rem;
-  color: #FAFAFA;
+  color: #fff;
   cursor: default;
 }
 

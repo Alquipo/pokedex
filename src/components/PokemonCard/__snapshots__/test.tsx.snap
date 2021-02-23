@@ -62,7 +62,7 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
   align-items: center;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FAFAFA;
+  color: #fff;
   background-color: #FBA54C;
   left: -1.5rem;
 }
@@ -98,7 +98,7 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
   border: 0.1rem solid;
   text-align: center;
   cursor: pointer;
-  background-color: #FAFAFA;
+  background-color: #fff;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
@@ -198,4 +198,4 @@ exports[`<PokemonCard /> should render the PokemonCard correctly 1`] = `
     </div>
   </div>
 </div>
-`
+`;

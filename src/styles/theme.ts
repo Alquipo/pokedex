@@ -34,8 +34,8 @@ export default {
     // mainBg: '#06092B',
     // black: '#030517',
     // darkGray: '#2E2F42',
-    lightBg: '#FFF',
-    white: '#FAFAFA',
+    lightBg: '#f2f3f5',
+    white: '#fff',
     lightGray: '#EAEAEA',
     gray: '#505050',
 

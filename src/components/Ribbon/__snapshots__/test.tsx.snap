@@ -16,7 +16,7 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
   align-items: center;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FAFAFA;
+  color: #fff;
   left: -1.5rem;
 }
 
