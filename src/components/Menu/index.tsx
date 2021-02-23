@@ -1,12 +1,13 @@
 import { useRouter } from 'next/router'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import GithubCorner from 'react-github-corner'
 
 import { PokemonTypesProps } from 'components/PokemonCard'
 
 import * as S from './styles'
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from 'components/Modal'
 
 export type MenuProps = {
   bgColor?: PokemonTypesProps | 'transparent'
@@ -25,6 +26,12 @@ const Menu = ({
 }: MenuProps) => {
   const router = useRouter()
 
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(!showModal)
+  }
+
   return (
     <S.Wrapper positionLogo={positionLogo} bgColor={bgColor}>
       {hasBackButton && (
@@ -32,16 +39,18 @@ const Menu = ({
       )}
 
       {hasLogo && (
-        <Link href="/" passHref>
-          <a>
-            <img
-              src="/img/pokemon-logo.svg"
-              alt="Pokemon logo"
-              height={59}
-              width={200}
-            />
-          </a>
-        </Link>
+        <>
+          <img
+            src="/img/pokemon-logo.svg"
+            alt="Pokemon logo"
+            height={59}
+            width={200}
+            role="button"
+            onClick={openModal}
+          />
+
+          <Modal showModal={showModal} setShowModal={openModal} />
+        </>
       )}
 
       {hasGitHubCorner && (

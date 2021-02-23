@@ -14,7 +14,7 @@ describe('<Menu />', () => {
     ).not.toBeInTheDocument()
 
     expect(
-      screen.queryByRole('img', { name: /Pokemon logo/i })
+      screen.queryByRole('button', { name: /Pokemon logo/i })
     ).not.toBeInTheDocument()
 
     expect(
@@ -25,13 +25,12 @@ describe('<Menu />', () => {
   it('should render the complete menu', () => {
     renderWithTheme(<Menu hasBackButton hasLogo hasGitHubCorner />)
 
-    expect(screen.getByRole('img', { name: /Pokemon logo/i })).toHaveAttribute(
-      'src',
-      `/img/pokemon-logo.svg`
-    )
+    expect(
+      screen.getByRole('button', { name: /Pokemon logo/i })
+    ).toHaveAttribute('src', `/img/pokemon-logo.svg`)
 
     expect(
-      screen.queryByRole('img', { name: /Pokemon logo/i })
+      screen.queryByRole('button', { name: /Pokemon logo/i })
     ).toBeInTheDocument()
 
     expect(
