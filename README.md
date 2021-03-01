@@ -51,7 +51,7 @@ Design Inspirado no [HybridShivam](https://github.com/HybridShivam/pokedex-angul
 ### Web
 
 <h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/moveit.gif" width="700px" />
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/pokemon.gif" width="700px" />
 </h4>
 
 <!-- #### Theme Dark
@@ -67,11 +67,11 @@ Design Inspirado no [HybridShivam](https://github.com/HybridShivam/pokedex-angul
 #### Theme Light
 
 <h4 align="center">
-  <img alt="home-light" title="home-light" src=".github/readme/home-light.png" width="400px" />
-  <img alt="dashboard-light" title="dashboard-light" src=".github/readme/dashboard-light.png" width="400px" />
-  <img alt="challenges-light" title="challenges-light" src=".github/readme/challenges-light.png" width="400px" />
+  <img alt="home-light" title="home-light" src=".github/readme/pokemon-home.png" width="400px" />
+  <img alt="dashboard-light" title="dashboard-light" src=".github/readme/pokemon.png" width="400px" />
+  <!-- <img alt="challenges-light" title="challenges-light" src=".github/readme/challenges-light.png" width="400px" />
   <img alt="challenges-completed-light" title="challenges-completed-light" src=".github/readme/challenges-completed-light.png" width="400px" />
-  <img alt="leaderboard" title="leaderboard" src=".github/readme/leaderboard-light.png" width="400px" />
+  <img alt="leaderboard" title="leaderboard" src=".github/readme/leaderboard-light.png" width="400px" /> -->
 </h4>
 
 <br/>
@@ -85,12 +85,12 @@ Design Inspirado no [HybridShivam](https://github.com/HybridShivam/pokedex-angul
   <!-- <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" /> -->
 <!-- </h4> -->
 
-### Storybook e Test
+### Storybook
 
 <h4 align="center">
-  <img alt="Example Test" title="ExampleTest" src=".github/readme/storybook.png" width="400px" />
+  <img alt="Example Test" title="ExampleTest" src=".github/readme/pokemon-storybook.png" width="400px" />
 
-  <img alt="Example Test" title="ExampleTest" src=".github/readme/test-temporary.png" width="400px" />
+  <img alt="Example Test" title="ExampleTest" src=".github/readme/pokemon-storybook2.png" width="400px" />
 
 </h4>
 
