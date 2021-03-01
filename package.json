@@ -28,7 +28,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.11",
     "bootstrap": "^4.6.0",
-    "graphql": "^15.5.0",
+    "graphql": "^14.0.0",
     "next": "10.0.7",
     "next-pwa": "^5.0.4",
     "nprogress": "^0.2.0",
